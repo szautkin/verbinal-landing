@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbinal — Native CANFAR Science Portal Client</title>
+    <meta name="description" content="Verbinal is a suite of native apps for the CANFAR Science Portal. Manage your interactive science sessions on macOS, Windows, Linux, and Android.">
+    <meta name="keywords" content="CANFAR, astronomy, science, sessions, notebook, CADC, research, computing, desktop, visualization, Verbinal">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Verbinal — Native CANFAR Science Portal Client">
+    <meta property="og:description" content="Manage your interactive science sessions — Jupyter notebooks, CARTA, VNC desktops, Firefly — directly from your device. Free and open source.">
+    <meta property="og:image" content="/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Verbinal — native apps for the CANFAR Science Portal on macOS, Windows, Linux, and Android">
+    <meta property="og:site_name" content="Verbinal">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Verbinal — Native CANFAR Science Portal Client">
+    <meta name="twitter:description" content="Manage your interactive science sessions — Jupyter notebooks, CARTA, VNC desktops, Firefly — directly from your device. Free and open source.">
+    <meta name="twitter:image" content="/assets/og-image.png">
+    <meta name="twitter:image:alt" content="Verbinal — native apps for the CANFAR Science Portal on macOS, Windows, Linux, and Android">
+
+    <link rel="icon" type="image/svg+xml" href="assets/verbinal-dark.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/play_store_icon_512.png">
+    <link rel="apple-touch-icon" href="assets/play_store_icon_512.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <img src="assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <nav class="nav">
+            <a href="#features">Features</a>
+            <a href="#platforms">Download</a>
+            <a href="#open-source">Open Source</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-bg">
+        <div class="stars"></div>
+        <div class="stars stars-2"></div>
+    </div>
+    <div class="container hero-content">
+        <img src="assets/verbinal-store.svg" alt="Verbinal icon" class="hero-icon" width="160" height="160">
+        <h1>Verbinal</h1>
+        <p class="hero-subtitle">A native companion for the <a href="https://www.canfar.net/science-portal" target="_blank" rel="noopener">CANFAR Science Portal</a></p>
+        <p class="hero-desc">Manage your interactive science sessions &mdash; Jupyter notebooks, CARTA, VNC desktops, Firefly &mdash; directly from your device. No browser needed.</p>
+        <div class="hero-actions">
+            <a href="#platforms" class="btn btn-primary">Download</a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="hero-platforms">
+            <span class="platform-badge">macOS</span>
+            <span class="platform-badge">Windows</span>
+            <span class="platform-badge">Linux</span>
+            <span class="platform-badge">Android</span>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="container">
+        <h2 class="section-title">Everything you need to manage your science sessions</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                </div>
+                <h3>Session Management</h3>
+                <p>Launch, monitor, extend, and delete CANFAR science sessions &mdash; Notebook, Desktop, CARTA, Firefly, and Contributed.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Standard &amp; Advanced Launch</h3>
+                <p>Pick from the CANFAR image catalogue or supply a custom container registry image with authentication credentials.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h3>Platform Load</h3>
+                <p>Real-time cluster CPU, GPU, and RAM utilisation at a glance so you can plan your workloads.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <h3>Storage Quota</h3>
+                <p>View your VOSpace home directory usage at a glance. Know exactly how much space you have left.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Secure Credentials</h3>
+                <p>Tokens stored securely in your platform's native keychain &mdash; macOS Keychain, Windows Credential Manager, GNOME Keyring, or Android EncryptedSharedPreferences.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3>Recent Launches</h3>
+                <p>Quick re-launch from your session history. Auto-refresh keeps active sessions up to date while any session is pending.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                </div>
+                <h3>Session Events &amp; Logs</h3>
+                <p>View detailed session events and container logs directly in the app for troubleshooting and monitoring.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <h3>Zero Telemetry</h3>
+                <p>No data collection, no analytics, no third-party services. All communication goes directly to CANFAR services over HTTPS.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="screenshots">
+    <div class="container">
+        <h2 class="section-title">Built native for every platform</h2>
+        <p class="section-subtitle">Each app is crafted with the platform's native toolkit &mdash; SwiftUI on macOS, WinUI 3 on Windows, GTK 4 &amp; libadwaita on Linux, Jetpack Compose on Android.</p>
+        <div class="screenshots-grid">
+            <figure class="screenshot-item">
+                <img src="assets/screenshot-2.png" alt="Verbinal macOS dashboard showing active science sessions" loading="lazy">
+                <figcaption>Session dashboard on macOS</figcaption>
+            </figure>
+            <figure class="screenshot-item">
+                <img src="assets/screenshot-1.png" alt="Verbinal macOS login screen" loading="lazy">
+                <figcaption>Secure login on macOS</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section id="platforms" class="platforms">
+    <div class="container">
+        <h2 class="section-title">Download Verbinal</h2>
+        <p class="section-subtitle">Free and open source. Choose your platform.</p>
+        <div class="platforms-grid">
+
+            <div class="platform-card">
+                <div class="platform-card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                </div>
+                <h3>Windows</h3>
+                <p class="platform-tech">C# &middot; WinUI 3</p>
+                <p class="platform-desc">Native Windows app with Fluent Design. Available on the Microsoft Store.</p>
+                <div class="platform-actions">
+                    <a href="https://apps.microsoft.com/detail/9p8jqvk4pjch?ocid=webpdpshare" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Microsoft Store</a>
+                    <a href="https://github.com/szautkin/CanfarDesktop" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                </div>
+                <h3>macOS</h3>
+                <p class="platform-tech">SwiftUI &middot; macOS 14+</p>
+                <p class="platform-desc">Native SwiftUI app. Zero dependencies, Keychain storage, seamless macOS integration.</p>
+                <div class="platform-actions">
+                    <a href="https://github.com/szautkin/canfar-macos/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Download .dmg</a>
+                    <a href="https://github.com/szautkin/canfar-macos" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V7H6v11zM3.5 7C2.67 7 2 7.67 2 8.5v7c0 .83.67 1.5 1.5 1.5S5 16.33 5 15.5v-7C5 7.67 4.33 7 3.5 7zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85.55 12.95.25 12 .25s-1.85.3-2.64.88L7.88.65c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31C6.97 3.69 6 5.33 6 7h12c0-1.67-.97-3.31-2.47-4.34zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
+                </div>
+                <h3>Android</h3>
+                <p class="platform-tech">Kotlin &middot; Jetpack Compose &middot; Material 3</p>
+                <p class="platform-desc">Native Android app with biometric unlock support. Material You design language.</p>
+                <div class="platform-actions">
+                    <a href="https://play.google.com/apps/testing/net.canfar.verbinal" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Join Testing</a>
+                    <a href="https://github.com/szautkin/canfar-android" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.36-.312.086-.664.196-.978.468a2.07 2.07 0 00-.496.64 2.205 2.205 0 00-.155.518.417.417 0 00.485.486 2.109 2.109 0 00.7-.217c.198-.1.378-.222.546-.366.168-.142.3-.26.478-.37.082-.05.174-.09.254-.128.076.298.218.58.42.85.413.55 1.107 1.058 2.162 1.153a.413.413 0 00.44-.34 6.21 6.21 0 01.496-1.527 2.038 2.038 0 01.155-.255c-.03.341.024.672.098.984.167.705.514 1.307.89 1.89-.263.088-.517.207-.72.404-.266.26-.42.6-.535.89-.12.293-.2.561-.31.754a.416.416 0 00.584.583c.185-.104.46-.193.748-.31.09-.037.339-.143.589-.355.093-.078.154-.128.272-.265a4.12 4.12 0 002.202.645c1.175 0 2.18-.398 2.94-1.01.237.219.5.368.73.467.29.124.564.21.747.312a.416.416 0 00.585-.582c-.112-.2-.19-.465-.31-.755-.118-.29-.27-.63-.536-.89-.18-.178-.393-.29-.618-.377.405-.612.76-1.27.88-2.018.03-.19.045-.375.04-.555.026.037.053.073.08.108.2.484.357 1.023.496 1.527a.413.413 0 00.44.34c1.055-.095 1.749-.603 2.162-1.153.202-.27.344-.552.42-.85.09.045.18.093.26.135.18.11.31.23.478.37.168.144.349.266.546.366.197.1.45.186.7.217a.417.417 0 00.485-.486 2.205 2.205 0 00-.155-.518 2.07 2.07 0 00-.496-.64c-.314-.272-.666-.382-.978-.468-.312-.093-.598-.16-.797-.36a3.555 3.555 0 01-.662-.839.424.424 0 00-.112-.137c.124-.805-.008-1.656-.287-2.487-.589-1.771-1.83-3.47-2.716-4.521-.75-1.067-.974-1.928-1.05-3.02-.065-1.491 1.057-5.965-3.17-6.298A5.043 5.043 0 0012.504 0z"/></svg>
+                </div>
+                <h3>Linux</h3>
+                <p class="platform-tech">Rust &middot; GTK 4 &middot; libadwaita</p>
+                <p class="platform-desc">Native GNOME app built with Rust. Secure credentials via Secret Service API (GNOME Keyring / KDE Wallet).</p>
+                <div class="platform-actions">
+                    <a href="https://github.com/szautkin/CanfarDesktopUbuntu/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Download .deb</a>
+                    <a href="https://github.com/szautkin/CanfarDesktopUbuntu" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="open-source" class="open-source">
+    <div class="container">
+        <div class="oss-content">
+            <h2>Open Source</h2>
+            <p>Verbinal is free and open source software. Every platform client is built in the open &mdash; contributions, issues, and feedback are welcome.</p>
+            <p>The apps connect to the <a href="https://github.com/opencadc/science-portal" target="_blank" rel="noopener">CANFAR Science Portal</a>, an open-source web platform by the <a href="https://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/" target="_blank" rel="noopener">Canadian Astronomy Data Centre</a> that provides interactive sessions for astronomical research &mdash; powered by the <a href="https://ws-uv.canfar.net/skaha" target="_blank" rel="noopener">Skaha</a> container orchestration service.</p>
+            <div class="oss-links">
+                <a href="https://github.com/szautkin/canfar-macos" target="_blank" rel="noopener" class="oss-repo">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    canfar-macos
+                </a>
+                <a href="https://github.com/szautkin/CanfarDesktop" target="_blank" rel="noopener" class="oss-repo">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    CanfarDesktop
+                </a>
+                <a href="https://github.com/szautkin/canfar-android" target="_blank" rel="noopener" class="oss-repo">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    canfar-android
+                </a>
+                <a href="https://github.com/szautkin/CanfarDesktopUbuntu" target="_blank" rel="noopener" class="oss-repo">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    CanfarDesktopUbuntu
+                </a>
+                <a href="https://github.com/opencadc/science-portal" target="_blank" rel="noopener" class="oss-repo">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    science-portal
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
+            <span>Verbinal</span>
+        </div>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin. Open source under MPL-2.0 and AGPL-3.0 licenses.</p>
+    </div>
+</footer>
+
+</body>
+</html>
