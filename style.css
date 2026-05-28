@@ -62,9 +62,87 @@ img {
     padding: 0 24px;
 }
 
+/* ── Announcement bar ──────────────────────────────────────── */
+.announce {
+    position: relative;
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 44px;
+    background: linear-gradient(90deg, var(--color-blue) 0%, var(--color-primary) 100%);
+    color: #fff;
+    text-align: center;
+}
+
+.announce-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.announce-text:hover {
+    color: #fff;
+}
+
+.announce-tag {
+    flex-shrink: 0;
+    padding: 2px 9px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.announce-arrow {
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.announce-text:hover .announce-arrow {
+    transform: translateX(3px);
+}
+
+.announce-close {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.announce-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.announce-hidden .announce {
+    display: none;
+}
+
 /* ── Header ────────────────────────────────────────────────── */
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -116,10 +194,10 @@ img {
 /* ── Hero ──────────────────────────────────────────────────── */
 .hero {
     position: relative;
-    padding: 160px 0 100px;
+    padding: 80px 0 100px;
     text-align: center;
     overflow: hidden;
-    min-height: 90vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
 }
@@ -404,12 +482,15 @@ img {
 }
 
 .platforms-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
 }
 
 .platform-card {
+    flex: 1 1 230px;
+    max-width: 256px;
     padding: 32px 24px;
     border-radius: var(--radius);
     background: var(--color-surface);
@@ -558,10 +639,6 @@ img {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .platforms-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media (max-width: 768px) {
@@ -606,11 +683,8 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .platforms-grid {
-        grid-template-columns: 1fr;
-    }
-
     .platform-card {
+        flex-basis: 100%;
         max-width: 400px;
         margin: 0 auto;
         width: 100%;

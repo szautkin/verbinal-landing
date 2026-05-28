@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verbinal — Native CANFAR Science Portal Client</title>
-    <meta name="description" content="Verbinal is a suite of native apps for the CANFAR Science Portal. Manage your interactive science sessions on macOS, Windows, Linux, and Android.">
+    <meta name="description" content="Verbinal is a suite of native apps for the CANFAR Science Portal. Manage your interactive science sessions on iOS, macOS, Windows, Linux, and Android.">
     <meta name="keywords" content="CANFAR, astronomy, science, sessions, notebook, CADC, research, computing, desktop, visualization, Verbinal">
     <meta name="author" content="Serhii Zautkin">
     <meta name="theme-color" content="#060a14">
@@ -25,7 +25,7 @@
     <meta property="og:image" content="/assets/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Verbinal — native apps for the CANFAR Science Portal on macOS, Windows, Linux, and Android">
+    <meta property="og:image:alt" content="Verbinal — native apps for the CANFAR Science Portal on iOS, macOS, Windows, Linux, and Android">
     <meta property="og:site_name" content="Verbinal">
 
     <!-- Twitter Card -->
@@ -41,6 +41,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<script>try{if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')document.documentElement.classList.add('announce-hidden');}catch(e){}</script>
+
+<div class="announce" id="announce">
+    <a href="#platforms" class="announce-text">
+        <span class="announce-tag">New</span>
+        <span>Verbinal is now on the App Store for iPhone &amp; iPad</span>
+        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
+    </a>
+    <button type="button" class="announce-close" id="announce-close" aria-label="Dismiss announcement">&times;</button>
+</div>
 
 <header class="header">
     <div class="container header-inner">
@@ -71,6 +82,7 @@
             <a href="#features" class="btn btn-secondary">Learn More</a>
         </div>
         <div class="hero-platforms">
+            <span class="platform-badge">iOS</span>
             <span class="platform-badge">macOS</span>
             <span class="platform-badge">Windows</span>
             <span class="platform-badge">Linux</span>
@@ -198,6 +210,21 @@
 
             <div class="platform-card">
                 <div class="platform-card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01M12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                </div>
+                <h3>iOS</h3>
+                <p class="platform-tech">Swift &middot; SwiftUI &middot; iPhone &amp; iPad</p>
+                <p class="platform-desc">Native SwiftUI app for iPhone and iPad. Manage your CANFAR sessions on the go, with credentials secured in the iOS Keychain.</p>
+                <div class="platform-actions">
+                    <a href="https://apps.apple.com/us/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
+                        <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="200">
+                    </a>
+                    <a href="https://github.com/szautkin/canfar-macos" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-card-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V7H6v11zM3.5 7C2.67 7 2 7.67 2 8.5v7c0 .83.67 1.5 1.5 1.5S5 16.33 5 15.5v-7C5 7.67 4.33 7 3.5 7zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85.55 12.95.25 12 .25s-1.85.3-2.64.88L7.88.65c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31C6.97 3.69 6 5.33 6 7h12c0-1.67-.97-3.31-2.47-4.34zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
                 </div>
                 <h3>Android</h3>
@@ -267,6 +294,17 @@
         <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin. Open source under MPL-2.0 and AGPL-3.0 licenses.</p>
     </div>
 </footer>
+
+<script>
+(function () {
+    var btn = document.getElementById('announce-close');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+        document.documentElement.classList.add('announce-hidden');
+        try { localStorage.setItem('verbinal-ios-announce-dismissed', '1'); } catch (e) {}
+    });
+})();
+</script>
 
 </body>
 </html>
