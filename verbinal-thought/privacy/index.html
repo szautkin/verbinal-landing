@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Verbinal Thought</title>
+    <meta name="description" content="Privacy policy for Verbinal Thought: the developer runs no servers and collects no data. Your work stays on your Mac.">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/verbinal-thought-icon-256.png">
+    <link rel="apple-touch-icon" href="/assets/verbinal-thought-icon-1024.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <nav class="nav">
+            <a href="/verbinal-thought">Verbinal Thought</a>
+            <a href="/verbinal-thought/support">Support</a>
+            <a href="/verbinal-thought/privacy">Privacy</a>
+        </nav>
+    </div>
+</header>
+
+<main class="doc">
+    <div class="container">
+        <div class="doc-inner">
+            <h1>Privacy Policy for Verbinal Thought</h1>
+            <p class="doc-meta">Last updated: 2026-05-31</p>
+
+            <p>Verbinal Thought is a native macOS app for thinking through system-level design. It runs on your Mac and keeps your work on your Mac. This policy explains, in plain English, exactly what happens to your data &mdash; and what does not.</p>
+
+            <p class="lede">The short version: <strong>the developer of Verbinal Thought runs no cloud servers and collects no data about you.</strong> The app stores your work locally on your device. The only time anything leaves your Mac over the internet is when <em>you</em> enable and configure an outside AI service with your own account &mdash; and even then, your data goes directly from your Mac to that service, never through us.</p>
+
+            <h2>What the developer collects</h2>
+            <p><strong>Nothing.</strong></p>
+            <p>We run no internet backend, no developer-operated servers, and no accounts. We do not collect, receive, store, or have any access to your Thoughts, your notes, your chat messages, your voice recordings, your API keys, or any information about how you use the app.</p>
+            <p>There is:</p>
+            <ul>
+                <li><strong>No analytics or usage tracking</strong> of any kind.</li>
+                <li><strong>No advertising</strong> and no ad identifiers.</li>
+                <li><strong>No third-party analytics, attribution, or crash-reporting SDKs.</strong> (The app links only ordinary third-party libraries needed to run; none of them collect or transmit your data.)</li>
+                <li><strong>No cross-app or cross-site tracking.</strong> The app does not link your activity to your identity across other apps or websites.</li>
+            </ul>
+            <p>This is reflected in the app's privacy manifest, which declares no tracking and no collected data types.</p>
+
+            <h2>Data stored on your device</h2>
+            <p>Everything you create in Verbinal Thought is stored <strong>locally on your Mac</strong>, inside the app's sandbox container. Specifically:</p>
+            <ul>
+                <li>Your Thoughts, tags, links, and other content are saved in a <strong>local SQLite database</strong> inside the app's macOS sandbox container (under <code>~/Library/Containers/</code>).</li>
+                <li>A small number of <strong>interface preferences</strong> (for example, which panel tab is open and whether archived items are shown) are stored locally as standard macOS app settings.</li>
+                <li><strong>Secrets and local settings</strong> are stored in the <strong>macOS Keychain</strong> on your device. These include your OpenAI API key, an optional Cohere API key, your speech/dictation preferences, and the on/off settings for the optional local integration described below. They are saved as generic-password items, accessible only when your device is unlocked, and are not shared with any other app or with us.</li>
+                <li>Files you explicitly export (for example <code>.vthought</code> bundles, or Markdown / HTML / PDF exports) are written only to the locations <em>you</em> choose through the standard macOS save dialog.</li>
+            </ul>
+            <p>None of this leaves your device on its own. There is no automatic sync, no cloud backup, and no upload of your content by the app itself.</p>
+
+            <h3>Optional local integration with other apps on your Mac</h3>
+            <p>Verbinal Thought can optionally let other apps already running <strong>on the same Mac</strong> (for example, an AI assistant such as Claude Desktop) connect to it through a local, on-device channel (a Unix-domain socket inside the app's shared container). This is <strong>off by default</strong>, requires you to turn it on in Settings, and additionally requires you to approve each connecting app. This connection is entirely local to your Mac and does not send your data over the internet or to the developer.</p>
+
+            <h2>Third-party services you may enable</h2>
+            <p>Verbinal Thought talks to outside internet services only when you choose to use a feature that needs one, and only after you provide your own credentials. In every case, the connection goes <strong>directly from your Mac to that company over HTTPS</strong>. There is no Verbinal Thought server in between, and we never see the data.</p>
+
+            <h3>OpenAI (for the chat / AI assistant)</h3>
+            <p>The AI chat feature uses <strong>OpenAI</strong>. To use it, you paste your <strong>own OpenAI API key</strong> into Settings; it is stored in your Keychain.</p>
+            <ul>
+                <li><strong>Where it goes:</strong> When you send a message, the app makes a request directly to OpenAI at <code>https://api.openai.com</code> (the <code>v1/chat/completions</code> endpoint), authenticated with your API key.</li>
+                <li><strong>What is sent:</strong> The contents of your chat conversation &mdash; the messages and context you send to the assistant, which may include text from your Thoughts.</li>
+                <li><strong>Who handles it:</strong> OpenAI, under OpenAI's own terms and privacy policy. Your use of OpenAI is between you and OpenAI.</li>
+            </ul>
+            <p>Your API key and your chat content never pass through any server operated by the developer.</p>
+
+            <h3>Apple Speech (the default for dictation)</h3>
+            <p>Voice dictation uses <strong>Apple's on-device Speech recognition by default</strong>. When this default backend is active, your microphone audio is transcribed by Apple's Speech framework on your Mac. This does not require an account or an API key, and is handled by Apple as part of macOS.</p>
+
+            <h3>Cohere (optional cloud dictation &mdash; off by default)</h3>
+            <p>Dictation also offers an <strong>optional</strong> cloud backend powered by <strong>Cohere</strong>. This is <strong>not</strong> used unless you deliberately switch the speech backend away from the Apple default <strong>and</strong> enter your own Cohere API key in Settings.</p>
+            <ul>
+                <li><strong>When it applies:</strong> Only if you select the Cohere speech backend and provide a Cohere API key.</li>
+                <li><strong>What is sent:</strong> Your <strong>recorded dictation audio</strong> (encoded as a 16 kHz mono FLAC audio file) along with your chosen language and the transcription model setting.</li>
+                <li><strong>Where it goes:</strong> Directly from your Mac to Cohere at <code>https://api.cohere.com</code> (the <code>/v2/audio/transcriptions</code> endpoint), authenticated with your Cohere API key.</li>
+                <li><strong>Who handles it:</strong> Cohere, under Cohere's own terms and privacy policy.</li>
+            </ul>
+            <p>If you leave dictation on the Apple on-device default, <strong>no audio is ever uploaded to Cohere or anywhere else.</strong></p>
+
+            <h2>Microphone and dictation</h2>
+            <p>The app requests microphone access only for the dictation feature, and only when you start a recording. macOS will ask for your permission the first time.</p>
+            <ul>
+                <li>With the <strong>default Apple on-device backend</strong>, your recorded audio is transcribed <strong>on your Mac</strong> and is not uploaded.</li>
+                <li>With the <strong>optional Cohere backend</strong> (only if you enabled it and supplied a key), your recorded audio is uploaded to Cohere for transcription as described above.</li>
+            </ul>
+            <p>You are always in control of which backend is used, and you can change it at any time in Settings.</p>
+
+            <h2>Your controls</h2>
+            <ul>
+                <li><strong>Use the app fully offline-capable.</strong> Without entering any API key, your Thoughts stay entirely on your device. The AI chat simply won't have a provider to talk to.</li>
+                <li><strong>Choose your AI provider.</strong> The chat feature only works with an OpenAI API key you supply, and only sends data when you use it.</li>
+                <li><strong>Keep dictation on-device.</strong> Leave the speech backend on the Apple on-device default to ensure no audio ever leaves your Mac. Cloud dictation via Cohere is strictly opt-in.</li>
+                <li><strong>Control the local integration.</strong> The optional on-device connection for other apps is off until you enable it and approve each connecting app; you can turn it off or revoke approved apps at any time in Settings.</li>
+                <li><strong>Remove your keys.</strong> Clearing your OpenAI or Cohere API key in Settings deletes it from your Keychain.</li>
+                <li><strong>Delete your data.</strong> Because your content lives in a local database in the app's sandbox container, deleting the app and its container removes that data from your device. You can also export your work to a <code>.vthought</code> file at any time.</li>
+                <li><strong>Manage data held by third parties</strong> (OpenAI, Cohere) through your account with those companies, under their respective policies.</li>
+            </ul>
+
+            <h2>Children</h2>
+            <p>Verbinal Thought is a productivity and thinking tool intended for general audiences and is not directed at children. The developer does not knowingly collect any personal information from anyone, including children &mdash; because the developer collects no personal information at all.</p>
+
+            <h2>Changes to this policy</h2>
+            <p>If this policy changes, we will update the version published on the app's landing page and revise the &ldquo;Last updated&rdquo; date above. Material changes will be reflected there before they take effect.</p>
+
+            <h2>Contact</h2>
+            <p>Questions about this policy or the app's privacy practices can be sent to:</p>
+            <p><strong><a href="mailto:support@verbinal.com">support@verbinal.com</a></strong></p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-thought-icon-256.png" alt="Verbinal Thought" width="28" height="28" class="footer-app-icon">
+            <span>Verbinal Thought</span>
+        </div>
+        <p class="footer-copy">&copy; 2026 Serhii Zautkin &middot; <a href="/verbinal-thought/privacy">Privacy</a> &middot; <a href="/verbinal-thought/support">Support</a> &middot; <a href="/">verbinal.com</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

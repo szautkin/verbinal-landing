@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help &amp; Support — Verbinal Thought</title>
+    <meta name="description" content="Help, FAQ, and troubleshooting for Verbinal Thought — a native Mac workbench for system-design thinking. Contact support@verbinal.com.">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/verbinal-thought-icon-256.png">
+    <link rel="apple-touch-icon" href="/assets/verbinal-thought-icon-1024.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <nav class="nav">
+            <a href="/verbinal-thought">Verbinal Thought</a>
+            <a href="/verbinal-thought/support">Support</a>
+            <a href="/verbinal-thought/privacy">Privacy</a>
+        </nav>
+    </div>
+</header>
+
+<main class="doc">
+    <div class="container">
+        <div class="doc-inner">
+            <h1>Verbinal Thought &mdash; Help &amp; Support</h1>
+
+            <p class="lede">Verbinal Thought is a native Mac workbench for high-level system design thinking. You converse, capture your reasoning as <strong>Thoughts</strong> (markdown notes you can tag, link, and arrange), and compose them into specs, assumption ledgers, assertion lists, and handoff briefs. It is a <em>thinking</em> tool &mdash; it helps you reason about what you're building. It does not write your source code.</p>
+
+            <ul>
+                <li><strong>Platform:</strong> macOS 14 (Sonoma) or later</li>
+                <li><strong>Availability:</strong> Coming soon to the Mac App Store</li>
+                <li><strong>Privacy:</strong> <a href="/verbinal-thought/privacy">Privacy policy</a></li>
+                <li><strong>Support:</strong> <a href="mailto:support@verbinal.com">support@verbinal.com</a></li>
+            </ul>
+
+            <h2>Frequently asked questions</h2>
+
+            <h3>Do I need an API key?</h3>
+            <p>No. Verbinal Thought is <strong>fully usable offline with no account and no API key</strong>. You can create projects and Thoughts, write and edit in markdown, tag and link Thoughts, arrange them on the canvas, search, and export &mdash; all with no network connection.</p>
+            <p>AI is <strong>optional</strong>. The in-app chat partner only activates once you add your own provider key. There is no sign-up, no Verbinal account, and no trial gate.</p>
+
+            <h3>Which AI models does it use?</h3>
+            <p>Chat uses <strong>OpenAI today</strong> on a <strong>bring-your-own-key</strong> basis &mdash; you supply your own OpenAI API key in <strong>Settings</strong> (<code>&#8984;,</code>), and the app talks directly to <code>api.openai.com</code> over HTTPS. We operate no proxy or server in between; requests go straight from your Mac to OpenAI under your key.</p>
+            <p>We run no model of our own. If you don't add a key, the chat partner simply stays inactive and the rest of the app works normally.</p>
+
+            <h3>Does it write code for me?</h3>
+            <p>No. Verbinal Thought is a thinking tool, not a coding tool. By design it does <strong>not</strong>:</p>
+            <ul>
+                <li>generate or complete source code,</li>
+                <li>read your repository,</li>
+                <li>run your tests or build anything,</li>
+                <li>produce a finished system design from one click.</li>
+            </ul>
+            <p>The AI is a thinking <em>partner</em>: it challenges assumptions, proposes alternatives, surfaces contradictions, and helps you structure your reasoning. If a code block appears in your output, it's text you put inside a handoff brief &mdash; not something the tool generates for you.</p>
+
+            <h3>Where is my data stored? Is it private?</h3>
+            <p>Everything is <strong>local-first</strong>. Your Thoughts live in a single SQLite database inside the app's own sandboxed container on your Mac:</p>
+            <pre><code>~/Library/Containers/com.codebg.Verbinal.apps.thought/Data/Library/Application Support/verbinal-thought/data.sqlite</code></pre>
+            <p>Your API keys are stored in the <strong>macOS Keychain</strong>, never in plain files. There are no Verbinal accounts, no cloud sync we operate, no analytics, no tracking, and no telemetry. The only network traffic is what you explicitly enable: chat requests to your AI provider, and &mdash; only if you opt in &mdash; cloud dictation (see below).</p>
+            <p>Because storage is a local file, <strong>you own your backups</strong>: copy the database file or export your projects. There is no online archive or data-recovery service. Full details are in the <a href="/verbinal-thought/privacy">privacy policy</a>.</p>
+
+            <h3>Is my dictation private?</h3>
+            <p>Yes, by default. The mic button transcribes with <strong>Apple's on-device Speech framework</strong> &mdash; audio stays on your Mac (Apple may fall back to its own cloud only for languages without on-device support). macOS prompts for microphone permission the first time you use it.</p>
+            <p>You can <strong>optionally</strong> switch the dictation backend to <strong>Cohere</strong> in <strong>Settings &rarr; Speech-to-text</strong> and supply your own Cohere key. In that mode <em>only</em>, recorded audio is uploaded over HTTPS to <code>api.cohere.com</code> for transcription. Verbinal Thought never receives or stores your audio &mdash; it goes directly to Cohere under your key. Apple on-device is the default; you have to choose Cohere deliberately.</p>
+
+            <h3>How do I export my work?</h3>
+            <p>Select a project, then use <strong>File &rarr; Export Project</strong>. The fastest path is <strong>Choose Format&hellip;</strong> (<code>&#8984;&#8679;E</code>), which previews what gets written and lets you pick a format. Individual formats are also listed in the menu:</p>
+            <ul>
+                <li><strong>Markdown</strong> &mdash; plain <code>.md</code>, plus dialects for <strong>Obsidian</strong>, <strong>GitHub</strong>, and <strong>Pandoc</strong></li>
+                <li><strong>HTML</strong> &mdash; single <code>.html</code> or an HTML <strong>site bundle</strong> (<code>.zip</code>)</li>
+                <li><strong>PDF</strong></li>
+                <li><strong>.vthought</strong> &mdash; the lossless bundle (round-trips back into the app via <strong>File &rarr; Import .vthought&hellip;</strong>, <code>&#8984;&#8679;I</code>)</li>
+                <li><strong>JSON snapshot</strong> and <strong>CSV tables</strong></li>
+                <li>Canvas as <strong>PNG / SVG</strong></li>
+                <li>Diagram outlines: <strong>Mermaid</strong> (<code>.mmd</code>), <strong>Graphviz DOT</strong> (<code>.dot</code>), <strong>OPML</strong> outline</li>
+            </ul>
+            <p>You can also right-click any node on the canvas to <strong>Copy</strong> it (as Markdown, Wikilink, or JSON), <strong>Export Thought&hellip;</strong>, or <strong>Share Thought&hellip;</strong>. Files are written to a location you pick via the standard macOS save panel &mdash; exports never leave your Mac unless you put them somewhere shared.</p>
+
+            <h3>How do I connect Claude Desktop (external agents)?</h3>
+            <p>External agents are <strong>off by default</strong>. To let a tool like Claude Desktop propose changes to your Thoughts:</p>
+            <ol>
+                <li>Open <strong>Settings &rarr; External Agents</strong> (<code>&#8984;,</code>).</li>
+                <li>Turn on <strong>Allow external agents</strong>. This opens a local socket inside the app's sandbox container.</li>
+                <li>Next to <strong>Claude Desktop</strong>, click <strong>Set up&hellip;</strong> to reveal the configuration snippet, then <strong>Copy</strong> it.</li>
+                <li>Paste it into <code>~/Library/Application Support/Claude/claude_desktop_config.json</code> and restart Claude Desktop.</li>
+            </ol>
+            <p>The snippet points Claude Desktop at the embedded helper bundled inside the app, which forwards requests to the running app over a local, filesystem-scoped socket. The helper has no network access of its own.</p>
+            <p>Two gates protect you, and both must be on:</p>
+            <ul>
+                <li><strong>Gate 1</strong> &mdash; the <em>Allow external agents</em> toggle, which opens the socket.</li>
+                <li><strong>Gate 2</strong> &mdash; a per-session approval sheet that appears when an agent first tries to connect. You approve or deny each session.</li>
+            </ul>
+            <p>Agents <strong>propose; you commit.</strong> Changes surface as reviewable diffs you accept or reject; destructive operations (delete, archive, unlink) always require an extra explicit confirmation. On the approval sheet you can choose to remember a client (and revoke it later in <strong>Settings &rarr; External Agents</strong>), which lets its safe, reversible proposals apply without review &mdash; destructive verbs still always require your confirmation.</p>
+            <blockquote>Tip: For a stable Claude Desktop setup, run the installed app from <code>/Applications</code> rather than a development build, so the helper path doesn't change. The setup popover warns you when the path is unstable.</blockquote>
+
+            <h2>Troubleshooting</h2>
+
+            <h3>The AI chat isn't responding</h3>
+            <ul>
+                <li><strong>Add or check your OpenAI key.</strong> Open <strong>Settings</strong> (<code>&#8984;,</code>) &rarr; <strong>OpenAI</strong> and confirm the status reads &ldquo;Key loaded from Keychain.&rdquo; Use <strong>Show key</strong> to verify it, and re-paste if needed.</li>
+                <li><strong>Confirm you're online.</strong> Chat needs a connection to <code>api.openai.com</code>; offline, only the AI features pause &mdash; the rest of the app keeps working.</li>
+                <li><strong>Check your provider account.</strong> An expired key, a billing issue, or a rate limit on the OpenAI side will surface as an error. Verify the key works in your OpenAI dashboard.</li>
+                <li>Remember chat is <strong>optional</strong> &mdash; if you never add a key, the chat panel stays inactive by design.</li>
+            </ul>
+
+            <h3>Dictation (the mic button) isn't working</h3>
+            <ul>
+                <li><strong>Grant microphone permission.</strong> On first use macOS prompts for the mic; if you declined, enable it in <strong>System Settings &rarr; Privacy &amp; Security &rarr; Microphone</strong> for Verbinal Thought. Speech recognition permission is requested the same way.</li>
+                <li><strong>Check the backend</strong> in <strong>Settings &rarr; Speech-to-text</strong>. The default is <strong>Apple (on-device when supported)</strong> and needs no key.</li>
+                <li><strong>If you selected Cohere</strong>, dictation needs a valid Cohere key and a connection to <code>api.cohere.com</code>. Use the <strong>Test</strong> button next to the Cohere key field to validate the key, model, and network path. Switch back to Apple to dictate offline.</li>
+                <li>Adjust <strong>Auto-stop after silence</strong> if recording cuts off too early or runs too long.</li>
+            </ul>
+
+            <h3>Claude Desktop says the MCP service is unavailable</h3>
+            <ul>
+                <li><strong>Enable Gate 1.</strong> Open <strong>Settings &rarr; External Agents</strong> and turn on <strong>Allow external agents</strong> &mdash; the socket is closed until you do.</li>
+                <li><strong>Keep Verbinal Thought running.</strong> The helper forwards to the <em>live</em> app; if the app is quit, there's nothing to connect to. Launch it first.</li>
+                <li><strong>Re-copy the config snippet.</strong> In <strong>Settings &rarr; External Agents</strong>, next to <strong>Claude Desktop</strong> click <strong>Set up&hellip;</strong>, then paste a fresh snippet into <code>claude_desktop_config.json</code> and <strong>restart Claude Desktop</strong>. If you'd been running a development build, the helper path can change between rebuilds &mdash; use the app installed in <code>/Applications</code> for a stable path.</li>
+                <li><strong>Approve the session.</strong> When the agent connects, accept the <strong>per-session approval sheet</strong> (Gate 2).</li>
+            </ul>
+
+            <h3>Where does my data live (and how do I back it up)?</h3>
+            <p>Your data is a single SQLite file in the app's sandbox container:</p>
+            <pre><code>~/Library/Containers/com.codebg.Verbinal.apps.thought/Data/Library/Application Support/verbinal-thought/data.sqlite</code></pre>
+            <p>To back up, <strong>copy that file</strong>, or <strong>export your projects</strong> (the <code>.vthought</code> bundle is lossless and re-imports cleanly). API keys live in the macOS Keychain, not in this file. There is no cloud copy &mdash; if you delete the file, the data is gone.</p>
+
+            <h2>A few handy shortcuts</h2>
+            <table>
+                <thead>
+                    <tr><th>Action</th><th>Shortcut</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>New Project</td><td><code>&#8984;&#8679;N</code></td></tr>
+                    <tr><td>Export Project &rarr; Choose Format&hellip;</td><td><code>&#8984;&#8679;E</code></td></tr>
+                    <tr><td>Import .vthought&hellip;</td><td><code>&#8984;&#8679;I</code></td></tr>
+                    <tr><td>Print Project&hellip;</td><td><code>&#8984;P</code></td></tr>
+                    <tr><td>Dictate (Toggle Mic)</td><td><code>&#8984;&#8679;M</code></td></tr>
+                    <tr><td>Switch right panel: AI Chat / Thought / Project</td><td><code>&#8984;1</code> / <code>&#8984;2</code> / <code>&#8984;3</code></td></tr>
+                    <tr><td>Show Archived</td><td><code>&#8997;&#8984;A</code></td></tr>
+                    <tr><td>Open Settings</td><td><code>&#8984;,</code></td></tr>
+                </tbody>
+            </table>
+            <p>You can also send selected text from any app into Verbinal Thought via the macOS <strong>Services &rarr; Send to Verbinal Thought</strong> menu.</p>
+
+            <h2>Getting support</h2>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:support@verbinal.com">support@verbinal.com</a> (we aim to reply within one business day)</li>
+                <li><strong>Report a bug or request a feature:</strong> email <a href="mailto:support@verbinal.com">support@verbinal.com</a> with steps to reproduce and your macOS version</li>
+                <li><strong>Privacy details:</strong> <a href="/verbinal-thought/privacy">Privacy policy</a></li>
+            </ul>
+            <p class="doc-meta">Copyright &copy; 2026 Serhii Zautkin.</p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-thought-icon-256.png" alt="Verbinal Thought" width="28" height="28" class="footer-app-icon">
+            <span>Verbinal Thought</span>
+        </div>
+        <p class="footer-copy">&copy; 2026 Serhii Zautkin &middot; <a href="/verbinal-thought/privacy">Privacy</a> &middot; <a href="/verbinal-thought/support">Support</a> &middot; <a href="/">verbinal.com</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

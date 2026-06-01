@@ -737,3 +737,368 @@ img {
 a, button, .btn {
     -webkit-tap-highlight-color: transparent;
 }
+
+/* ── Verbinal apps (family section, homepage) ──────────────── */
+.apps {
+    padding: 100px 0;
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.app-card {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 28px;
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.app-card:hover {
+    border-color: rgba(56, 189, 248, 0.25);
+    transform: translateY(-3px);
+}
+
+.app-card-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.app-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+.app-card-title h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 3px;
+}
+
+.app-card-title .app-kind {
+    font-size: 0.78rem;
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+}
+
+.app-card-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.app-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.app-card-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+}
+
+.cs-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: 0 0 8px var(--color-accent);
+    flex-shrink: 0;
+}
+
+/* ── Verbinal Thought landing page ─────────────────────────── */
+.vt-hero {
+    position: relative;
+    padding: 76px 0 60px;
+    text-align: center;
+    background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(14, 165, 233, 0.12) 0%, transparent 70%), var(--color-bg);
+}
+
+.vt-hero-icon {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    border-radius: 22px;
+    filter: drop-shadow(0 0 32px rgba(14, 165, 233, 0.25));
+}
+
+.vt-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    color: var(--color-heading);
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.vt-tagline {
+    font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.vt-lede {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    max-width: 640px;
+    margin: 0 auto 30px;
+    line-height: 1.75;
+}
+
+.vt-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.coming-soon {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 24px;
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.vt-meta-links {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.vt-section {
+    padding: 64px 0;
+}
+
+.vt-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.vt-center {
+    text-align: center;
+}
+
+.section-title.vt-left {
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.vt-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.vt-steps li {
+    position: relative;
+    padding: 0 0 18px 30px;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+}
+
+.vt-steps li::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.vt-steps li strong {
+    color: var(--color-heading);
+}
+
+.vt-pillars {
+    padding: 40px 0 72px;
+    background: var(--color-bg);
+}
+
+.vt-grid-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.vt-closing {
+    background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%);
+    border-top: 1px solid var(--color-border);
+}
+
+/* ── Document / content pages (privacy, support) ───────────── */
+.doc {
+    padding: 56px 0 88px;
+    background: var(--color-bg);
+}
+
+.doc-inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.doc h1 {
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: var(--color-heading);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.doc-meta {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+}
+
+.doc .lede {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 28px;
+}
+
+.doc h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin: 44px 0 14px;
+    letter-spacing: -0.01em;
+}
+
+.doc h3 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin: 28px 0 10px;
+}
+
+.doc p {
+    color: var(--color-text);
+    margin-bottom: 16px;
+    line-height: 1.75;
+}
+
+.doc ul,
+.doc ol {
+    margin: 0 0 18px 1.3rem;
+    color: var(--color-text);
+}
+
+.doc li {
+    margin-bottom: 9px;
+    line-height: 1.7;
+}
+
+.doc strong {
+    color: var(--color-heading);
+}
+
+.doc code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 2px 6px;
+    color: var(--color-accent);
+}
+
+.doc pre {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    overflow-x: auto;
+    margin-bottom: 18px;
+}
+
+.doc pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--color-text);
+    font-size: 0.82rem;
+}
+
+.doc blockquote {
+    border-left: 3px solid var(--color-primary);
+    padding: 4px 0 4px 16px;
+    margin: 0 0 18px;
+    color: var(--color-text-muted);
+}
+
+.doc table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 22px;
+    font-size: 0.92rem;
+}
+
+.doc th,
+.doc td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.doc th {
+    color: var(--color-heading);
+    font-weight: 600;
+}
+
+.doc td {
+    color: var(--color-text-muted);
+}
+
+.footer-app-icon {
+    border-radius: 6px;
+}
+
+/* ── Responsive (Verbinal apps + Thought pages) ────────────── */
+@media (max-width: 768px) {
+    .apps-grid,
+    .vt-grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+
+    .vt-hero {
+        padding: 56px 0 48px;
+    }
+
+    .doc h1 {
+        font-size: 1.7rem;
+    }
+}
