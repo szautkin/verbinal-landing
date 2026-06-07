@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aide et assistance — Verbinal Thought</title>
+    <meta name="description" content="Aide, FAQ et dépannage pour Verbinal Thought — un atelier Mac natif pour la réflexion sur la conception de systèmes. Contactez support@verbinal.com.">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/verbinal-thought-icon-256.png">
+    <link rel="apple-touch-icon" href="/assets/verbinal-thought-icon-1024.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="canonical" href="https://verbinal.com/fr/verbinal-thought/support">
+    <meta property="og:url" content="https://verbinal.com/fr/verbinal-thought/support">
+    <link rel="alternate" hreflang="en" href="https://verbinal.com/verbinal-thought/support">
+    <link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/verbinal-thought/support">
+    <link rel="alternate" hreflang="x-default" href="https://verbinal.com/verbinal-thought/support">
+    <meta property="og:locale" content="fr_CA">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/fr/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <div class="header-actions">
+            <nav class="nav">
+            <a href="/fr/verbinal-thought">Verbinal Thought</a>
+            <a href="/fr/verbinal-thought/support">Support</a>
+            <a href="/fr/verbinal-thought/privacy">Confidentialité</a>
+        </nav>
+            <!--LANGSWITCH--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/verbinal-thought/support" hreflang="en">EN</a><a href="/fr/verbinal-thought/support" aria-current="page" hreflang="fr">FR</a></div><!--/LANGSWITCH-->
+        </div>
+    </div>
+</header>
+
+<main class="doc">
+    <div class="container">
+        <div class="doc-inner">
+            <h1>Verbinal Thought &mdash; Aide et assistance</h1>
+
+            <p class="lede">Verbinal Thought est un atelier Mac natif pour la réflexion de haut niveau sur la conception de systèmes. Vous conversez, vous saisissez votre raisonnement sous forme de <strong>Pensées</strong> (des notes markdown que vous pouvez étiqueter, lier et agencer), puis vous les composez en spécifications, registres d’hypothèses, listes d’assertions et dossiers de transfert. C’est un outil de <em>réflexion</em> &mdash; il vous aide à raisonner sur ce que vous construisez. Il n’écrit pas votre code source.</p>
+
+            <p>Cette traduction est fournie pour votre commodité. En cas de divergence, la <a href="/verbinal-thought/support">version anglaise</a> fait foi.</p>
+
+            <ul>
+                <li><strong>Plate-forme&nbsp;:</strong> macOS 14 (Sonoma) ou version ultérieure</li>
+                <li><strong>Disponibilité&nbsp;:</strong> Bientôt sur le Mac App Store</li>
+                <li><strong>Confidentialité&nbsp;:</strong> <a href="/fr/verbinal-thought/privacy">Politique de confidentialité</a></li>
+                <li><strong>Assistance&nbsp;:</strong> <a href="mailto:support@verbinal.com">support@verbinal.com</a></li>
+            </ul>
+
+            <h2>Foire aux questions</h2>
+
+            <h3>Ai-je besoin d’une clé d’API&nbsp;?</h3>
+            <p>Non. Verbinal Thought est <strong>entièrement utilisable hors ligne, sans compte ni clé d’API</strong>. Vous pouvez créer des projets et des Pensées, écrire et modifier en markdown, étiqueter et lier des Pensées, les agencer sur le canevas, effectuer des recherches et exporter &mdash; le tout sans connexion réseau.</p>
+            <p>L’IA est <strong>facultative</strong>. Le partenaire de conversation intégré ne s’active qu’une fois que vous ajoutez votre propre clé de fournisseur. Il n’y a aucune inscription, aucun compte Verbinal et aucune barrière d’essai.</p>
+
+            <h3>Quels modèles d’IA utilise-t-il&nbsp;?</h3>
+            <p>La conversation utilise <strong>OpenAI pour l’instant</strong>, selon le principe <strong>«&nbsp;apportez votre propre clé&nbsp;»</strong> &mdash; vous fournissez votre propre clé d’API OpenAI dans les <strong>Réglages</strong> (<code>&#8984;,</code>), et l’application communique directement avec <code>api.openai.com</code> en HTTPS. Nous n’exploitons aucun proxy ni serveur intermédiaire; les requêtes vont directement de votre Mac à OpenAI sous votre clé.</p>
+            <p>Nous n’exploitons aucun modèle qui nous soit propre. Si vous n’ajoutez pas de clé, le partenaire de conversation reste simplement inactif et le reste de l’application fonctionne normalement.</p>
+
+            <h3>Écrit-il du code à ma place&nbsp;?</h3>
+            <p>Non. Verbinal Thought est un outil de réflexion, pas un outil de programmation. Par conception, il ne fait <strong>pas</strong> ceci&nbsp;:</p>
+            <ul>
+                <li>générer ou compléter du code source,</li>
+                <li>lire votre dépôt,</li>
+                <li>exécuter vos tests ni construire quoi que ce soit,</li>
+                <li>produire une conception de système achevée en un seul clic.</li>
+            </ul>
+            <p>L’IA est un <em>partenaire</em> de réflexion&nbsp;: elle remet en question les hypothèses, propose des solutions de rechange, fait ressortir les contradictions et vous aide à structurer votre raisonnement. Si un bloc de code apparaît dans votre résultat, il s’agit d’un texte que vous avez placé dans un dossier de transfert &mdash; et non de quelque chose que l’outil génère à votre place.</p>
+
+            <h3>Où mes données sont-elles stockées&nbsp;? Sont-elles privées&nbsp;?</h3>
+            <p>Tout est en <strong>priorité au local</strong>. Vos Pensées résident dans une seule base de données SQLite, à l’intérieur du conteneur en bac à sable propre à l’application, sur votre Mac&nbsp;:</p>
+            <pre><code>~/Library/Containers/com.codebg.Verbinal.apps.thought/Data/Library/Application Support/verbinal-thought/data.sqlite</code></pre>
+            <p>Vos clés d’API sont stockées dans le <strong>trousseau macOS</strong>, jamais dans des fichiers en clair. Il n’y a aucun compte Verbinal, aucune synchronisation infonuagique que nous exploitions, aucune analyse d’utilisation, aucun suivi et aucune télémétrie. Le seul trafic réseau est celui que vous activez explicitement&nbsp;: les requêtes de conversation vers votre fournisseur d’IA et &mdash; uniquement si vous y consentez &mdash; la dictée infonuagique (voir ci-dessous).</p>
+            <p>Comme le stockage est un fichier local, <strong>vous êtes propriétaire de vos sauvegardes</strong>&nbsp;: copiez le fichier de base de données ou exportez vos projets. Il n’y a aucune archive en ligne ni service de récupération de données. Tous les détails se trouvent dans la <a href="/fr/verbinal-thought/privacy">politique de confidentialité</a>.</p>
+
+            <h3>Ma dictée est-elle privée&nbsp;?</h3>
+            <p>Oui, par défaut. Le bouton du micro transcrit avec le <strong>framework Speech d’Apple, sur l’appareil</strong> &mdash; l’audio reste sur votre Mac (Apple peut recourir à son propre nuage uniquement pour les langues sans prise en charge sur l’appareil). macOS demande l’autorisation d’accès au microphone lors de la première utilisation.</p>
+            <p>Vous pouvez, de façon <strong>facultative</strong>, basculer le moteur de dictée vers <strong>Cohere</strong> dans <strong>Réglages &rarr; Reconnaissance vocale</strong> et fournir votre propre clé Cohere. Dans ce mode <em>seulement</em>, l’audio enregistré est téléversé en HTTPS vers <code>api.cohere.com</code> pour transcription. Verbinal Thought ne reçoit ni ne stocke jamais votre audio &mdash; il va directement à Cohere sous votre clé. Apple sur l’appareil est l’option par défaut; vous devez choisir Cohere délibérément.</p>
+
+            <h3>Comment exporter mon travail&nbsp;?</h3>
+            <p>Sélectionnez un projet, puis utilisez <strong>Fichier &rarr; Exporter le projet</strong>. Le chemin le plus rapide est <strong>Choisir le format&hellip;</strong> (<code>&#8984;&#8679;E</code>), qui prévisualise ce qui sera écrit et vous laisse choisir un format. Les formats individuels figurent aussi dans le menu&nbsp;:</p>
+            <ul>
+                <li><strong>Markdown</strong> &mdash; <code>.md</code> simple, ainsi que des variantes pour <strong>Obsidian</strong>, <strong>GitHub</strong> et <strong>Pandoc</strong></li>
+                <li><strong>HTML</strong> &mdash; un seul <code>.html</code> ou un <strong>ensemble de site</strong> HTML (<code>.zip</code>)</li>
+                <li><strong>PDF</strong></li>
+                <li><strong>.vthought</strong> &mdash; l’ensemble sans perte (réimportable dans l’application via <strong>Fichier &rarr; Importer .vthought&hellip;</strong>, <code>&#8984;&#8679;I</code>)</li>
+                <li><strong>Instantané JSON</strong> et <strong>tableaux CSV</strong></li>
+                <li>Canevas en <strong>PNG / SVG</strong></li>
+                <li>Esquisses de diagrammes&nbsp;: <strong>Mermaid</strong> (<code>.mmd</code>), <strong>Graphviz DOT</strong> (<code>.dot</code>), plan <strong>OPML</strong></li>
+            </ul>
+            <p>Vous pouvez aussi faire un clic droit sur n’importe quel nœud du canevas pour le <strong>Copier</strong> (en Markdown, lien wiki ou JSON), l’<strong>Exporter la Pensée&hellip;</strong> ou la <strong>Partager la Pensée&hellip;</strong>. Les fichiers sont écrits à un emplacement que vous choisissez via le panneau d’enregistrement macOS standard &mdash; les exports ne quittent jamais votre Mac à moins que vous ne les placiez dans un emplacement partagé.</p>
+
+            <h3>Comment connecter Claude Desktop (agents externes)&nbsp;?</h3>
+            <p>Les agents externes sont <strong>désactivés par défaut</strong>. Pour permettre à un outil comme Claude Desktop de proposer des modifications à vos Pensées&nbsp;:</p>
+            <ol>
+                <li>Ouvrez <strong>Réglages &rarr; Agents externes</strong> (<code>&#8984;,</code>).</li>
+                <li>Activez <strong>Autoriser les agents externes</strong>. Cela ouvre un socket local à l’intérieur du conteneur en bac à sable de l’application.</li>
+                <li>À côté de <strong>Claude Desktop</strong>, cliquez sur <strong>Configurer&hellip;</strong> pour révéler l’extrait de configuration, puis <strong>Copiez</strong>-le.</li>
+                <li>Collez-le dans <code>~/Library/Application Support/Claude/claude_desktop_config.json</code> et redémarrez Claude Desktop.</li>
+            </ol>
+            <p>L’extrait pointe Claude Desktop vers l’utilitaire intégré fourni avec l’application, qui transmet les requêtes à l’application en cours d’exécution via un socket local, restreint au système de fichiers. L’utilitaire n’a aucun accès réseau qui lui soit propre.</p>
+            <p>Deux barrières vous protègent, et toutes deux doivent être activées&nbsp;:</p>
+            <ul>
+                <li><strong>Barrière 1</strong> &mdash; le commutateur <em>Autoriser les agents externes</em>, qui ouvre le socket.</li>
+                <li><strong>Barrière 2</strong> &mdash; une fiche d’approbation par session qui apparaît lorsqu’un agent tente de se connecter pour la première fois. Vous approuvez ou refusez chaque session.</li>
+            </ul>
+            <p>Les agents <strong>proposent; vous validez.</strong> Les modifications apparaissent sous forme de différences révisables que vous acceptez ou refusez; les opérations destructrices (supprimer, archiver, délier) exigent toujours une confirmation explicite supplémentaire. Sur la fiche d’approbation, vous pouvez choisir de mémoriser un client (et le révoquer plus tard dans <strong>Réglages &rarr; Agents externes</strong>), ce qui permet à ses propositions sûres et réversibles de s’appliquer sans révision &mdash; les verbes destructeurs exigent quand même toujours votre confirmation.</p>
+            <blockquote>Astuce&nbsp;: Pour une configuration stable de Claude Desktop, exécutez l’application installée depuis <code>/Applications</code> plutôt qu’une version de développement, afin que le chemin de l’utilitaire ne change pas. La fenêtre contextuelle de configuration vous avertit lorsque le chemin est instable.</blockquote>
+
+            <h2>Dépannage</h2>
+
+            <h3>La conversation IA ne répond pas</h3>
+            <ul>
+                <li><strong>Ajoutez ou vérifiez votre clé OpenAI.</strong> Ouvrez les <strong>Réglages</strong> (<code>&#8984;,</code>) &rarr; <strong>OpenAI</strong> et confirmez que l’état indique «&nbsp;Clé chargée depuis le trousseau.&nbsp;» Utilisez <strong>Afficher la clé</strong> pour la vérifier, et recollez-la au besoin.</li>
+                <li><strong>Confirmez que vous êtes en ligne.</strong> La conversation a besoin d’une connexion à <code>api.openai.com</code>; hors ligne, seules les fonctionnalités d’IA sont en pause &mdash; le reste de l’application continue de fonctionner.</li>
+                <li><strong>Vérifiez votre compte de fournisseur.</strong> Une clé expirée, un problème de facturation ou une limite de débit du côté d’OpenAI se manifestera par une erreur. Vérifiez que la clé fonctionne dans votre tableau de bord OpenAI.</li>
+                <li>Souvenez-vous que la conversation est <strong>facultative</strong> &mdash; si vous n’ajoutez jamais de clé, le panneau de conversation reste inactif, par conception.</li>
+            </ul>
+
+            <h3>La dictée (le bouton du micro) ne fonctionne pas</h3>
+            <ul>
+                <li><strong>Accordez l’autorisation d’accès au microphone.</strong> Lors de la première utilisation, macOS demande l’accès au micro; si vous avez refusé, activez-le dans <strong>Réglages Système &rarr; Confidentialité et sécurité &rarr; Microphone</strong> pour Verbinal Thought. L’autorisation de reconnaissance vocale est demandée de la même façon.</li>
+                <li><strong>Vérifiez le moteur</strong> dans <strong>Réglages &rarr; Reconnaissance vocale</strong>. L’option par défaut est <strong>Apple (sur l’appareil lorsque pris en charge)</strong> et ne nécessite aucune clé.</li>
+                <li><strong>Si vous avez sélectionné Cohere</strong>, la dictée nécessite une clé Cohere valide et une connexion à <code>api.cohere.com</code>. Utilisez le bouton <strong>Tester</strong> à côté du champ de la clé Cohere pour valider la clé, le modèle et le chemin réseau. Revenez à Apple pour dicter hors ligne.</li>
+                <li>Ajustez <strong>Arrêt automatique après un silence</strong> si l’enregistrement s’interrompt trop tôt ou se prolonge trop longtemps.</li>
+            </ul>
+
+            <h3>Claude Desktop indique que le service MCP est indisponible</h3>
+            <ul>
+                <li><strong>Activez la barrière 1.</strong> Ouvrez <strong>Réglages &rarr; Agents externes</strong> et activez <strong>Autoriser les agents externes</strong> &mdash; le socket reste fermé tant que vous ne le faites pas.</li>
+                <li><strong>Gardez Verbinal Thought en cours d’exécution.</strong> L’utilitaire transmet à l’application <em>en direct</em>; si l’application est quittée, il n’y a rien à quoi se connecter. Lancez-la d’abord.</li>
+                <li><strong>Recopiez l’extrait de configuration.</strong> Dans <strong>Réglages &rarr; Agents externes</strong>, à côté de <strong>Claude Desktop</strong>, cliquez sur <strong>Configurer&hellip;</strong>, puis collez un extrait à jour dans <code>claude_desktop_config.json</code> et <strong>redémarrez Claude Desktop</strong>. Si vous exécutiez une version de développement, le chemin de l’utilitaire peut changer entre les reconstructions &mdash; utilisez l’application installée dans <code>/Applications</code> pour un chemin stable.</li>
+                <li><strong>Approuvez la session.</strong> Lorsque l’agent se connecte, acceptez la <strong>fiche d’approbation par session</strong> (barrière 2).</li>
+            </ul>
+
+            <h3>Où mes données résident-elles (et comment les sauvegarder)&nbsp;?</h3>
+            <p>Vos données forment un seul fichier SQLite dans le conteneur en bac à sable de l’application&nbsp;:</p>
+            <pre><code>~/Library/Containers/com.codebg.Verbinal.apps.thought/Data/Library/Application Support/verbinal-thought/data.sqlite</code></pre>
+            <p>Pour effectuer une sauvegarde, <strong>copiez ce fichier</strong> ou <strong>exportez vos projets</strong> (l’ensemble <code>.vthought</code> est sans perte et se réimporte proprement). Les clés d’API résident dans le trousseau macOS, pas dans ce fichier. Il n’y a aucune copie infonuagique &mdash; si vous supprimez le fichier, les données sont perdues.</p>
+
+            <h2>Quelques raccourcis pratiques</h2>
+            <table>
+                <thead>
+                    <tr><th>Action</th><th>Raccourci</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nouveau projet</td><td><code>&#8984;&#8679;N</code></td></tr>
+                    <tr><td>Exporter le projet &rarr; Choisir le format&hellip;</td><td><code>&#8984;&#8679;E</code></td></tr>
+                    <tr><td>Importer .vthought&hellip;</td><td><code>&#8984;&#8679;I</code></td></tr>
+                    <tr><td>Imprimer le projet&hellip;</td><td><code>&#8984;P</code></td></tr>
+                    <tr><td>Dicter (activer/désactiver le micro)</td><td><code>&#8984;&#8679;M</code></td></tr>
+                    <tr><td>Changer de panneau de droite&nbsp;: Conversation IA / Pensée / Projet</td><td><code>&#8984;1</code> / <code>&#8984;2</code> / <code>&#8984;3</code></td></tr>
+                    <tr><td>Afficher les éléments archivés</td><td><code>&#8997;&#8984;A</code></td></tr>
+                    <tr><td>Ouvrir les Réglages</td><td><code>&#8984;,</code></td></tr>
+                </tbody>
+            </table>
+            <p>Vous pouvez aussi envoyer du texte sélectionné depuis n’importe quelle application vers Verbinal Thought via le menu macOS <strong>Services &rarr; Envoyer à Verbinal Thought</strong>.</p>
+
+            <h2>Obtenir de l’aide</h2>
+            <ul>
+                <li><strong>Courriel&nbsp;:</strong> <a href="mailto:support@verbinal.com">support@verbinal.com</a> (nous visons à répondre dans un jour ouvrable)</li>
+                <li><strong>Signaler un bogue ou demander une fonctionnalité&nbsp;:</strong> écrivez à <a href="mailto:support@verbinal.com">support@verbinal.com</a> en précisant les étapes pour reproduire le problème et votre version de macOS</li>
+                <li><strong>Détails sur la confidentialité&nbsp;:</strong> <a href="/fr/verbinal-thought/privacy">Politique de confidentialité</a></li>
+            </ul>
+            <p class="doc-meta">Copyright &copy; 2026 Serhii Zautkin.</p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-thought-icon-256.png" alt="Verbinal Thought" width="28" height="28" class="footer-app-icon">
+            <span>Verbinal Thought</span>
+        </div>
+        <p class="footer-copy">&copy; 2026 Serhii Zautkin &middot; <a href="/fr/verbinal-thought/privacy">Confidentialité</a> &middot; <a href="/fr/verbinal-thought/support">Support</a> &middot; <a href="/fr/">verbinal.com</a></p>
+        <!--LANGSWITCH-FOOTER--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/verbinal-thought/support" hreflang="en">EN</a><a href="/fr/verbinal-thought/support" aria-current="page" hreflang="fr">FR</a></div><!--/LANGSWITCH-FOOTER-->
+    </div>
+</footer>
+
+</body>
+</html>

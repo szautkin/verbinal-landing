@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de confidentialité — Verbinal Thought</title>
+    <meta name="description" content="Politique de confidentialité de Verbinal Thought : le développeur n’exploite aucun serveur et ne recueille aucune donnée. Votre travail reste sur votre Mac.">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/verbinal-thought-icon-256.png">
+    <link rel="apple-touch-icon" href="/assets/verbinal-thought-icon-1024.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="canonical" href="https://verbinal.com/fr/verbinal-thought/privacy">
+    <meta property="og:url" content="https://verbinal.com/fr/verbinal-thought/privacy">
+    <link rel="alternate" hreflang="en" href="https://verbinal.com/verbinal-thought/privacy">
+    <link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/verbinal-thought/privacy">
+    <link rel="alternate" hreflang="x-default" href="https://verbinal.com/verbinal-thought/privacy">
+    <meta property="og:locale" content="fr_CA">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/fr/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <div class="header-actions">
+            <nav class="nav">
+            <a href="/fr/verbinal-thought">Verbinal Thought</a>
+            <a href="/fr/verbinal-thought/support">Support</a>
+            <a href="/fr/verbinal-thought/privacy">Confidentialité</a>
+        </nav>
+            <!--LANGSWITCH--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/verbinal-thought/privacy" hreflang="en">EN</a><a href="/fr/verbinal-thought/privacy" aria-current="page" hreflang="fr">FR</a></div><!--/LANGSWITCH-->
+        </div>
+    </div>
+</header>
+
+<main class="doc">
+    <div class="container">
+        <div class="doc-inner">
+            <h1>Politique de confidentialité de Verbinal Thought</h1>
+            <p class="doc-meta">Dernière mise à jour : 2026-05-31</p>
+
+            <p>Verbinal Thought est une application macOS native pour réfléchir à la conception au niveau système. Elle fonctionne sur votre Mac et conserve votre travail sur votre Mac. Cette politique explique, en termes clairs, exactement ce qui advient de vos données &mdash; et ce qui n’advient pas.</p>
+
+            <p class="lede">En bref : <strong>le développeur de Verbinal Thought n’exploite aucun serveur infonuagique et ne recueille aucune donnée à votre sujet.</strong> L’application stocke votre travail localement sur votre appareil. Le seul moment où quoi que ce soit quitte votre Mac par Internet, c’est lorsque <em>vous</em> activez et configurez un service d’IA externe avec votre propre compte &mdash; et même alors, vos données vont directement de votre Mac à ce service, jamais par notre intermédiaire.</p>
+
+            <p>Cette traduction française est fournie à titre indicatif. En cas de divergence, la <a href="/verbinal-thought/privacy">version anglaise</a> fait foi.</p>
+
+            <h2>Ce que recueille le développeur</h2>
+            <p><strong>Rien.</strong></p>
+            <p>Nous n’exploitons aucun service d’infrastructure Internet, aucun serveur opéré par le développeur et aucun compte. Nous ne recueillons, ne recevons, ne stockons ni n’avons aucun accès à vos Pensées, à vos notes, à vos messages de clavardage, à vos enregistrements vocaux, à vos clés d’API ni à aucune information sur la façon dont vous utilisez l’application.</p>
+            <p>Il n’y a :</p>
+            <ul>
+                <li><strong>Aucune analyse d’utilisation ni aucun suivi d’utilisation</strong> d’aucune sorte.</li>
+                <li><strong>Aucune publicité</strong> ni aucun identifiant publicitaire.</li>
+                <li><strong>Aucun SDK tiers d’analyse, d’attribution ou de rapport de plantage.</strong> (L’application n’est liée qu’aux bibliothèques tierces ordinaires nécessaires à son fonctionnement ; aucune d’elles ne recueille ni ne transmet vos données.)</li>
+                <li><strong>Aucun suivi entre applications ou entre sites.</strong> L’application ne relie pas votre activité à votre identité au sein d’autres applications ou sites Web.</li>
+            </ul>
+            <p>Cela se reflète dans le manifeste de confidentialité de l’application, qui ne déclare aucun suivi ni aucun type de données recueillies.</p>
+
+            <h2>Données stockées sur votre appareil</h2>
+            <p>Tout ce que vous créez dans Verbinal Thought est stocké <strong>localement sur votre Mac</strong>, à l’intérieur du conteneur de bac à sable de l’application. Plus précisément :</p>
+            <ul>
+                <li>Vos Pensées, étiquettes, liens et autres contenus sont enregistrés dans une <strong>base de données SQLite locale</strong> à l’intérieur du conteneur de bac à sable macOS de l’application (sous <code>~/Library/Containers/</code>).</li>
+                <li>Un petit nombre de <strong>préférences d’interface</strong> (par exemple, quel onglet de panneau est ouvert et si les éléments archivés sont affichés) sont stockées localement comme réglages d’application macOS standards.</li>
+                <li>Les <strong>secrets et réglages locaux</strong> sont stockés dans le <strong>trousseau macOS</strong> sur votre appareil. Ceux-ci comprennent votre clé d’API OpenAI, une clé d’API Cohere facultative, vos préférences de reconnaissance vocale / dictée, ainsi que les réglages d’activation/désactivation de l’intégration locale facultative décrite ci-dessous. Ils sont enregistrés sous forme d’éléments de type mot de passe générique, accessibles uniquement lorsque votre appareil est déverrouillé, et ne sont partagés avec aucune autre application ni avec nous.</li>
+                <li>Les fichiers que vous exportez explicitement (par exemple les ensembles <code>.vthought</code>, ou les exportations en Markdown / HTML / PDF) sont écrits uniquement aux emplacements que <em>vous</em> choisissez au moyen de la boîte de dialogue d’enregistrement macOS standard.</li>
+            </ul>
+            <p>Rien de tout cela ne quitte votre appareil de lui-même. Il n’y a aucune synchronisation automatique, aucune sauvegarde infonuagique ni aucun téléversement de votre contenu par l’application elle-même.</p>
+
+            <h3>Intégration locale facultative avec d’autres applications sur votre Mac</h3>
+            <p>Verbinal Thought peut, de façon facultative, permettre à d’autres applications déjà en cours d’exécution <strong>sur le même Mac</strong> (par exemple, un assistant IA tel que Claude Desktop) de s’y connecter par un canal local, sur l’appareil (un socket de domaine UNIX à l’intérieur du conteneur partagé de l’application). Cette fonction est <strong>désactivée par défaut</strong>, exige que vous l’activiez dans les Réglages et exige en outre que vous approuviez chaque application qui se connecte. Cette connexion est entièrement locale à votre Mac et n’envoie pas vos données par Internet ni au développeur.</p>
+
+            <h2>Services tiers que vous pouvez activer</h2>
+            <p>Verbinal Thought communique avec des services Internet externes uniquement lorsque vous choisissez d’utiliser une fonctionnalité qui en nécessite un, et seulement après que vous avez fourni vos propres identifiants. Dans tous les cas, la connexion se fait <strong>directement de votre Mac vers cette entreprise par HTTPS</strong>. Il n’y a aucun serveur Verbinal Thought entre les deux, et nous ne voyons jamais les données.</p>
+
+            <h3>OpenAI (pour le clavardage / l’assistant IA)</h3>
+            <p>La fonctionnalité de clavardage IA utilise <strong>OpenAI</strong>. Pour l’utiliser, vous collez votre <strong>propre clé d’API OpenAI</strong> dans les Réglages ; elle est stockée dans votre trousseau.</p>
+            <ul>
+                <li><strong>Où elles vont :</strong> Lorsque vous envoyez un message, l’application effectue une requête directement à OpenAI à <code>https://api.openai.com</code> (le point d’accès <code>v1/chat/completions</code>), authentifiée avec votre clé d’API.</li>
+                <li><strong>Ce qui est envoyé :</strong> Le contenu de votre conversation de clavardage &mdash; les messages et le contexte que vous envoyez à l’assistant, qui peuvent comprendre du texte de vos Pensées.</li>
+                <li><strong>Qui les traite :</strong> OpenAI, selon les propres conditions et la propre politique de confidentialité d’OpenAI. Votre utilisation d’OpenAI vous concerne, vous et OpenAI.</li>
+            </ul>
+            <p>Votre clé d’API et le contenu de votre clavardage ne transitent jamais par aucun serveur exploité par le développeur.</p>
+
+            <h3>Apple Speech (l’option par défaut pour la dictée)</h3>
+            <p>La dictée vocale utilise <strong>la reconnaissance vocale Apple sur l’appareil par défaut</strong>. Lorsque ce moteur par défaut est actif, l’audio de votre microphone est transcrit par le framework Speech d’Apple sur votre Mac. Cela ne nécessite ni compte ni clé d’API, et est géré par Apple en tant que partie de macOS.</p>
+
+            <h3>Cohere (dictée infonuagique facultative &mdash; désactivée par défaut)</h3>
+            <p>La dictée offre aussi un moteur infonuagique <strong>facultatif</strong> propulsé par <strong>Cohere</strong>. Celui-ci n’est <strong>pas</strong> utilisé à moins que vous ne basculiez délibérément le moteur de reconnaissance vocale loin de l’option Apple par défaut <strong>et</strong> que vous n’entriez votre propre clé d’API Cohere dans les Réglages.</p>
+            <ul>
+                <li><strong>Quand cela s’applique :</strong> Uniquement si vous sélectionnez le moteur de reconnaissance vocale Cohere et fournissez une clé d’API Cohere.</li>
+                <li><strong>Ce qui est envoyé :</strong> Votre <strong>audio de dictée enregistré</strong> (encodé sous forme de fichier audio FLAC mono 16 kHz) avec la langue que vous avez choisie et le réglage du modèle de transcription.</li>
+                <li><strong>Où il va :</strong> Directement de votre Mac vers Cohere à <code>https://api.cohere.com</code> (le point d’accès <code>/v2/audio/transcriptions</code>), authentifié avec votre clé d’API Cohere.</li>
+                <li><strong>Qui le traite :</strong> Cohere, selon les propres conditions et la propre politique de confidentialité de Cohere.</li>
+            </ul>
+            <p>Si vous laissez la dictée sur l’option Apple sur l’appareil par défaut, <strong>aucun audio n’est jamais téléversé vers Cohere ni nulle part ailleurs.</strong></p>
+
+            <h2>Microphone et dictée</h2>
+            <p>L’application demande l’accès au microphone uniquement pour la fonctionnalité de dictée, et seulement lorsque vous démarrez un enregistrement. macOS vous demandera votre autorisation la première fois.</p>
+            <ul>
+                <li>Avec le <strong>moteur Apple sur l’appareil par défaut</strong>, votre audio enregistré est transcrit <strong>sur votre Mac</strong> et n’est pas téléversé.</li>
+                <li>Avec le <strong>moteur Cohere facultatif</strong> (uniquement si vous l’avez activé et fourni une clé), votre audio enregistré est téléversé vers Cohere pour transcription comme décrit ci-dessus.</li>
+            </ul>
+            <p>Vous gardez toujours le contrôle du moteur utilisé, et vous pouvez le changer à tout moment dans les Réglages.</p>
+
+            <h2>Vos commandes</h2>
+            <ul>
+                <li><strong>Utilisez l’application pleinement capable de fonctionner hors ligne.</strong> Sans entrer aucune clé d’API, vos Pensées restent entièrement sur votre appareil. Le clavardage IA n’aura simplement aucun fournisseur à qui parler.</li>
+                <li><strong>Choisissez votre fournisseur d’IA.</strong> La fonctionnalité de clavardage ne fonctionne qu’avec une clé d’API OpenAI que vous fournissez, et n’envoie des données que lorsque vous l’utilisez.</li>
+                <li><strong>Gardez la dictée sur l’appareil.</strong> Laissez le moteur de reconnaissance vocale sur l’option Apple sur l’appareil par défaut pour vous assurer qu’aucun audio ne quitte jamais votre Mac. La dictée infonuagique par Cohere est strictement sur option d’adhésion.</li>
+                <li><strong>Contrôlez l’intégration locale.</strong> La connexion facultative sur l’appareil pour d’autres applications est désactivée tant que vous ne l’activez pas et n’approuvez pas chaque application qui se connecte ; vous pouvez la désactiver ou révoquer les applications approuvées à tout moment dans les Réglages.</li>
+                <li><strong>Supprimez vos clés.</strong> Effacer votre clé d’API OpenAI ou Cohere dans les Réglages la supprime de votre trousseau.</li>
+                <li><strong>Supprimez vos données.</strong> Comme votre contenu réside dans une base de données locale au sein du conteneur de bac à sable de l’application, supprimer l’application et son conteneur retire ces données de votre appareil. Vous pouvez aussi exporter votre travail dans un fichier <code>.vthought</code> à tout moment.</li>
+                <li><strong>Gérez les données détenues par des tiers</strong> (OpenAI, Cohere) au moyen de votre compte auprès de ces entreprises, selon leurs politiques respectives.</li>
+            </ul>
+
+            <h2>Enfants</h2>
+            <p>Verbinal Thought est un outil de productivité et de réflexion destiné au grand public et n’est pas dirigé vers les enfants. Le développeur ne recueille sciemment aucun renseignement personnel auprès de qui que ce soit, y compris les enfants &mdash; parce que le développeur ne recueille aucun renseignement personnel du tout.</p>
+
+            <h2>Modifications à cette politique</h2>
+            <p>Si cette politique change, nous mettrons à jour la version publiée sur la page d’accueil de l’application et réviserons la date de &laquo;&nbsp;dernière mise à jour&nbsp;&raquo; ci-dessus. Les modifications importantes y seront reflétées avant qu’elles ne prennent effet.</p>
+
+            <h2>Contact</h2>
+            <p>Les questions concernant cette politique ou les pratiques de confidentialité de l’application peuvent être envoyées à :</p>
+            <p><strong><a href="mailto:support@verbinal.com">support@verbinal.com</a></strong></p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-thought-icon-256.png" alt="Verbinal Thought" width="28" height="28" class="footer-app-icon">
+            <span>Verbinal Thought</span>
+        </div>
+        <p class="footer-copy">&copy; 2026 Serhii Zautkin &middot; <a href="/fr/verbinal-thought/privacy">Confidentialité</a> &middot; <a href="/fr/verbinal-thought/support">Support</a> &middot; <a href="/fr/">verbinal.com</a></p>
+        <!--LANGSWITCH-FOOTER--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/verbinal-thought/privacy" hreflang="en">EN</a><a href="/fr/verbinal-thought/privacy" aria-current="page" hreflang="fr">FR</a></div><!--/LANGSWITCH-FOOTER-->
+    </div>
+</footer>
+
+</body>
+</html>

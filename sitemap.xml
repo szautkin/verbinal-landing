@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://verbinal.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/fr/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/blog/verbinal-1-2-5-macos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-2-5-macos"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-2-5-macos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-2-5-macos"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/fr/blog/verbinal-1-2-5-macos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-2-5-macos"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-2-5-macos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-2-5-macos"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/verbinal-thought</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/verbinal-thought"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/verbinal-thought"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/verbinal-thought"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/fr/verbinal-thought</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/verbinal-thought"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/verbinal-thought"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/verbinal-thought"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/verbinal-thought/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/verbinal-thought/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/verbinal-thought/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/verbinal-thought/support"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/fr/verbinal-thought/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/verbinal-thought/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/verbinal-thought/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/verbinal-thought/support"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/verbinal-thought/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/verbinal-thought/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/verbinal-thought/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/verbinal-thought/privacy"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/fr/verbinal-thought/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/verbinal-thought/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/verbinal-thought/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/verbinal-thought/privacy"/>
+  </url>
+</urlset>
