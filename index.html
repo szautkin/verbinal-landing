@@ -42,7 +42,7 @@
 </head>
 <body>
 
-<script>try{if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')document.documentElement.classList.add('announce-hidden');}catch(e){}</script>
+<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-hidden');if(localStorage.getItem('verbinal-macos-125-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');}catch(e){}</script>
 
 <div class="announce" id="announce">
     <a href="#platforms" class="announce-text">
@@ -51,6 +51,15 @@
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-close" aria-label="Dismiss announcement">&times;</button>
+</div>
+
+<div class="announce announce-sub" id="announce-macos">
+    <a href="/blog/verbinal-1-2-5-macos" class="announce-text">
+        <span class="announce-tag">macOS 1.2.5</span>
+        <span>Verbinal for Mac now drives Claude Desktop &amp; Claude Code on CANFAR &mdash; read the guide</span>
+        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
+    </a>
+    <button type="button" class="announce-close" id="announce-macos-close" aria-label="Dismiss announcement">&times;</button>
 </div>
 
 <header class="header">
@@ -64,6 +73,7 @@
             <a href="#platforms">Download</a>
             <a href="#open-source">Open Source</a>
             <a href="#apps">Apps</a>
+            <a href="/blog">Blog</a>
             <a href="mailto:support@verbinal.com">Support</a>
         </nav>
     </div>
@@ -333,18 +343,22 @@
             <img src="assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
             <span>Verbinal</span>
         </div>
-        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; CANFAR clients are open source under MPL-2.0 and AGPL-3.0.</p>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="/blog">Blog</a> &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; CANFAR clients are open source under MPL-2.0 and AGPL-3.0.</p>
     </div>
 </footer>
 
 <script>
 (function () {
-    var btn = document.getElementById('announce-close');
-    if (!btn) return;
-    btn.addEventListener('click', function () {
-        document.documentElement.classList.add('announce-hidden');
-        try { localStorage.setItem('verbinal-ios-announce-dismissed', '1'); } catch (e) {}
-    });
+    function wire(id, cls, key) {
+        var btn = document.getElementById(id);
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+            document.documentElement.classList.add(cls);
+            try { localStorage.setItem(key, '1'); } catch (e) {}
+        });
+    }
+    wire('announce-close', 'announce-hidden', 'verbinal-ios-announce-dismissed');
+    wire('announce-macos-close', 'announce-macos-hidden', 'verbinal-macos-125-announce-dismissed');
 })();
 </script>
 

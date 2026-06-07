@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One conversation, one CANFAR session: Verbinal for macOS 1.2.5 — Verbinal</title>
+    <meta name="description" content="Verbinal for macOS 1.2.5 bridges to your own Claude Desktop or Claude Code over the Model Context Protocol — so you can run a whole CANFAR research session from a single conversation, approving the moves that matter.">
+    <meta name="keywords" content="Verbinal, CANFAR, CADC, macOS, MCP, Model Context Protocol, Claude Desktop, Claude Code, astronomy, Skaha, FITS, VOSpace, research">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="One conversation, one CANFAR session: Verbinal for macOS 1.2.5">
+    <meta property="og:description" content="The native CADC and CANFAR client now bridges to your own Claude Desktop or Claude Code over the Model Context Protocol — run a whole research session from a single train of thought, approving the moves that matter.">
+    <meta property="og:image" content="/assets/blog/verbinal-1-2-5-welcome.png">
+    <meta property="og:image:alt" content="Verbinal for macOS Welcome screen with tiles for Portal, Search, Research, Storage, FITS Viewer, Addons, AI Assistant, and AI Guide.">
+    <meta property="og:site_name" content="Verbinal">
+    <meta property="og:url" content="https://verbinal.com/blog/verbinal-1-2-5-macos">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="One conversation, one CANFAR session: Verbinal for macOS 1.2.5">
+    <meta name="twitter:description" content="Verbinal for macOS now bridges to your own Claude Desktop or Claude Code over MCP — run a whole CANFAR research session from one conversation, approving the moves that matter.">
+    <meta name="twitter:image" content="/assets/blog/verbinal-1-2-5-welcome.png">
+
+    <link rel="canonical" href="https://verbinal.com/blog/verbinal-1-2-5-macos">
+    <link rel="icon" type="image/svg+xml" href="/assets/verbinal-dark.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/play_store_icon_512.png">
+    <link rel="apple-touch-icon" href="/assets/play_store_icon_512.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <nav class="nav">
+            <a href="/#features">Features</a>
+            <a href="/#platforms">Download</a>
+            <a href="/blog">Blog</a>
+            <a href="mailto:support@verbinal.com">Support</a>
+        </nav>
+    </div>
+</header>
+
+<section class="post-hero">
+    <div class="container">
+        <div class="doc-inner">
+            <a href="/blog" class="post-back"><span aria-hidden="true">&lsaquo;</span> All articles</a>
+            <div class="post-eyebrow">
+                <span class="tag">macOS 1.2.5</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>Release</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>7 June 2026</span>
+            </div>
+            <h1>One conversation, one CANFAR session: Verbinal for macOS 1.2.5</h1>
+            <p class="post-lede">The native CADC and CANFAR client now bridges to your own Claude Desktop or Claude Code over the Model Context Protocol &mdash; so you can run a whole research session from a single train of thought, approving the moves that matter.</p>
+            <div class="post-byline">
+                <span>Serhii Zautkin</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>8 min read</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="doc post">
+    <div class="container">
+        <div class="doc-inner">
+            <article>
+
+                <h2>The tab you keep losing</h2>
+                <p>You know the shape of an afternoon on the CANFAR Science Portal. A target name in your head, a browser open to the CADC archive, an ADQL box, a results table you sort and re-sort, a preview you squint at, then a jump to the Skaha portal to launch a Notebook, then VOSpace to stage the data, then back to a terminal to sanity-check a reduction. Every step is a context switch. Every switch is a small tax on attention, and by the third tab you have lost the thread of the question you sat down to answer.</p>
+                <p><strong>Verbinal for macOS 1.2.5</strong> is about getting that thread back. The release adds a built-in <strong>Model Context Protocol (MCP)</strong> bridge, so a compatible AI assistant &mdash; your own <strong>Claude Desktop</strong> or <strong>Claude Code</strong> &mdash; can work directly inside the app: search the archive, read metadata, list and launch sessions, browse storage, run a snippet on compute, and keep what is worth keeping. You stay in one conversation. The portal-clicking moves out of the way. And &mdash; this is the part that matters for research &mdash; nothing consequential happens without your explicit approval.</p>
+                <p>This piece walks through one concrete, end-to-end CANFAR session driven from a Claude conversation, and explains the architecture and the controls around it as they come up. The point is not novelty. The point is fewer tabs and the same rigour.</p>
+
+                <h2>What Verbinal for macOS is, briefly</h2>
+                <p>If you are new to it: Verbinal for macOS is a fast, native companion for the <strong>CANFAR Science Portal</strong> and the <strong>Canadian Astronomy Data Centre (CADC)</strong>. It is written in SwiftUI for macOS 14 (Sonoma) or later, carries zero external dependencies &mdash; only Apple frameworks &mdash; and is free and open source under the Mozilla Public License 2.0. It is on the Mac App Store, ships full English and French interfaces, and needs only a free CANFAR account; your credentials live in the macOS Keychain.</p>
+                <p>What it already did before this release still holds:</p>
+                <ul>
+                    <li><strong>Sessions.</strong> Launch and manage interactive Notebook, Desktop, CARTA, Contributed, and Firefly sessions on Skaha without a browser &mdash; status auto-refreshing on a 15-second poll, live platform CPU and RAM availability, one-click re-launch from recent history, session events and container logs inspected in place, and headless batch jobs submitted and monitored in the app.</li>
+                    <li><strong>CADC archive search.</strong> Build queries against the CADC TAP service, review results in a sortable table, and act on them in place.</li>
+                    <li><strong>Research workspace.</strong> Track downloaded observations, search across them, and keep notes alongside your data files for ongoing projects.</li>
+                    <li><strong>VOSpace storage.</strong> Browse, organise, upload, and manage VOSpace files in a native file browser, with quota and usage at a glance.</li>
+                    <li><strong>FITS viewer.</strong> View FITS images with hardware-accelerated, Metal-based rendering &mdash; pan, zoom, adjust scaling, inspect pixel values.</li>
+                    <li><strong>Image content discovery.</strong> Find which CANFAR container image carries the Python, R, system, and OS-level packages your workflow needs, before you launch.</li>
+                </ul>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-2-5-welcome.png" alt="Verbinal for macOS Welcome screen — the What Verbinal Can Do feature guide with tiles for Portal, Search, Research, Storage, FITS Viewer, Addons, AI Assistant, and AI Guide." width="1600" height="982" loading="lazy">
+                    <figcaption>The new Welcome screen in 1.2.5 &mdash; every area one tile away, including the new AI Assistant and AI Guide.</figcaption>
+                </figure>
+
+                <p>The new <strong>Welcome</strong> screen and its <em>What Verbinal Can Do</em> feature guide are the clearer way in. Every area is one tile away &mdash; Portal, Search, Research, Storage, FITS Viewer, Addons &mdash; with the Help and Go menus offering quick access to the same destinations. Two tiles are new this release: <strong>AI Assistant</strong>, which connects Claude to drive Verbinal, and <strong>AI Guide</strong>, which lets you tune what the assistant sees. So 1.2.5 keeps all of the above and adds two things: the AI bridge, and a clearer way in.</p>
+
+                <h2>What's new in 1.2.5</h2>
+                <p>The release concentrates on the AI assistant integration and on making the app easier to explore. At a glance:</p>
+                <h3>AI assistant integration</h3>
+                <ul>
+                    <li>A <strong>built-in MCP server</strong> lets Claude Desktop and Claude Code work inside Verbinal &mdash; searching the archive, querying sessions, browsing storage, launching jobs, and starting or stopping compute and running code on your behalf.</li>
+                    <li>A <strong>guided setup wizard</strong> connects your client in a few clear steps, with one-click configuration and a built-in connection check.</li>
+                    <li>An <strong>AI Guide</strong> lets you review and fine-tune the description your assistant sees for each tool, and author your own read-only instruction tools. It is off by default.</li>
+                    <li><strong>Remote compute control</strong> lets the assistant start and stop compute sessions and run code, with the cores and RAM you choose.</li>
+                    <li>More reliable connections: multiple AI clients can stay connected at once without interfering with each other.</li>
+                </ul>
+                <h3>Discoverability</h3>
+                <ul>
+                    <li>A new <strong>Welcome</strong> screen and a <em>What Verbinal Can Do</em> feature guide.</li>
+                    <li>Quick access to every area from the <strong>Help</strong> and <strong>Go</strong> menus.</li>
+                    <li>An <strong>AI Assistant</strong> tile on the home screen.</li>
+                </ul>
+                <p>The release also brings a round of polish &mdash; smoother navigation, clearer Settings, more French localization, and the usual fixes &mdash; which the closing section returns to. First, the part most worth understanding: how the bridge works, and how it keeps you in control.</p>
+
+                <h2>How the bridge actually works</h2>
+                <p>Before the workflow, the mechanism &mdash; because researchers reasonably want to know where their data goes, and a small bridge is one you can audit. The short version: Verbinal does not provide or run an AI model, and it never sends your data to an AI vendor on its own. The intelligence is your own Claude, running under your own account. Verbinal is the bridge and the tools the assistant can call &mdash; nothing more.</p>
+                <p>Verbinal exposes its features over MCP. Your Claude client connects to Verbinal through a tiny helper binary bundled inside the app. The helper relays JSON-RPC messages over a local <strong>UNIX-domain socket</strong> that lives inside the app's own sandbox container on your Mac. That is the entire transport.</p>
+                <p>Two properties matter here. First, the helper has no network access of its own &mdash; it cannot reach the internet, only the local socket; it is a pipe and nothing more. Second, your AI client talks <em>only</em> to your local Verbinal app. Verbinal, in turn, talks directly to CANFAR and CADC over HTTPS using your own CADC login. Nothing about your archive, sessions, or storage is routed through a Verbinal server, because there is no Verbinal server to route it through.</p>
+                <p>This is built to be App Store-safe and sandboxed. In 1.2.5 the MCP server runs inside the app itself, needs no special entitlements, and the only data that ever leaves your Mac is your own authenticated calls to CANFAR and CADC, plus whatever you choose to send to your own AI provider through your own Claude client. Because the release handles multiple clients cleanly, a Claude Desktop window and a Claude Code session can stay connected at the same time without interfering with each other. It is a design you can reason about rather than simply trust.</p>
+
+                <h2>The tool surface</h2>
+                <p>Through that bridge, the assistant is offered <strong>more than fifty tools</strong>. They span the same ground the app does, so the assistant can do the work you would otherwise click through by hand:</p>
+                <ul>
+                    <li><strong>Status.</strong> App, session, service-health, and authentication status.</li>
+                    <li><strong>Archive.</strong> CADC archive search, observation metadata (CAOM-2), data links, preview images, target and coordinate resolution, and VizieR cone search.</li>
+                    <li><strong>Sessions.</strong> List, get, launch, session types, available images, recent launches, and session events.</li>
+                    <li><strong>Storage.</strong> List a VOSpace path, get a node, read a file, download.</li>
+                    <li><strong>FITS.</strong> Read a header, resolve world-coordinate systems.</li>
+                    <li><strong>Research workspace.</strong> Downloaded observations, notes, saved queries.</li>
+                    <li><strong>Headless jobs.</strong> Launch, list, get, logs, events.</li>
+                    <li><strong>Remote compute.</strong> Start, stop, and run code &mdash; together with the proposal lifecycle that governs those actions.</li>
+                </ul>
+                <p>The breadth is the point, but so is the boundary. Read-only tools such as <code>search_observations</code> or a status check return data directly. Tools that change state &mdash; like <code>launch_session</code> or <code>run_code</code> &mdash; go through approval. That split is the subject of the next two sections.</p>
+
+                <h2>Setting it up: the wizard</h2>
+                <p>The integration is off until you turn it on. You enable <strong>Allow external AI agents</strong> in <strong>Settings</strong>; until then the socket is closed and no assistant can reach the app. That is the first gate, and it is deliberately a manual one.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-2-5-connect-agent.png" alt="The Connect your AI agent wizard in Verbinal asking which client are you connecting, with Claude Desktop and Claude Code as the two options." width="1600" height="974" loading="lazy">
+                    <figcaption>The guided setup wizard: choose Claude Desktop or Claude Code, then let Verbinal do the wiring and run a connection check.</figcaption>
+                </figure>
+
+                <p>From there, the <em>Connect your AI agent</em> wizard does the wiring rather than leaving you to hand-edit config files. The steps are visible across the top &mdash; allow AI agents, pick your client, configure, verify &mdash; and it starts by asking <strong>which client are you connecting?</strong> with <strong>Claude Desktop</strong> and <strong>Claude Code</strong> as the two options:</p>
+                <ol>
+                    <li><strong>Allow AI agents.</strong> The switch that opens the local socket.</li>
+                    <li><strong>Pick your client.</strong> Choose Claude Desktop or Claude Code. You connect one at a time; run the wizard again for the other.</li>
+                    <li><strong>Configure.</strong> Verbinal applies the configuration in one click, so you do not touch a config file by hand.</li>
+                    <li><strong>Verify.</strong> A built-in connection check confirms the client can reach Verbinal and see its tools.</li>
+                </ol>
+                <p>When the check passes, your assistant reports back the way any well-behaved tool should.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-2-5-claude-mcp.png" alt="Verbinal for macOS with a live Claude conversation in a side panel, reporting that the Verbinal CANFAR MCP connection is healthy and its tools are available." width="1600" height="801" loading="lazy">
+                    <figcaption>Connection verified: Claude reports the Verbinal CANFAR bridge is healthy and its tools are live, before you ask it to do anything real.</figcaption>
+                </figure>
+
+                <p>Here Claude has verified the connection and is listing healthy tools &mdash; the assistant confirming it can see Verbinal, and that the surface is live, before you ask it to do anything real. That confirmation step is worth slowing down for: you want to know the bridge is up and reaching CANFAR with your credentials before you start launching compute through it.</p>
+
+                <h2>Read by default, write by proposal</h2>
+                <p>This is the control model, and it is the reason an astronomer can hand work to an assistant without losing accountability for it. Four mechanisms keep you in charge, and none of them are buried.</p>
+                <p><strong>Opt-in.</strong> As above, the master switch is <strong>Allow external AI agents</strong> in <strong>Settings</strong>, and its default state is closed. Until you flip it, no assistant can reach the app.</p>
+                <p><strong>Read by default, write by proposal.</strong> The tool surface splits cleanly into two kinds, and the split is the whole safety story:</p>
+                <ul>
+                    <li><strong>Read-only tools return data directly.</strong> Search, status, metadata, listings &mdash; these answer immediately, because reading your own archive or inspecting a session changes nothing.</li>
+                    <li><strong>Anything that changes state surfaces as a proposal you review.</strong> Launching a session, downloading a file, starting compute, running code, editing a note &mdash; each one comes back to you as a <strong>proposal</strong> to approve or reject. Destructive actions always need an explicit confirmation.</li>
+                </ul>
+                <p class="pullquote">The assistant proposes; you commit. It does the fetching and the portal-clicking; you approve the moves that matter.</p>
+                <p><strong>AI Guide.</strong> Off by default, it lets you decide exactly what each tool exposes &mdash; fine-tune the per-tool description the assistant sees, and author your own read-only instruction tools &mdash; so you control not just what the assistant can do but how each tool is framed to it.</p>
+                <p><strong>Bounded remote compute.</strong> Letting an assistant start compute and run code is a deliberate opt-in, and a bounded one &mdash; you choose the cores and RAM it may use, so &ldquo;run this for me&rdquo; cannot quietly become a large allocation. The net effect is simple to state: permission gates keep you in control of every consequential action, while the assistant accelerates the busywork without taking the wheel.</p>
+
+                <h2>One session, start to finish</h2>
+                <p>Now the workflow this release was built for. Picture a single Claude conversation, with Verbinal connected and <em>Allow external AI agents</em> on. You are after recent imaging of a particular source. What follows is one realistic arc &mdash; adapt it to your own science; the shape is what matters.</p>
+                <p><strong>Resolve and search.</strong> You give Claude the target by name. It calls a resolver to turn the name into coordinates, then runs <code>search_observations</code> against the CADC archive for matches in your bands of interest. The results come back as data &mdash; no approval needed, because nothing has changed. You scan them in the conversation, or open the same query in Verbinal's <strong>Search</strong> table to sort it yourself.</p>
+                <p><strong>Confirm it is the right data.</strong> You ask for the details on the two most promising observations. Claude reads the <strong>CAOM-2</strong> metadata and pulls a <strong>preview image</strong> so you can confirm, with your own eyes, that the footprint and instrument are what you want before you commit to anything heavier. Still all reads. Still your judgement on the result.</p>
+                <p><strong>Launch the work session.</strong> Satisfied, you say: launch a Notebook for this. Now you cross the line from reading to acting, so Claude does not simply do it &mdash; <code>launch_session</code> comes back as a <strong>proposal</strong>: session type, image, resources. You glance at it, approve, and Verbinal launches it on Skaha. The session shows up in <strong>Portal</strong> with its status auto-refreshing, exactly as if you had launched it by hand, because you effectively did &mdash; you signed off on it.</p>
+                <p><strong>Stage the data.</strong> You ask Claude to bring the confirmed observations into VOSpace and lay them out for the reduction. Browsing and listing are reads; each download and write is a proposal. You approve the stage. The files land where you expect, and you can watch your quota in <strong>Storage</strong> as they arrive.</p>
+                <p><strong>Sanity-check on compute.</strong> Before committing to a full reduction, you want to know your approach holds. You ask Claude to run a short snippet on remote compute &mdash; within the cores and RAM you granted. <code>run_code</code> is a write, and a consequential one, so it surfaces as a proposal with the resources spelled out. You approve it, the snippet runs, and you read the result in the conversation. If it looks wrong, you have spent a snippet, not an afternoon.</p>
+                <p><strong>Keep the keepers.</strong> The two observations earned their place. You ask Claude to save them, plus a note on what you found and the query that found them, into the <strong>Research</strong> workspace &mdash; each write a proposal you approve. Next week the observations, the notes, and the saved query are waiting, and the train of thought picks up where it left off.</p>
+                <p>Across the whole arc you never left your Mac, never opened the web portal, and never lost the question you started with. The assistant did the fetching, the portal-clicking, and the boilerplate. You approved the moves that mattered &mdash; the launch, the downloads, the compute &mdash; and read every result with the same scrutiny you always would.</p>
+
+                <h2>The rest of what 1.2.5 polished</h2>
+                <p>Around the headline work, the release sands down the edges of everyday use. Navigation and transitions are smoother and more cinematic throughout. Settings have been reorganised, so what you are looking for is where you would expect it. The French interface gains additional localization. And there is the usual round of bug fixes and stability improvements that a point release earns its number with.</p>
+                <p>None of it is loud. It is the kind of polish you notice as an absence of friction rather than a feature you point at.</p>
+
+                <h2>Privacy, source, and how to get it</h2>
+                <p>The privacy posture is unchanged by the AI work, which is the point. Verbinal collects no data, runs no analytics, and ships no telemetry. Your CADC credentials live in the macOS Keychain. Network traffic goes directly to CANFAR and CADC over HTTPS &mdash; no third-party servers. The MCP bridge does not weaken any of that: the helper has no network of its own, the socket stays closed until you open it, and the only data leaving your Mac is your own authenticated calls to CANFAR and CADC and whatever you send to your own Claude client.</p>
+                <p>Verbinal for macOS is free and open source under the Mozilla Public License 2.0, with the full source at <code>github.com/szautkin/canfar-macos</code> &mdash; so the architecture described here is something you can read rather than take on faith. Requirements: macOS 14 (Sonoma) or later, a free CANFAR account from <code>canfar.net</code>, and &mdash; if you want the AI integration &mdash; your own Claude Desktop or Claude Code on the same Mac. Download it from the Mac App Store, turn on <strong>Allow external AI agents</strong> when you are ready, run the wizard, and try the session above with a target of your own. The first time you keep a whole train of thought intact from name to notes, the old tabs stop feeling necessary.</p>
+
+                <div class="post-cta">
+                    <h3>Get Verbinal for macOS</h3>
+                    <p>Free and open source. macOS 14 or later and a free CANFAR account. Bring your own Claude Desktop or Claude Code for the AI integration.</p>
+                    <div class="post-cta-actions">
+                        <a href="https://apps.apple.com/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
+                            <img src="/assets/mac-app-store-badge.svg" alt="Download on the Mac App Store" width="200">
+                        </a>
+                        <a href="https://github.com/szautkin/canfar-macos" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
+            <span>Verbinal</span>
+        </div>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="/blog">Blog</a> &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; CANFAR clients are open source under MPL-2.0 and AGPL-3.0.</p>
+    </div>
+</footer>
+
+</body>
+</html>
