@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From cube on disk to figure in the paper: Verbinal for macOS 1.3.0 — Verbinal</title>
+    <meta name="description" content="Verbinal for macOS 1.3.0 adds the Cube Viewer — a native, GPU-accelerated 3D viewer for FITS spectral cubes. Orbit in Volume mode, measure with WCS in Slice mode, and export a publication figure — all on your Mac.">
+    <meta name="keywords" content="Verbinal, CANFAR, CADC, macOS, FITS, spectral cube, data cube, Cube Viewer, volume rendering, WCS, astronomy, Metal, publication figure">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="From cube on disk to figure in the paper: Verbinal for macOS 1.3.0">
+    <meta property="og:description" content="The native CADC and CANFAR client adds the Cube Viewer — a GPU-accelerated 3D viewer for FITS spectral cubes — so the whole loop from a first 3D look to a quantitative read to a publication-ready figure happens in one window on your Mac.">
+    <meta property="og:image" content="/assets/blog/verbinal-1-3-0-cube-volume.png">
+    <meta property="og:image:alt" content="The Verbinal Cube Viewer in Volume mode — a FITS spectral cube rendered as a GPU ray-marched 3D volume.">
+    <meta property="og:site_name" content="Verbinal">
+    <meta property="og:url" content="https://verbinal.com/blog/verbinal-1-3-0-macos">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="From cube on disk to figure in the paper: Verbinal for macOS 1.3.0">
+    <meta name="twitter:description" content="Verbinal for macOS 1.3.0 adds the Cube Viewer — a native GPU 3D viewer for FITS spectral cubes: orbit in Volume mode, measure with WCS in Slice mode, export a publication figure.">
+    <meta name="twitter:image" content="/assets/blog/verbinal-1-3-0-cube-volume.png">
+
+    <link rel="canonical" href="https://verbinal.com/blog/verbinal-1-3-0-macos">
+    <link rel="icon" type="image/svg+xml" href="/assets/verbinal-dark.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/play_store_icon_512.png">
+    <link rel="apple-touch-icon" href="/assets/play_store_icon_512.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-3-0-macos">
+    <link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-3-0-macos">
+    <link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-3-0-macos">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <div class="header-actions">
+            <nav class="nav">
+                <a href="/#features">Features</a>
+                <a href="/#platforms">Download</a>
+                <a href="/blog">Blog</a>
+                <a href="mailto:support@verbinal.com">Support</a>
+            </nav>
+            <!--LANGSWITCH--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-3-0-macos" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-3-0-macos" hreflang="fr">FR</a></div><!--/LANGSWITCH-->
+        </div>
+    </div>
+</header>
+
+<section class="post-hero">
+    <div class="container">
+        <div class="doc-inner">
+            <a href="/blog" class="post-back"><span aria-hidden="true">&lsaquo;</span> All articles</a>
+            <div class="post-eyebrow">
+                <span class="tag">macOS 1.3.0</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>Release</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>15 June 2026</span>
+            </div>
+            <h1>From cube on disk to figure in the paper: Verbinal for macOS 1.3.0</h1>
+            <p class="post-lede">The native CADC and CANFAR client adds the Cube Viewer &mdash; a GPU-accelerated 3D viewer for FITS spectral cubes &mdash; so the whole loop from a first 3D look to a quantitative read to a publication-ready figure happens in one window on your Mac, with no server seeing your data.</p>
+            <div class="post-byline">
+                <span>Serhii Zautkin</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>8 min read</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="doc post">
+    <div class="container">
+        <div class="doc-inner">
+            <article>
+
+                <h2>A cube on disk, and nowhere good to look at it</h2>
+                <p>You have a spectral cube sitting in a folder. Maybe you pulled it from the CADC archive through Verbinal's <strong>Search</strong> table; maybe you staged it in <strong>VOSpace</strong> and synced it down; maybe a collaborator handed it to you. Two sky axes, one spectral axis &mdash; frequency, velocity, or wavelength &mdash; and somewhere inside it the structure you actually care about. A great deal of modern astronomy arrives this way: HI and molecular-line surveys, IFU spectroscopy, radio data cubes, Faraday-depth cubes. All of it lands as a stack of channels you have to look <em>through</em>, not just at. The file is right there. The trouble has always been the looking.</p>
+                <p>On a Mac, inspecting a cube usually meant one of two detours: a browser tool that wants the data near a remote server, or a notebook session where you write a few cells, render a channel, write a few more, and reconstruct from flat images a thing that is fundamentally three-dimensional. Both work. Neither lets you simply turn the cube in your hands, and neither keeps the data wholly on your machine.</p>
+                <p><strong>Verbinal for macOS 1.3.0</strong> adds the piece that was missing: the <strong>Cube Viewer</strong>, a native, GPU-accelerated 3D viewer for FITS spectral cubes, built on Metal and running entirely on your machine. The point is not that a cube viewer exists &mdash; they do &mdash; but that this one is native, GPU-accelerated, and local-first, with the measurements you would reach for built in. This piece follows one cube through one realistic loop &mdash; a first 3D look, a quantitative read at a pixel, an exported figure plate &mdash; and explains the controls as they come up. By the end the point should be plain enough to act on: you can drag your own cube onto the window and do all of this without leaving the desktop.</p>
+
+                <p class="pullquote">A browser shows you a cube. A notebook lets you measure one. The Cube Viewer does both, locally, in a single native window.</p>
+
+                <h2>What Verbinal for macOS is, briefly</h2>
+                <p>If you are new to it: Verbinal for macOS is a fast, native companion for the <strong>CANFAR Science Portal</strong> and the <strong>Canadian Astronomy Data Centre (CADC)</strong>. It is written in SwiftUI for macOS 14 (Sonoma) or later, carries zero external dependencies beyond Apple frameworks, and is free and open source under the Mozilla Public License 2.0. It is on the Mac App Store, ships full English and French interfaces, and needs only a free CANFAR account; your credentials live in the macOS Keychain.</p>
+                <p>What it already does still holds. You can launch and manage interactive <strong>sessions</strong> on Skaha &mdash; Notebook, Desktop, CARTA, Contributed, Firefly &mdash; without a browser; search the <strong>CADC archive</strong> over TAP; keep a <strong>Research</strong> workspace for the observations and notes a project accumulates; browse and organise <strong>VOSpace</strong> storage; view 2D FITS images, Metal-rendered; explore image content discovery; and, since 1.2.5, bridge to your own Claude Desktop or Claude Code over the Model Context Protocol. The Cube Viewer joins that set as another native tool in the same window &mdash; one more surface for a kind of data the app could already fetch but could not yet show in three dimensions &mdash; not a thing apart.</p>
+
+                <h2>Opening the cube, and the memory question</h2>
+                <p>The Cube Viewer takes a FITS cube two ways: open it <strong>from disk</strong>, or <strong>drag and drop</strong> the file onto the window. The cube can come from anywhere Verbinal already touches &mdash; an observation you pulled through the archive search, a file in your Research workspace, something synced from VOSpace &mdash; or simply a FITS file in a folder. There is no upload step and no staging server: the cube you point at is the cube it reads, in place.</p>
+                <p>The honest constraint with cubes is size. A respectable HI or line cube can dwarf the working memory you want to spend on it, and the naive approach &mdash; load the whole thing, then look &mdash; falls over exactly when the data gets interesting. The Cube Viewer <strong>streams large cubes from disk</strong> so memory stays in check, rather than insisting the entire volume sit in RAM before it will show you a single channel. That is what lets a survey-scale HI cube or a wide IFU datacube open promptly and stay responsive while you work it, instead of first becoming a question about RAM.</p>
+                <p>Once it is open you are in one of two modes &mdash; <code>Volume</code> for the gestalt, <code>Slice</code> for the measurement &mdash; and you move between them freely. They are not separate tools; they are two views of the same loaded cube, and they share their navigation furniture. The same cube, two ways of asking questions of it.</p>
+
+                <h2>Volume mode: the first look</h2>
+                <p>Start where intuition starts. <code>Volume</code> mode renders the whole cube as a <strong>GPU ray-marched 3D volume</strong> on Metal, and you explore it directly: <strong>orbit</strong> to turn it, <strong>zoom</strong> to push in. For the first time the spectral axis is a real axis you can look along rather than a stack you page through, and the shape of the emission &mdash; a rotating disc, a filament threading channels, an outflow leaning out of the plane &mdash; is simply <em>there</em>, before you have measured a single number. It is structure that a flat channel map flattens away.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-0-cube-volume.png" alt="The Verbinal Cube Viewer in Volume mode — a FITS spectral cube rendered as a GPU ray-marched 3D volume, with the Display panel showing colormap, stretch, window, background, and Volume controls (emission/maximum-intensity, density, spectral scale, quality, opacity curve), and a channel timeline along the bottom." width="1600" height="1000" loading="lazy">
+                    <figcaption>Volume mode &mdash; the whole cube as a GPU ray-marched 3D volume you can orbit, with the emission / maximum-intensity projection, density and spectral-scale controls, and an editable opacity curve.</figcaption>
+                </figure>
+
+                <p>Two projections give you two readings of the same data. <code>emission</code> integrates along each ray, so faint, distributed structure accumulates and shows itself; <code>maximum-intensity</code> keeps the brightest value along each ray, so compact peaks stay sharp. You reach for one or the other depending on whether you are chasing diffuse signal or distinct knots, and switching between them is a fair part of the first look.</p>
+                <p>From there you tune what the volume shows. <strong>Adjustable density</strong> and <strong>spectral scaling</strong> set how strongly the data accumulates and how the spectral axis is stretched against the spatial ones, so a cube that is long and thin in velocity does not render as an unreadable needle. An <strong>editable opacity curve</strong> is the lever that matters most: it maps value to transparency, so you can dissolve the noise floor and let the real emission carry the image &mdash; the 3D analogue of choosing a sensible stretch on a 2D frame. A <strong>quality</strong> control trades fidelity against responsiveness while you orbit, an idle <strong>auto-orbit</strong> toggle turns the cube slowly when you step back to think, and a <strong>slice-plane marker</strong> shows where a given channel sits inside the volume &mdash; the bridge to the half of the viewer where you make this quantitative.</p>
+
+                <h2>Slice mode: the quantitative read</h2>
+                <p>A 3D impression is where understanding starts, not where it ends. <code>Slice</code> mode is the measuring half. It steps through the cube one channel at a time at <strong>native resolution</strong> &mdash; no resampling between you and the pixels you are about to measure &mdash; so what you read is what the data says.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-0-cube-slice.png" alt="The Verbinal Cube Viewer in Slice mode — a single channel of a FITS cube at native resolution with WCS sky coordinates and the colormap, stretch, window, and background display panel." width="1600" height="1000" loading="lazy">
+                    <figcaption>Slice mode &mdash; one channel at native resolution, with WCS sky coordinates and a spectral readout in frequency, velocity, or wavelength, and click-to-probe spectra.</figcaption>
+                </figure>
+
+                <p>Three readouts turn the picture into numbers:</p>
+                <ul>
+                    <li><strong>WCS sky coordinates.</strong> The cursor reads world coordinates from the cube's own header, so a position is a real RA and Dec, not a pixel index.</li>
+                    <li><strong>Spectral readout.</strong> The current channel reports its spectral value in the unit that suits the data &mdash; <strong>frequency, velocity, or wavelength</strong> &mdash; following the cube's own spectral axis, not an index you convert in your head.</li>
+                    <li><strong>Click-to-probe spectrum.</strong> Click a pixel and read the full spectrum through the depth of the cube &mdash; the line profile at the position you care about, the measurement you would otherwise extract in a notebook, available in the same window where you found the position worth probing.</li>
+                </ul>
+                <p>The qualitative look in <code>Volume</code> mode tells you where to point; <code>Slice</code> mode tells you, quantitatively, what is there.</p>
+
+                <h2>Navigation both modes share</h2>
+                <p>Whichever mode you are in, the same furniture frames the cube. <strong>Axis captions</strong> label what each axis is, so a figure is never ambiguous about which way is sky and which way is spectral. Along the bottom runs a <strong>channel timeline with a cube-mean waveform scrubber</strong>: the mean of each channel drawn as a waveform, so the spectral structure of the whole cube is visible at a glance, and you scrub straight to the channel you want instead of stepping blind. It plays back too, sweeping through the cube when you want to watch the emission evolve rather than step it by hand. The bright bump in the cube mean is usually the channel range worth probing, and the scrubber puts you there in one motion.</p>
+
+                <h2>Reading the data honestly: display controls</h2>
+                <p>How a cube looks is a scientific decision, not decoration, and the display controls treat it that way. They are the ones you already trust, applied to a cube, on the GPU, in real time:</p>
+                <ul>
+                    <li><strong>Colormaps.</strong> Perceptually-ordered scientific maps &mdash; <code>inferno</code>, <code>magma</code>, <code>plasma</code>, <code>viridis</code>, and more &mdash; the kind you can publish without a referee querying the colour scale.</li>
+                    <li><strong>Stretches.</strong> <code>linear</code>, <code>log</code>, <code>sqrt</code>, <code>squared</code>, and <code>asinh</code>, the last of these keeping faint extended emission and bright compact cores legible in the same frame.</li>
+                    <li><strong>Window.</strong> Set the value range the colormap spans &mdash; a percentile such as <code>p99.9</code> to clip the brightest outliers, or <code>MinMax</code> for the full range &mdash; so you fix contrast deliberately rather than letting a single hot pixel set the scale.</li>
+                    <li><strong>Background.</strong> <code>Dark</code>, <code>Black</code>, or <code>Light</code>, which matters more than it sounds: the right background is the difference between faint structure you can see and faint structure that vanishes into the canvas.</li>
+                </ul>
+                <p>These choices carry across both modes and straight into export, so the figure you publish shows the data the way you actually read it.</p>
+
+                <h2>Publication figure export</h2>
+                <p>This is the step that usually sends you back to a notebook, and the one the Cube Viewer is built to absorb. You have the view you want on screen; now you need it at print quality, with the scaffolding a journal expects. <code>Export figure&hellip;</code> renders a proper plate, not a screenshot of the canvas: the <strong>header</strong>, a <strong>colorbar</strong>, a <strong>WCS legend</strong>, and the <strong>axis captions</strong>, composed together as the figure a referee should see.</p>
+                <p>The output is publication-grade. You can render to <strong>PNG at 2&times; or 4&times;</strong> for high-resolution raster, or to <strong>PDF</strong> for vector, and choose a <strong>light</strong> or <strong>dark</strong> journal theme to match the venue. <strong>Font</strong>, <strong>text-colour</strong>, and <strong>background</strong> controls handle the rest of the house style without leaving the app. Because the colorbar, WCS legend, and captions are rendered into the export, the figure is self-describing &mdash; the reader can see the colour scale, the coordinates, and what each axis is, without a separate caption doing all the work.</p>
+
+                <h2>One cube, look to figure</h2>
+                <p>Put the pieces together and the arc is short, which is the point. Suppose you have a line cube on disk &mdash; downloaded through Verbinal's archive search into your <strong>Research</strong> workspace, or synced from <strong>VOSpace</strong>.</p>
+                <ul>
+                    <li><strong>Open it.</strong> Drag the FITS cube onto the Cube Viewer, or open it from disk. A large one streams rather than swallowing your memory, and you are looking at it promptly.</li>
+                    <li><strong>Get the gestalt.</strong> In <code>Volume</code> mode, orbit and zoom; pick <code>emission</code> or <code>maximum-intensity</code>; tune density, spectral scale, and the opacity curve until the noise floor falls away and the structure stands out. You now know the shape of the thing, and roughly where the interesting velocities are.</li>
+                    <li><strong>Make it quantitative.</strong> Switch to <code>Slice</code> mode. Read real <strong>WCS</strong> positions and a <strong>velocity</strong> or <strong>frequency</strong> at the channel you care about, then <strong>click-to-probe</strong> the spectrum at the pixel that caught your eye.</li>
+                    <li><strong>Navigate the spectrum.</strong> Scrub the <strong>channel timeline</strong> on its cube-mean waveform to land on the line, and play through it to confirm the feature is real across channels rather than a single-channel artefact.</li>
+                    <li><strong>Export the figure.</strong> Choose a stretch and colormap that read honestly, set a <strong>dark journal theme</strong>, and <code>Export figure&hellip;</code> &mdash; colorbar, WCS legend, and captions &mdash; to <strong>PDF</strong> or high-resolution <strong>PNG</strong>, straight into the paper.</li>
+                </ul>
+                <p>Qualitative look, quantitative read, publishable figure: one native window, one sitting, and no server in the path. You went from a file you could not really see to a plate you can submit without ever opening a browser tab or writing a cell.</p>
+
+                <h2>Where it lives, and the rest of 1.3.0</h2>
+                <p>The viewer is one tile away. The <strong>Welcome</strong> screen gains a <strong>Cube Viewer</strong> tile &mdash; <em>Explore 3D spectral cubes</em> &mdash; alongside Portal, Search, Research, Storage, FITS Viewer, Addons, AI Assistant, and AI Guide, so the path from opening the app to dragging in a cube is short and obvious.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-0-welcome.png" alt="The Verbinal for macOS Welcome screen showing the new Cube Viewer tile — Explore 3D spectral cubes — among Portal, Search, Research, Storage, FITS Viewer, Addons, AI Assistant, and AI Guide." width="1600" height="1000" loading="lazy">
+                    <figcaption>The new Cube Viewer tile on the Welcome screen &mdash; one tile away from dragging in a cube.</figcaption>
+                </figure>
+
+                <p>Around the headline, 1.3.0 brings the polish a point release earns its number with. Rendering in the cube and volume views is <strong>leaner and faster</strong>, with <strong>lower memory use</strong> &mdash; which is what makes streaming a large cube comfortable rather than just possible. The <strong>universal build</strong> is refined for both Intel and Apple-silicon Macs, so the same app runs well whichever you are on; and there is the usual round of bug fixes and stability improvements. None of it is loud. It is the kind of polish you notice as an absence of friction rather than a feature you point at.</p>
+
+                <h2>Privacy, source, and how to get it</h2>
+                <p>The privacy posture is unchanged, which is the point. Verbinal collects no data, runs no analytics, and ships no telemetry. Your CADC credentials live in the macOS Keychain, and network traffic &mdash; the archive searches and storage transfers that put the cube on your disk in the first place &mdash; goes directly to CANFAR and CADC over HTTPS, with no third-party servers in the path. The Cube Viewer keeps that promise the most literally of any feature: a cube you open is read on your own machine and rendered on your own GPU. Nothing about it is uploaded, and no server ever sees the data the figure was made from.</p>
+                <p>Verbinal for macOS is free and open source under the Mozilla Public License 2.0, with the full source at <code>github.com/szautkin/canfar-macos</code> &mdash; so the rendering, the WCS handling, and the export described here are something you can read rather than take on faith. Requirements are unchanged: macOS 14 (Sonoma) or later and a free CANFAR account from <code>canfar.net</code>. Download it from the Mac App Store, open the <strong>Cube Viewer</strong> tile, and drag one of your own cubes onto the window. The first time you turn one in 3D, land on the channel that matters, probe a spectrum, and export the plate without leaving the Mac, the old detours stop feeling necessary.</p>
+
+                <div class="post-cta">
+                    <h3>Get Verbinal for macOS</h3>
+                    <p>Free and open source. macOS 14 or later and a free CANFAR account. The Cube Viewer opens any FITS spectral cube on your Mac &mdash; no server in the path.</p>
+                    <div class="post-cta-actions">
+                        <a href="https://apps.apple.com/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
+                            <img src="/assets/mac-app-store-badge.svg" alt="Download on the Mac App Store" width="200">
+                        </a>
+                        <a href="https://github.com/szautkin/canfar-macos" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
+            <span>Verbinal</span>
+        </div>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="/blog">Blog</a> &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; CANFAR clients are open source under MPL-2.0 and AGPL-3.0.</p>
+        <!--LANGSWITCH-FOOTER--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-3-0-macos" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-3-0-macos" hreflang="fr">FR</a></div><!--/LANGSWITCH-FOOTER-->
+    </div>
+</footer>
+
+</body>
+</html>
