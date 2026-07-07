@@ -136,7 +136,7 @@ img {
     color: #fff;
 }
 
-.announce-hidden .announce {
+.announce-windows-hidden #announce-windows {
     display: none;
 }
 
@@ -1135,7 +1135,11 @@ a, button, .btn {
     color: var(--color-heading);
 }
 
-.announce-macos-hidden .announce-sub {
+.announce-macos-hidden #announce-macos {
+    display: none;
+}
+
+.announce-ios-hidden #announce-ios {
     display: none;
 }
 

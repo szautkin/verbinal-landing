@@ -25,6 +25,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog"/>
   </url>
   <url>
+    <loc>https://verbinal.com/blog/verbinal-1-3-0-windows</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-3-0-windows"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-3-0-windows"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-3-0-windows"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/fr/blog/verbinal-1-3-0-windows</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-3-0-windows"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-3-0-windows"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-3-0-windows"/>
+  </url>
+  <url>
     <loc>https://verbinal.com/blog/verbinal-1-3-0-macos</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-3-0-macos"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-3-0-macos"/>

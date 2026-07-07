@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The whole research loop, native on Windows: Verbinal for Windows 1.3.0 — Verbinal</title>
+    <meta name="description" content="Verbinal comes to Windows as a native WinUI 3 desktop for CANFAR and the CADC. Version 1.3.0 adds check-off Workflows, an AI assistant, a Direct3D 3D Cube Viewer, and a native Jupyter notebook with a local kernel — search to publication figure, without leaving the desktop.">
+    <meta name="keywords" content="Verbinal, CANFAR, CADC, Windows, WinUI 3, Fluent, FITS, spectral cube, Cube Viewer, Direct3D, Jupyter, notebook, Workflows, AI assistant, MCP, astronomy, Microsoft Store">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The whole research loop, native on Windows: Verbinal for Windows 1.3.0">
+    <meta property="og:description" content="The native CADC and CANFAR client arrives on Windows: search the archive, run notebooks with a local kernel, orbit spectral cubes in 3D, follow check-off research protocols, and let an AI agent drive it all — from one Fluent-design window.">
+    <meta property="og:image" content="/assets/blog/verbinal-1-3-0-windows-cube-viewer.png">
+    <meta property="og:image:alt" content="The Verbinal for Windows Cube Viewer in Volume mode — a FITS spectral cube rendered as a Direct3D volume, with the Display panel and a channel timeline.">
+    <meta property="og:site_name" content="Verbinal">
+    <meta property="og:url" content="https://verbinal.com/blog/verbinal-1-3-0-windows">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The whole research loop, native on Windows: Verbinal for Windows 1.3.0">
+    <meta name="twitter:description" content="Verbinal for Windows 1.3.0 — a native WinUI 3 CANFAR desktop with Workflows, an AI assistant, a Direct3D 3D Cube Viewer, and a native Jupyter notebook.">
+    <meta name="twitter:image" content="/assets/blog/verbinal-1-3-0-windows-cube-viewer.png">
+
+    <link rel="canonical" href="https://verbinal.com/blog/verbinal-1-3-0-windows">
+    <link rel="icon" type="image/svg+xml" href="/assets/verbinal-dark.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/play_store_icon_512.png">
+    <link rel="apple-touch-icon" href="/assets/play_store_icon_512.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-3-0-windows">
+    <link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-3-0-windows">
+    <link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-3-0-windows">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <div class="header-actions">
+            <nav class="nav">
+                <a href="/#features">Features</a>
+                <a href="/#platforms">Download</a>
+                <a href="/blog">Blog</a>
+                <a href="mailto:support@verbinal.com">Support</a>
+            </nav>
+            <!--LANGSWITCH--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-3-0-windows" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-3-0-windows" hreflang="fr">FR</a></div><!--/LANGSWITCH-->
+        </div>
+    </div>
+</header>
+
+<section class="post-hero">
+    <div class="container">
+        <div class="doc-inner">
+            <a href="/blog" class="post-back"><span aria-hidden="true">&lsaquo;</span> All articles</a>
+            <div class="post-eyebrow">
+                <span class="tag">Windows 1.3.0</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>Release</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>6 July 2026</span>
+            </div>
+            <h1>The whole research loop, native on Windows: Verbinal for Windows 1.3.0</h1>
+            <p class="post-lede">Verbinal comes to Windows as a fast, native WinUI&nbsp;3 desktop for the CANFAR Science Platform and the CADC. Version 1.3.0 &mdash; the first of the Workflows and AI-assistant generation &mdash; lets you search the archive, run notebooks on a local kernel, orbit spectral cubes in 3D, follow research protocols you can check off, and hand the whole thing to an AI agent, from one Fluent-design window with your data staying on your machine.</p>
+            <div class="post-byline">
+                <span>Serhii Zautkin</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>9 min read</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="doc post">
+    <div class="container">
+        <div class="doc-inner">
+            <article>
+
+                <p>Verbinal has been a native companion for the <strong>CANFAR Science Portal</strong> and the <strong>Canadian Astronomy Data Centre (CADC)</strong> on macOS, iOS, Linux, and Android for a while now. With <strong>1.3.0</strong> it arrives on Windows as a first-class member of the family &mdash; not a port wearing another platform's clothes, but a genuinely native desktop app built with <strong>C#</strong>, <strong>WinUI&nbsp;3</strong>, and the <strong>Windows App SDK</strong>, with the Fluent look, a Mica backdrop, and the keyboard-friendliness Windows users expect.</p>
+                <p>It arrives with ambition, too. Where the macOS releases have grown feature by feature, the Windows app lands as what its changelog calls the first release of the <em>Workflows / AI-assistant generation</em>: it brings the everyday work of an astronomer &mdash; finding archival data, inspecting images and cubes, running analysis, managing cloud storage and compute &mdash; into one window, and adds two things worth pausing on. <strong>Workflows</strong> turn a research protocol into a checklist you step through, each step wired to the exact part of the app that does the work. And an optional <strong>AI assistant</strong> can drive that same app for you, under a control model that keeps you in charge of every consequential move.</p>
+                <p>This piece is a tour of what the Windows app is, what 1.3.0 puts in it, and &mdash; because it is built the Windows way &mdash; where it differs from the Mac. If you already know Verbinal on another platform, skim to the parts that are new; if this is your first Verbinal, start here.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-0-windows-landing.png" alt="The Verbinal for Windows Welcome screen (shown here in French) with tiles for Portal, Search, Research, Storage, Notebook (Calepin), FITS Viewer, Cube Viewer, Workflows (Flux de travail), AI Guide (Guide IA), and AI Assistant (Assistant IA)." width="2560" height="1401" loading="lazy">
+                    <figcaption>The Welcome screen, one tile per module &mdash; here in French, because the whole interface ships in English <em>and</em> French. The Workflows, AI Guide, and AI Assistant tiles are new in 1.3.0.</figcaption>
+                </figure>
+
+                <p class="pullquote">A protocol you can check off. An agent that can run it. A cube you can turn in 3D. One native Windows window, and your data never leaves it.</p>
+
+                <h2>What Verbinal for Windows is</h2>
+                <p>If you are new to it: Verbinal for Windows is a native desktop client for CANFAR and the CADC, written in <strong>C#&nbsp;12 / .NET&nbsp;8</strong> with a <strong>WinUI&nbsp;3</strong> interface on the Windows App SDK. It runs on <strong>Windows&nbsp;10 (1809)</strong> or newer, installs from the <strong>Microsoft Store</strong> as a packaged MSIX app, and is free and open source under the <strong>GNU Affero General Public License v3.0</strong>. The interface is available in <strong>English and French</strong> (Settings &rarr; General &rarr; Language), and your CADC credentials live in the <strong>Windows Credential Manager</strong> (PasswordVault) &mdash; never in a config file.</p>
+                <p>The app is organised as a set of modules, each a tile on the Welcome screen: <strong>Portal</strong> for sessions and batch compute, <strong>Search</strong> for the CADC archive, <strong>Research</strong> for what you have downloaded, <strong>Storage</strong> for VOSpace, a 2D <strong>FITS Viewer</strong>, a 3D <strong>Cube Viewer</strong>, a native <strong>Notebook</strong>, the new <strong>Workflows</strong>, and the optional <strong>AI Assistant</strong> and <strong>AI Guide</strong>. Portal, Storage, and compute need a free CADC account; <strong>Search and both viewers work without signing in</strong>, so you can pull a public file and inspect it before you ever log in. There is no telemetry anywhere in the app.</p>
+
+                <h2>Portal: sessions and batch compute</h2>
+                <p>Portal is the CANFAR control room. Launch and manage interactive <strong>Skaha sessions</strong> &mdash; Notebook, Desktop, CARTA, Firefly &mdash; from a Standard form or an Advanced one that takes a custom container-registry image, and follow each session's <strong>logs and events</strong> live. Beyond interactive sessions, you can submit <strong>headless batch jobs with replicas</strong> for the reprocessing runs that do not need a screen, and watch them move through pending, running, complete, and failed. <strong>Image Discovery</strong> shows which software packages a container image carries <em>before</em> you launch it, so you are not guessing at what is inside.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-0-windows-portal.png" alt="The Verbinal for Windows Portal dashboard: Active Sessions with running Jupyter notebooks, a Launch Session form with Standard and Advanced tabs, Storage quota, a Batch Jobs summary, Recent Launches, and a Platform Load panel showing cluster CPU and RAM utilisation." width="1820" height="1584" loading="lazy">
+                    <figcaption>Portal &mdash; active sessions, a Standard/Advanced launch form, batch jobs, recent launches, your VOSpace quota, and real-time cluster CPU/RAM load, in one Fluent dashboard.</figcaption>
+                </figure>
+
+                <p>Around the edges of the dashboard sit the numbers you plan around: your <strong>VOSpace storage quota</strong>, a <strong>Recent Launches</strong> list for one-click re-launch, and a <strong>Platform Load</strong> panel with live cluster CPU, GPU, and RAM utilisation. It is the same information the web portal surfaces, gathered into one native view that refreshes itself while anything is pending.</p>
+
+                <h2>Find it, keep it, store it: Search, Research, Storage</h2>
+                <p>Most projects begin at the archive, and <strong>Search</strong> queries the CADC directly over TAP &mdash; CFHT, JCMT, DAO, Gemini, HST, and more. Do a cone search by coordinate or target name, then narrow with a filterable data train (collection, instrument, filter, calibration level, dates), preview what you find, save the ADQL queries you will run again, run a <strong>VizieR</strong> catalogue cone search alongside, and download products in one click into your local research archive.</p>
+                <p>What you download lands in <strong>Research</strong>, organised automatically, with previews, per-observation notes, and an <strong>exportable research bundle</strong> you can hand to a collaborator. <strong>Storage</strong> is a full VOSpace/ARC browser &mdash; upload, download, organise, and share files, make a folder public or share it with a group, all with quota tracking. The three modules are meant to be used together: find it in Search, keep it in Research, park it in Storage.</p>
+
+                <h2>Workflows: research protocols you can check off</h2>
+                <p>This is the headline of 1.3.0, and the piece with no equivalent elsewhere yet. A great deal of astronomy is <em>procedure</em> &mdash; the ordered set of steps that turns a question into a measurement &mdash; and that procedure usually lives in someone's head, a lab wiki, or a stale README. <strong>Workflows</strong> makes it a first-class object in the app: a research protocol written as a simple <strong>markdown checklist</strong>, rendered as a column of numbered step cards you check off as you go.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-0-windows-workflows.png" alt="The Verbinal for Windows Workflows module: a left panel listing seven built-in templates, and a selected 'Archival stellar spectroscopy' protocol rendered as numbered step cards, each with a description, tool chips, and links into the Search, Research, and Notebook modules." width="2560" height="1403" loading="lazy">
+                    <figcaption>A Workflow is a markdown checklist rendered as step cards. Each step names the action it performs and links straight to the module that does it &mdash; here, &rarr;&nbsp;Search, &rarr;&nbsp;Research, &rarr;&nbsp;Notebook.</figcaption>
+                </figure>
+
+                <p>What makes it more than a to-do list is that the steps are <strong>wired into the app</strong>. Each card names the concrete action it stands for &mdash; resolve a target, search observations, save a query, download the products in bulk, create an analysis notebook, upload a result to VOSpace, note it on the observation &mdash; and links straight to the module that carries it out, so <em>step&nbsp;5, download the 1D products</em> is one click from actually downloading them in <strong>Research</strong>. Verbinal ships <strong>seven built-in, Canada-first templates</strong> &mdash; archival imaging reconnaissance on CFHT MegaCam, stellar spectroscopy on DAO Plaskett and CFHT ESPaDOnS, batch reprocessing as headless jobs, a VizieR cross-match sample builder, observing-proposal due diligence, spectral-cube kinematics, and variable-star time-series photometry &mdash; and you can write your own in markdown with a live-preview editor. Store a workflow locally, or <strong>share it with your team over VOSpace</strong>. And because a protocol is also a plan an agent can execute, every workflow has a <strong>Copy agent prompt</strong> button &mdash; which is where the AI assistant comes in.</p>
+
+                <h2>An AI assistant that can drive the app</h2>
+                <p>Verbinal for Windows can pair with your own <strong>Claude Desktop</strong> or <strong>Claude Code</strong> over the <strong>Model Context Protocol</strong>, through a guided connect wizard, and let an AI agent operate the app with <strong>115+ tools</strong>: search and download, open the viewers, run notebooks, manage storage and sessions, and follow &mdash; or author &mdash; Workflows. Hand it a protocol with <em>Copy agent prompt</em> and it can work down the checklist; ask it a question and it can go get the answer.</p>
+                <p>The reason this is comfortable rather than alarming is the control model. <strong>You stay in charge.</strong> A <strong>proposal review strip</strong> gates every consequential action &mdash; the agent proposes, you approve &mdash; and <strong>destructive operations always require explicit approval</strong>. Every change the agent makes is <strong>badged</strong> so you can see what it did and undo your trust as easily as you extended it. And the <strong>AI Guide</strong> lets you tune how the agent sees each tool, so you can widen or narrow what it is allowed to reach for. It is an assistant with its hands visible, not an autopilot.</p>
+
+                <h2>Two viewers: FITS in 2D, cubes in 3D</h2>
+                <p>Data you can see is data you can trust, and Verbinal brings its own viewers rather than sending you to a browser. The <strong>FITS Viewer</strong> is a hardware-accelerated 2D image viewer with <strong>WCS readout</strong>, coordinate go-to, pixel probing, saved bookmarks, multiple stretches and colormaps, a North-Up orientation from the WCS, and <strong>multi-tab comparison</strong> &mdash; a linked crosshair that follows the same sky position across tabs, synchronised zoom across different pixel scales, and a blink mode for spotting transients. It opens fpack-compressed <code>.fits.fz</code> files directly, decompressing RICE in-app.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-0-windows-cube-viewer.png" alt="The Verbinal for Windows Cube Viewer in Volume mode — a Faraday-depth spectral cube rendered as a Direct3D volume with axis captions, a Display panel (colormap, stretch, window, background, render mode, density, spectral scale, quality, opacity curve, export figure), and a channel timeline with an intensity-waveform scrubber." width="2560" height="1397" loading="lazy">
+                    <figcaption>The Cube Viewer in Volume mode &mdash; a Direct3D volume render you can orbit, with an editable opacity curve, an intensity-waveform channel scrubber, and one-click publication-figure export.</figcaption>
+                </figure>
+
+                <p>The <strong>Cube Viewer</strong> is the same idea in three dimensions, and it is the Windows counterpart to the Metal viewer that headlined macOS 1.3.0 &mdash; here it is a <strong>Direct3D volume renderer</strong>. In <code>Volume</code> mode you fly around position&ndash;position&ndash;velocity space: orbit and zoom, choose an <code>Emission</code> or maximum-intensity projection, and shape a <strong>transfer function</strong> &mdash; density, spectral scale, and an <strong>editable opacity curve</strong> &mdash; until the noise floor drops away and the structure stands out. A <code>Slice</code> mode reads a single channel with <strong>WCS sky coordinates</strong> and a spectral value in <strong>frequency, velocity, or wavelength</strong>, and <strong>click-to-probe</strong> pulls the full spectrum through the cube at any pixel. Along the bottom, a <strong>channel timeline with an intensity-waveform scrubber</strong> shows the spectral structure of the whole cube at a glance and plays through it; the scientific display controls &mdash; scientific colormaps, <code>linear</code>/<code>log</code>/<code>asinh</code> stretches, a percentile window, background choice &mdash; carry straight into <strong>Export figure</strong>, which composes a publication plate with a colorbar and captions rather than a screenshot. It streams large cubes so a survey-scale file opens promptly instead of becoming a question about memory.</p>
+
+                <h2>Notebook: native Jupyter with a local kernel</h2>
+                <p>Some analysis wants code, and Verbinal for Windows runs it in place. The <strong>Notebook</strong> module edits and executes <code>.ipynb</code> files natively against a <strong>local Python kernel</strong> &mdash; no browser, no server to start, no JupyterLab tab to babysit. Open several notebooks in tabs, run cells or the whole book, see matplotlib figures render inline, and rely on autosave and recovery so a crash does not cost you the session.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-0-windows-notebook.png" alt="The Verbinal for Windows Notebook module: a file Explorer on the left, tabbed .ipynb notebooks, a toolbar with Run and Run All, and an executed cell whose output is a 2x2 grid of matplotlib sky-coverage plots rendered inline." width="2076" height="1591" loading="lazy">
+                    <figcaption>Native Jupyter with a local kernel &mdash; a file explorer, tabbed <code>.ipynb</code> files, Run / Run&nbsp;All, and matplotlib output rendered inline. No browser, no server.</figcaption>
+                </figure>
+
+                <p>The tie-in with the rest of the app is the point: from a downloaded observation in Research you can <strong>seed a ready-to-run analysis notebook</strong> &mdash; quick-look imaging, aperture photometry, cube moment maps &mdash; so a Workflow step like <em>normalise in a notebook</em> lands you in a real, populated notebook rather than a blank cell. Running notebooks needs Python&nbsp;3.8+ on your machine; everything else in the app does not.</p>
+
+                <h2>Built the Windows way &mdash; and how it differs from the Mac</h2>
+                <p>Because Verbinal is written natively on each platform, the Windows app is not the Mac app recompiled &mdash; it speaks Windows idiom throughout, and a few differences are worth naming outright if you have used it on a Mac:</p>
+                <ul>
+                    <li><strong>Toolkit.</strong> WinUI&nbsp;3 on the Windows App SDK with a Mica backdrop and Fluent design, where macOS is SwiftUI. The result feels at home next to File Explorer, not ported from elsewhere.</li>
+                    <li><strong>3D rendering.</strong> The Cube Viewer uses <strong>Direct3D</strong>; the macOS viewer uses Metal. Same capability, each on its platform's own GPU stack.</li>
+                    <li><strong>Credentials.</strong> Tokens are stored in the <strong>Windows Credential Manager</strong> (PasswordVault); on macOS they live in the Keychain.</li>
+                    <li><strong>Distribution and licence.</strong> Windows ships as a packaged <strong>MSIX on the Microsoft Store</strong> and is open source under <strong>AGPL-3.0</strong>; the Mac app is on the Mac App Store under MPL-2.0.</li>
+                    <li><strong>Requirements.</strong> Windows&nbsp;10 (1809) or newer, and Python&nbsp;3.8+ if you want to run notebooks.</li>
+                </ul>
+                <p>And a difference in emphasis: the <strong>native Notebook</strong> and <strong>Workflows</strong> are front-and-centre on Windows. Under the hood, 1.3.0 also brings editable service endpoints for every CANFAR/CADC host with a connection self-test, in-app fpack (RICE_1) decompression, full French localization, and more reliable expired-session handling, on top of a large suite of macOS-parity, 4K-layout, notebook, and MCP fixes. The project ships with <strong>1,500+ tests</strong> covering the FITS parser, WCS transforms, the notebook engine, the ADQL builder, VOSpace, MCP tool routing, and more.</p>
+
+                <h2>Privacy, source, and how to get it</h2>
+                <p>The privacy posture is the same one every Verbinal app keeps. No data collection, no analytics, no third-party services. Your CADC credentials stay in the Windows Credential Manager, and network traffic &mdash; archive searches, storage transfers, session management &mdash; goes directly to CANFAR and CADC over HTTPS, with nothing in between. Data you open in the viewers is read and rendered on your own machine; the cube you turn in 3D is never uploaded.</p>
+                <p>Verbinal for Windows is free and open source under the GNU Affero General Public License v3.0, with the full source at <code>github.com/szautkin/CanfarDesktop</code> &mdash; the FITS parser, the WCS handling, the renderers, and the MCP tool layer described here are all things you can read rather than take on faith. Install it from the <strong>Microsoft Store</strong>, open a tile, and &mdash; if you like &mdash; start from a Workflow template and let it walk you from the archive to a figure without leaving the desktop.</p>
+
+                <div class="post-cta">
+                    <h3>Get Verbinal for Windows</h3>
+                    <p>Free and open source. Windows 10 (1809) or newer and a free CANFAR account. Search and the viewers work without signing in &mdash; and your data stays on your machine.</p>
+                    <div class="post-cta-actions">
+                        <a href="https://apps.microsoft.com/detail/9p8jqvk4pjch?mode=full" class="store-badge" target="_blank" rel="noopener">
+                            <img src="https://get.microsoft.com/images/en-us%20light.svg" alt="Get it from Microsoft Store" width="200">
+                        </a>
+                        <a href="https://github.com/szautkin/CanfarDesktop" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
+            <span>Verbinal</span>
+        </div>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="/blog">Blog</a> &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; CANFAR clients are open source under MPL-2.0 and AGPL-3.0.</p>
+        <!--LANGSWITCH-FOOTER--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-3-0-windows" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-3-0-windows" hreflang="fr">FR</a></div><!--/LANGSWITCH-FOOTER-->
+    </div>
+</footer>
+
+</body>
+</html>
