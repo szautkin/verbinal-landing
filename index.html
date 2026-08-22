@@ -47,11 +47,20 @@
 </head>
 <body>
 
-<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-windows-130-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-macos-130-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
+<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-linux-137-announce-dismissed')==='1')d.classList.add('announce-linux-hidden');if(localStorage.getItem('verbinal-windows-130-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-macos-130-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
 
-<div class="announce" id="announce-windows">
-    <a href="/blog/verbinal-1-3-0-windows" class="announce-text">
+<div class="announce" id="announce-linux">
+    <a href="/blog/verbinal-1-3-7-linux" class="announce-text">
         <span class="announce-tag">New</span>
+        <span>Verbinal for Linux 1.3.7 is here &mdash; a native GTK&nbsp;4 desktop for CANFAR. Read the guide</span>
+        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
+    </a>
+    <button type="button" class="announce-close" id="announce-linux-close" aria-label="Dismiss announcement">&times;</button>
+</div>
+
+<div class="announce announce-sub" id="announce-windows">
+    <a href="/blog/verbinal-1-3-0-windows" class="announce-text">
+        <span class="announce-tag">Windows 1.3.0</span>
         <span>Verbinal for Windows is here &mdash; now on the Microsoft Store. Read the guide</span>
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
@@ -271,7 +280,7 @@
                 </div>
                 <h3>Linux</h3>
                 <p class="platform-tech">Rust &middot; GTK 4 &middot; libadwaita</p>
-                <p class="platform-desc">Native GNOME app built with Rust. Secure credentials via Secret Service API (GNOME Keyring / KDE Wallet).</p>
+                <p class="platform-desc">Native GNOME app built with Rust. Sessions and batch compute, CADC archive search, FITS and 3D cube viewers, a native notebook, research workflows, and an optional AI assistant. Credentials via Secret Service (GNOME Keyring / KDE Wallet).</p>
                 <div class="platform-actions">
                     <a href="https://github.com/szautkin/CanfarDesktopUbuntu/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Download .deb</a>
                     <a href="https://github.com/szautkin/CanfarDesktopUbuntu" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
@@ -375,6 +384,7 @@
             try { localStorage.setItem(key, '1'); } catch (e) {}
         });
     }
+    wire('announce-linux-close', 'announce-linux-hidden', 'verbinal-linux-137-announce-dismissed');
     wire('announce-windows-close', 'announce-windows-hidden', 'verbinal-windows-130-announce-dismissed');
     wire('announce-macos-close', 'announce-macos-hidden', 'verbinal-macos-130-announce-dismissed');
     wire('announce-ios-close', 'announce-ios-hidden', 'verbinal-ios-announce-dismissed');

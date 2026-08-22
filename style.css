@@ -136,6 +136,10 @@ img {
     color: #fff;
 }
 
+.announce-linux-hidden #announce-linux {
+    display: none;
+}
+
 .announce-windows-hidden #announce-windows {
     display: none;
 }

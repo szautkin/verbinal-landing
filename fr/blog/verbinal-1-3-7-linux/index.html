@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un bureau GNOME pour toute la boucle de recherche&nbsp;: Verbinal pour Linux 1.3.7 — Verbinal</title>
+    <meta name="description" content="Verbinal pour Linux est un bureau GTK 4 natif pour CANFAR et le CADC, écrit en Rust. La version 1.3.7 apporte des Flux de travail à cocher, un Assistant IA par MCP, une Visionneuse de cubes 3D OpenGL et un calepin Jupyter natif — plus cinq versions de durcissement trouvées en utilisant l’application contre le service en direct.">
+    <meta name="keywords" content="Verbinal, CANFAR, CADC, Linux, Ubuntu, GTK 4, libadwaita, Rust, GNOME, FITS, cube spectral, Visionneuse de cubes, OpenGL, Jupyter, calepin, Flux de travail, Assistant IA, MCP, astronomie, deb">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Un bureau GNOME pour toute la boucle de recherche&nbsp;: Verbinal pour Linux 1.3.7">
+    <meta property="og:description" content="Le client natif du CADC et de CANFAR sur Linux&nbsp;: cherchez dans l’archive, exécutez des calepins sur un noyau local, orbitez des cubes spectraux en 3D, suivez des protocoles de recherche à cocher, et laissez un agent IA tout piloter — depuis une seule fenêtre GTK 4.">
+    <meta property="og:image" content="/assets/blog/verbinal-1-3-7-linux-fits-viewer.png">
+    <meta property="og:image:alt" content="La Visionneuse FITS de Verbinal pour Linux affichant une image JWST/MIRI de M51, avec un réticule WCS et les panneaux d’affichage, de vue et de comparaison.">
+    <meta property="og:site_name" content="Verbinal">
+    <meta property="og:url" content="https://verbinal.com/fr/blog/verbinal-1-3-7-linux">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Un bureau GNOME pour toute la boucle de recherche&nbsp;: Verbinal pour Linux 1.3.7">
+    <meta name="twitter:description" content="Verbinal pour Linux 1.3.7 — un bureau CANFAR natif GTK 4 en Rust, avec des Flux de travail, un Assistant IA, une Visionneuse de cubes 3D OpenGL et un calepin Jupyter natif.">
+    <meta name="twitter:image" content="/assets/blog/verbinal-1-3-7-linux-fits-viewer.png">
+
+    <link rel="canonical" href="https://verbinal.com/fr/blog/verbinal-1-3-7-linux">
+    <link rel="icon" type="image/svg+xml" href="/assets/verbinal-dark.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/play_store_icon_512.png">
+    <link rel="apple-touch-icon" href="/assets/play_store_icon_512.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-3-7-linux">
+    <link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-3-7-linux">
+    <link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-3-7-linux">
+    <meta property="og:locale" content="fr_CA">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/fr/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <div class="header-actions">
+            <nav class="nav">
+                <a href="/fr/#features">Fonctionnalités</a>
+                <a href="/fr/#platforms">Télécharger</a>
+                <a href="/fr/blog">Blogue</a>
+                <a href="mailto:support@verbinal.com">Support</a>
+            </nav>
+            <!--LANGSWITCH--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-3-7-linux" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-3-7-linux" aria-current="page" hreflang="fr">FR</a></div><!--/LANGSWITCH-->
+        </div>
+    </div>
+</header>
+
+<section class="post-hero">
+    <div class="container">
+        <div class="doc-inner">
+            <a href="/fr/blog" class="post-back"><span aria-hidden="true">&lsaquo;</span> Tous les articles</a>
+            <div class="post-eyebrow">
+                <span class="tag">Linux 1.3.7</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>Version</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>22 août 2026</span>
+            </div>
+            <h1>Un bureau GNOME pour toute la boucle de recherche&nbsp;: Verbinal pour Linux 1.3.7</h1>
+            <p class="post-lede">Verbinal pour Linux est un bureau natif <strong>GTK&nbsp;4</strong> pour la plate-forme scientifique CANFAR et le CADC, écrit en <strong>Rust</strong>. Il cherche dans l’archive, exécute des calepins sur un noyau local, orbite des cubes spectraux en 3D, transforme des protocoles de recherche en listes que vous cochez, et remet toute l’application à un agent IA par MCP &mdash; depuis une seule fenêtre, vos données restant sur votre machine. Voici le tour de ce qu’il fait à la 1.3.7, et un compte rendu honnête de ce que cinq versions en neuf jours ont changé.</p>
+            <div class="post-byline">
+                <span>Serhii Zautkin</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>11 min de lecture</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="doc post">
+    <div class="container">
+        <div class="doc-inner">
+            <article>
+
+                <p>Verbinal est depuis un moment un compagnon natif du <strong>portail scientifique CANFAR</strong> et du <strong>Centre canadien de données astronomiques (CADC)</strong> sur macOS, iOS, Windows et Android. L’application Linux est le membre de la famille qui n’a jamais eu sa propre page ici &mdash; ce qui devient voyant, car elle n’est plus le modeste gestionnaire de sessions de ses débuts.</p>
+                <p>Elle est écrite en <strong>Rust</strong>, avec une interface <strong>GTK&nbsp;4</strong> et <strong>libadwaita</strong>, une exécution Tokio reliée à la boucle principale GLib, et aucun Electron à l’horizon. Ce n’est pas un portage vêtu des habits d’une autre plate-forme&nbsp;: elle a l’allure et le comportement d’une application GNOME parce qu’elle en est une. Elle s’installe depuis un <code>.deb</code>, elle est libre sous la <strong>licence publique générale GNU Affero v3.0</strong>, et son interface est offerte en <strong>anglais et en français</strong>.</p>
+                <p>La version <strong>1.3.3</strong> l’a amenée à parité avec la génération Flux de travail et Assistant IA de l’application Windows. Les quatre versions depuis &mdash; de la <strong>1.3.4</strong> à la <strong>1.3.7</strong>, toutes en trois jours &mdash; ont été quelque chose de moins reluisant et de plus utile&nbsp;: six séances d’assurance qualité à piloter l’application contre le service en direct, et les correctifs qui en sont sortis. Les deux moitiés de cette histoire sont ci-dessous.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-7-linux-home.png" alt="L’écran de bienvenue de Verbinal pour Linux&nbsp;: une barre latérale GNOME listant Accueil, Portail, Stockage, Rechercher, Recherche, Visionneuse FITS, Visionneuse de cubes, Calepin, Flux de travail et Guide IA, à côté d’une grille de dix tuiles de modules." width="2560" height="1439" loading="lazy">
+                    <figcaption>L’écran de bienvenue, une tuile par module. Dix en tout, et la barre latérale atteint n’importe lequel en un clic.</figcaption>
+                </figure>
+
+                <p class="pullquote">Un protocole que vous cochez. Un agent qui peut l’exécuter, et qui doit demander avant de casser quoi que ce soit. Un cube que vous tournez en 3D. Une seule fenêtre GTK, et vos données n’en sortent jamais.</p>
+
+                <h2>Ce qu’est Verbinal pour Linux</h2>
+                <p>Si c’est nouveau pour vous&nbsp;: Verbinal pour Linux est un client de bureau pour CANFAR et le CADC qui demande <strong>GTK&nbsp;4.12+</strong>, <strong>libadwaita&nbsp;1.4+</strong> et un fournisseur du service de secrets (Secret Service) &mdash; trousseau GNOME, KDE Wallet ou équivalent &mdash; où votre jeton du CADC réside plutôt que dans un fichier de configuration. Installez le <code>.deb</code> depuis les versions GitHub avec <code>sudo dpkg -i verbinal_*_amd64.deb</code>, ou compilez depuis les sources avec <code>cargo build --release</code>.</p>
+                <p>L’application est un ensemble de modules, chacun une tuile sur l’écran de bienvenue&nbsp;: <strong>Portail</strong> pour les sessions et le calcul par lots, <strong>Rechercher</strong> pour l’archive du CADC, <strong>Recherche</strong> pour ce que vous avez téléchargé, <strong>Stockage</strong> pour VOSpace, une <strong>Visionneuse FITS</strong> 2D, une <strong>Visionneuse de cubes</strong> 3D, un <strong>Calepin</strong> natif, les <strong>Flux de travail</strong>, et l’<strong>Assistant IA</strong> et le <strong>Guide IA</strong> optionnels. Portail, Stockage et le calcul demandent un compte CADC gratuit&nbsp;; <strong>Rechercher et les deux visionneuses fonctionnent sans connexion</strong>, de sorte que vous pouvez récupérer un fichier public et l’inspecter avant même d’ouvrir une session. Il n’y a aucune télémétrie nulle part dans l’application.</p>
+
+                <h2>Portail&nbsp;: sessions, tâches par lots, et ce qu’il y a dans un conteneur</h2>
+                <p>Le Portail est la salle de contrôle de CANFAR. Lancez et gérez des <strong>sessions Skaha</strong> interactives &mdash; Calepin, Bureau, CARTA, Firefly, Contributed &mdash; depuis un formulaire Standard, un formulaire Avancé qui accepte une image de registre personnalisée avec ses identifiants, ou un onglet Headless pour le travail qui n’a pas besoin d’écran. Tout autour se trouvent les chiffres autour desquels on planifie&nbsp;: votre <strong>quota VOSpace</strong>, une liste de <strong>Lancements récents</strong> pour relancer en un clic, et un panneau de <strong>Charge de la plate-forme</strong> avec la disponibilité en direct du CPU et de la RAM de la grappe.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-7-linux-portal.png" alt="Le Portail de Verbinal pour Linux&nbsp;: trois sessions en cours avec le CPU et la RAM réellement utilisés, un formulaire de lancement Standard/Avancé/Headless, le quota de stockage, un résumé des tâches par lots, les lancements récents, la charge de la plate-forme en direct et un catalogue d’images CANFAR." width="2560" height="1439" loading="lazy">
+                    <figcaption>Le Portail &mdash; les sessions actives avec leur CPU et leur RAM réellement en usage, un formulaire de lancement, les tâches par lots, votre quota, la charge de la grappe en direct et le catalogue d’images CANFAR, dans une seule disposition adaptative.</figcaption>
+                </figure>
+
+                <p>Les <strong>tâches par lots headless</strong> s’exécutent avec des répliques qui en sont vraiment&nbsp;: un lancement par réplique, chacune nommée <code>job-N</code> et informée de son rang par <code>REPLICA_ID</code> et <code>REPLICA_COUNT</code>. Comme CANFAR récupère les tâches terminées en quelques secondes, Verbinal retient les cinquante dernières avec la <em>raison</em> de chaque échec &mdash; saisie depuis les journaux et les événements de la tâche pendant qu’elle existe encore, puisque ceux-ci meurent avec elle.</p>
+                <p>Le catalogue du bas est plus intéressant qu’il n’en a l’air. La <strong>Découverte d’images</strong> répond à une question à laquelle on répondrait autrement en lançant une session pour y fouiller&nbsp;: <em>laquelle de ces 359 images de conteneur porte le paquet dont j’ai besoin&nbsp;?</em> Elle inspecte les images avec une petite sonde headless, publie le manifeste dans votre propre VOSpace pour qu’une deuxième machine ou une réinstallation ne coûte aucune tâche, et vous laisse filtrer le catalogue par famille de système, version et paquets contenus.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-7-linux-image-discovery.png" alt="La boîte de dialogue « Trouver une image par paquet » de Verbinal pour Linux&nbsp;: un panneau de filtres à facettes listant les familles et versions de systèmes avec leurs décomptes, et une liste défilante d’images de conteneur avec des boutons « Utiliser cette image » et « Découvrir »." width="2560" height="1439" loading="lazy">
+                    <figcaption>Trouver une image par paquet &mdash; filtrez 359 images de conteneur par famille de système, version et paquets contenus, puis lancez-en une sans quitter la boîte de dialogue.</figcaption>
+                </figure>
+
+                <h2>Trouvez-le, gardez-le, rangez-le&nbsp;: Rechercher, Recherche, Stockage</h2>
+                <p>La plupart des projets commencent à l’archive, et <strong>Rechercher</strong> interroge le CADC directement par TAP &mdash; CFHT, JCMT, DAO, Gemini, HST, JWST, MOST et plus encore. Faites une recherche conique par coordonnée ou par nom de cible résolu, ou écrivez vous-même de l’ADQL dans l’onglet éditeur. Affinez les résultats avec des filtres de colonnes en direct qui comprennent les <strong>expressions booléennes</strong> &mdash; <code>!tess &amp; !apass</code> veut dire ce à quoi vous vous attendez &mdash; prévisualisez une ligne sans quitter la grille, enregistrez les requêtes que vous relancerez, faites une recherche conique dans les catalogues <strong>VizieR</strong> en parallèle, et exportez en CSV ou en TSV.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-7-linux-search.png" alt="La recherche dans l’archive du CADC dans Verbinal pour Linux&nbsp;: une grille de résultats d’observations HST de M-51 avec des champs de filtre par colonne, une fenêtre de prévisualisation montrant l’image de l’observation et ses métadonnées avec un bouton « Enregistrer dans Recherche », et des panneaux de recherches récentes et de requêtes enregistrées." width="2560" height="1439" loading="lazy">
+                    <figcaption>Les résultats de recherche avec une prévisualisation par ligne &mdash; l’image, ses métadonnées, et un seul bouton pour la conserver. Les recherches récentes et les requêtes ADQL enregistrées sont à côté.</figcaption>
+                </figure>
+
+                <p>Ce que vous conservez aboutit dans <strong>Recherche</strong>, une bibliothèque locale organisée par observation, avec des aperçus, des notes par observation et un dossier de recherche exportable. Le dossier peut désormais emporter les fichiers de données eux-mêmes, transmis en flux par un rédacteur compatible ZIP64 pour qu’un cube de plusieurs gigaoctets passe sans peine, et il inclut les champs de citation &mdash; identifiant de proposition, chercheur principal, titre, date de diffusion &mdash; que son propre fichier README vous dit de citer.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-7-linux-research.png" alt="Le module Recherche de Verbinal pour Linux&nbsp;: une liste de neuf observations téléchargées à gauche, et à droite une image Fabry MOST d’Altaïr avec ses métadonnées d’observation CAOM2, ses informations de fichier et une pastille « Créé par un agent IA »." width="2560" height="1439" loading="lazy">
+                    <figcaption>Une observation MOST téléchargée d’Altaïr, ses métadonnées CAOM2 remplies depuis l’archive plutôt que laissées vides &mdash; et une pastille indiquant qu’un agent IA, et non une personne, l’a récupérée.</figcaption>
+                </figure>
+
+                <p><strong>Stockage</strong> est un navigateur VOSpace/ARC complet &mdash; téléverser, télécharger, organiser, partager un dossier avec un groupe ou le rendre public, le tout avec le suivi du quota. Les transferts se font en flux, avec une barre de progression et un bouton d’annulation&nbsp;; un téléchargement atterrit en <code>.tmp</code> et n’est renommé qu’une fois complet, de sorte qu’un transfert raté ne laisse jamais un fichier FITS tronqué qui a l’air entier.</p>
+
+                <h2>Flux de travail&nbsp;: des protocoles de recherche que vous cochez</h2>
+                <p>Une bonne part de l’astronomie est de la <em>procédure</em> &mdash; la suite ordonnée d’étapes qui transforme une question en mesure &mdash; et cette procédure vit d’ordinaire dans la tête de quelqu’un, dans un wiki de laboratoire ou dans un README périmé. Les <strong>Flux de travail</strong> en font un objet de premier ordre&nbsp;: un protocole écrit comme une simple <strong>liste de contrôle en markdown</strong>, rendu en fiches d’étapes numérotées que vous cochez au fur et à mesure, la coche étant réécrite en préservant les octets pour que le fichier reste le vôtre.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-7-linux-workflows.png" alt="Le module Flux de travail de Verbinal pour Linux&nbsp;: un panneau de sept modèles intégrés et une liste de flux locaux, à côté d’un protocole « Altair delta-Scuti seismology from MOST archival photometry » terminé montrant 9 étapes sur 9 cochées, chaque fiche portant des pastilles d’outils et un lien vers un autre module." width="2560" height="1439" loading="lazy">
+                    <figcaption>Un protocole de réplication terminé, 9 étapes sur 9 cochées. Chaque fiche nomme les outils qu’elle emploie &mdash; <code>execute_adql_query</code>, <code>download_observation</code>, <code>run_cell</code> &mdash; et mène au module qui fait le travail.</figcaption>
+                </figure>
+
+                <p>Ce qui en fait plus qu’une liste de tâches, c’est que les étapes sont <strong>reliées à l’application</strong>. Chaque fiche nomme l’action concrète qu’elle représente et mène directement au module qui l’exécute, si bien que <em>télécharger les quatre époques</em> se trouve à un clic de les télécharger pour de bon dans Recherche. Verbinal livre <strong>sept modèles intégrés, pensés d’abord pour le Canada</strong> &mdash; reconnaissance d’imagerie d’archive sur CFHT MegaCam, spectroscopie stellaire sur DAO Plaskett et CFHT ESPaDOnS, retraitement par lots en tâches headless, constructeur d’échantillon par recoupement VizieR, diligence raisonnable pour une demande de temps d’observation, cinématique de cubes spectraux, et photométrie de séries temporelles d’étoiles variables &mdash; et vous pouvez écrire les vôtres en markdown avec un éditeur à aperçu en direct. Gardez un flux localement, ou <strong>publiez-le à votre équipe par VOSpace</strong>. Et parce qu’un protocole est aussi un plan qu’un agent peut exécuter, chaque flux a un bouton <strong>Copier l’invite</strong>.</p>
+
+                <h2>Un assistant IA qui peut piloter l’application &mdash; et qui doit demander</h2>
+                <p>Verbinal pour Linux peut s’apparier à votre propre <strong>Claude Desktop</strong>, <strong>Claude Code</strong>, ou à n’importe quel client MCP. Un pont <code>verbinal mcp</code> parle le <strong>Model Context Protocol</strong> sur un socket UNIX privé par utilisateur, et un assistant de connexion guidé écrit la configuration du client et lance un autotest. L’agent obtient la même application que vous&nbsp;: rechercher et télécharger, les deux visionneuses, le calepin, le stockage, les sessions, et des Flux de travail qu’il peut suivre ou rédiger.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-7-linux-ai-guide.png" alt="Le Guide IA de Verbinal pour Linux, annonçant 135 outils en 16 catégories, avec un champ de filtre, une liste d’outils de guide rédigés par l’utilisateur, et des tuiles de catégories pour Foundational, Search & Archive, Saved Queries, Research & Notes, Downloads, FITS Viewer, Cube Viewer, Notebook, Storage, Sessions, Headless/Batch, Image Discovery, AI Compute et Workflows." width="2560" height="1439" loading="lazy">
+                    <figcaption>Le Guide IA &mdash; 135 outils rangés en 16 catégories, chaque description modifiable pour réajuster la façon dont l’agent voit un outil. Vous pouvez aussi rédiger vos propres outils de guide qui transmettent vos conventions à l’agent, mot pour mot.</figcaption>
+                </figure>
+
+                <p>Ce qui rend cela confortable plutôt qu’inquiétant, c’est le modèle de contrôle. Les appels en lecture seule s’appliquent tout de suite&nbsp;; tout ce qui est <strong>conséquent est mis en file comme une proposition qu’un humain approuve dans l’application</strong>, et les opérations destructrices le sont toujours. Chaque action aboutit dans un journal d’événements, et tout ce qu’un agent a créé porte une <strong>pastille de robot</strong> pour que vous puissiez voir à qui revient le travail &mdash; l’observation d’Altaïr deux figures plus haut est marquée exactement ainsi. Le Guide IA vous laisse réécrire, en direct, la façon dont chacun des 135 outils se décrit, pour élargir ou restreindre ce vers quoi l’agent tend la main. C’est un assistant qui garde les mains visibles, pas un pilote automatique.</p>
+
+                <h2>Deux visionneuses&nbsp;: le FITS en 2D, les cubes en 3D</h2>
+                <p>Des données que l’on voit sont des données auxquelles on se fie, et Verbinal apporte ses propres visionneuses plutôt que de vous renvoyer à un navigateur. La <strong>Visionneuse FITS</strong> est une visionneuse d’images 2D avec un <strong>WCS conscient de la projection, distorsion SIP comprise</strong> (TAN, SIN, STG, ZEA), une lecture de coordonnées et un « aller à », un sondage de pixels, des coordonnées enregistrées, plusieurs étirements et palettes, une rotation nord-en-haut tirée du WCS, et un sélecteur d’extension pour les fichiers multi-HDU. <strong>Chercher ici</strong> transforme le réticule en requête d’archive. Ouvrez plusieurs fichiers à la fois et comparez-les&nbsp;: un <strong>réticule lié</strong> qui suit la même position céleste d’un onglet à l’autre, un zoom synchronisé malgré des échelles de pixels différentes, et un mode clignotement au fondu réglable.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-7-linux-fits-viewer.png" alt="La Visionneuse FITS de Verbinal pour Linux affichant l’extension SCI d’une image JWST/MIRI de M51 en niveaux de gris, avec un réticule WCS rouge indiquant AD 13h29m51,73s Déc +47d12m07,60s, et les panneaux d’affichage, de vue, de réticule et de comparaison à droite." width="2560" height="1439" loading="lazy">
+                    <figcaption>Une image JWST/MIRI de M51, extension SCI, le réticule lisant les coordonnées célestes directement dans le WCS. Le clignotement, le réticule lié et le zoom synchronisé sont dans le panneau de comparaison, en dessous.</figcaption>
+                </figure>
+
+                <p>La <strong>Visionneuse de cubes</strong> est la même idée en trois dimensions. En mode <code>3D</code>, c’est un véritable rendu volumique &mdash; un <strong>ray-marcher GLSL sur une <code>GtkGLArea</code></strong> &mdash; et vous survolez l’espace position&ndash;position&ndash;vitesse&nbsp;: orbitez, zoomez, mettez en orbite automatique, passez à une projection d’intensité maximale, et façonnez la fonction de transfert avec la densité, l’échelle spectrale et une <strong>courbe d’opacité modifiable</strong> jusqu’à ce que le plancher de bruit s’efface et que la structure ressorte. Un mode <code>Coupe</code> lit un seul canal avec les coordonnées WCS et une valeur spectrale, et le sondage au clic extrait le spectre complet à travers le cube en n’importe quel pixel. Le long du bas, un défileur de canaux avec une forme d’onde d’intensité montre d’un coup d’œil la structure spectrale de tout le cube et la parcourt. <strong>Exporter la figure</strong> compose une planche de publication en PNG ou en PDF plutôt que de prendre une capture d’écran.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-3-7-linux-cube-viewer.png" alt="La Visionneuse de cubes de Verbinal pour Linux en mode 3D&nbsp;: un cube de profondeur de Faraday du DRAO rendu comme un volume OpenGL dans la palette Inferno avec des axes de coordonnées galactiques et de profondeur de Faraday légendés, un plan de coupe le traversant, et un panneau d’affichage avec palette, étirement, fenêtre, densité, échelle spectrale, qualité et une courbe d’opacité modifiable." width="2560" height="1439" loading="lazy">
+                    <figcaption>Un cube de profondeur de Faraday du DRAO en rendu volumique OpenGL, avec un plan de coupe le traversant, des légendes d’axes en coordonnées galactiques et une courbe d’opacité modifiable. Le défileur de canaux et sa forme d’onde d’intensité courent le long du bas.</figcaption>
+                </figure>
+
+                <p>Un détail ici est propre à Linux et mérite d’être dit plutôt que caché&nbsp;: les pilotes graphiques varient bien davantage sur Linux que sur un Mac ou une machine Windows bien élevée, de sorte que le <strong>mode Coupe est entièrement sans GL et toujours disponible</strong>. Si le rendu volumique ne démarre pas sur votre machine, il vous reste le défileur de canaux, le sondage de spectre, la lecture WCS et l’export de figure &mdash; les instruments de mesure &mdash; plutôt qu’une boîte de dialogue d’erreur et rien d’autre.</p>
+
+                <h2>Calepin&nbsp;: un noyau local, et un noyau distant quand vous le voulez</h2>
+                <p>Certaines analyses demandent du code, et Verbinal l’exécute sur place. Le module <strong>Calepin</strong> édite et exécute des fichiers <code>.ipynb</code> nativement contre un <strong>noyau Python local</strong> &mdash; votre <code>python3</code> système, sans navigateur, sans serveur à démarrer, sans onglet JupyterLab à surveiller. Ouvrez plusieurs calepins en onglets, exécutez une cellule ou tout le livre, voyez les figures matplotlib s’afficher en ligne. Depuis une observation téléchargée dans Recherche, vous pouvez amorcer un calepin d’analyse prêt à l’emploi, si bien qu’une étape de flux de travail comme <em>extraction photométrique</em> vous dépose dans un vrai calepin garni plutôt que dans une cellule vide. Les paquets manquants peuvent être installés depuis le calepin &mdash; prudemment, car sur Ubuntu le Python système est géré de l’extérieur et <code>pip install --user</code> est refusé à dessein&nbsp;; Verbinal ne propose de passer outre qu’après que pip l’ait dit lui-même, et seulement si vous le demandez.</p>
+                <p>Il y a un second type de calcul, et savoir lequel vous employez compte. Les noyaux de calepin s’exécutent <strong>localement</strong>, sur votre machine, avec ce que vous avez installé. <code>run_code</code> &mdash; l’outil vers lequel un agent tend la main &mdash; s’exécute <strong>à distance</strong> sur un conteneur CANFAR déjà chaud&nbsp;: Python&nbsp;3.11 avec astropy, numpy, matplotlib et pyvo, votre <code>/arc/home</code> monté, et votre certificat CADC disponible pour les récupérations authentifiées depuis l’intérieur de la tâche. Local pour tout ce qui touche à vos propres fichiers&nbsp;; distant pour tout ce qui veut les données et les paquets de la plate-forme.</p>
+
+                <h2>Bâti à la façon Linux &mdash; et ce qui le distingue du Mac et de Windows</h2>
+                <p>Parce que Verbinal est écrit nativement sur chaque plate-forme, l’application Linux n’est pas l’application Mac ou Windows recompilée. Quelques différences méritent d’être nommées franchement&nbsp;:</p>
+                <ul>
+                    <li><strong>Boîte à outils.</strong> Rust avec <strong>GTK&nbsp;4 et libadwaita</strong>, là où macOS est en SwiftUI et Windows en WinUI&nbsp;3. Elle suit votre thème GNOME et sa disposition adaptative plutôt que d’imiter un système sur lequel elle ne tourne pas.</li>
+                    <li><strong>Rendu 3D.</strong> La Visionneuse de cubes est un <strong>ray-marcher OpenGL (GLSL&nbsp;330)</strong> dans une <code>GtkGLArea</code>, avec un mode Coupe sans GL comme repli garanti&nbsp;; macOS utilise Metal et Windows Direct3D, dont aucun n’a besoin de ce repli.</li>
+                    <li><strong>Identifiants.</strong> Les jetons résident dans le trousseau du système par l’<strong>API Secret Service</strong> &mdash; trousseau GNOME, KDE Wallet ou un autre fournisseur. Sur macOS c’est le trousseau macOS&nbsp;; sur Windows, le Gestionnaire d’identifiants.</li>
+                    <li><strong>Distribution.</strong> Un <strong><code>.deb</code> depuis les versions GitHub</strong>, ou <code>cargo build --release</code> depuis les sources. Aucun gardien de boutique entre vous et l’application, et aucun bac à sable ne restreint les fichiers qu’elle peut lire.</li>
+                    <li><strong>Licence.</strong> <strong>AGPL-3.0</strong>, comme le client Windows&nbsp;; l’application Mac est sous MPL-2.0.</li>
+                    <li><strong>Prérequis.</strong> GTK&nbsp;4.12+, libadwaita&nbsp;1.4+, un fournisseur du service de secrets, et Python&nbsp;3 si vous voulez exécuter des calepins localement.</li>
+                </ul>
+
+                <h2>Ce que cinq versions en neuf jours ont vraiment changé</h2>
+                <p>La 1.3.3 a posé les fonctionnalités. Puis six séances d’assurance qualité ont piloté l’application contre les services CADC et CANFAR en direct &mdash; dont deux réplications complètes d’articles publiés, menées entièrement sur la plate-forme &mdash; et les versions 1.3.4 à 1.3.7 ont corrigé ce que cela a révélé. Cela vaut la peine d’être précis, car le motif est instructif&nbsp;: presque rien de tout cela n’était visible depuis l’intérieur du code.</p>
+                <ul>
+                    <li><strong>Un filtre qui n’avait jamais fonctionné.</strong> L’option <em>Données publiques seulement</em> du formulaire de recherche construisait de l’ADQL avec <code>GETDATE()</code>, qui est du T-SQL&nbsp;; le CADC répond <em>« Function [GETDATE] is not found in TapSchema »</em>. Elle n’avait jamais fonctionné, ni ici ni dans l’application Windows d’où elle avait été portée. Le CADC déclare de l’ADQL&nbsp;2.0 avec douze fonctions géométriques et aucune UDF, et un garde-fou refuse désormais tout appel hors de cet ensemble &mdash; ce qui l’aurait attrapé dès le premier jour.</li>
+                    <li><strong>Les transferts se faisaient à l’aveugle.</strong> Le Stockage gardait les fichiers entiers en mémoire&nbsp;: un cube de 5&nbsp;Go demandait 5&nbsp;Go de RAM, n’affichait rien avant la fin, et ne pouvait pas être arrêté.</li>
+                    <li><strong>Un téléchargement qui ne produisait rien comptait comme une réussite.</strong> Un point d’accès du CADC répond HTTP&nbsp;200 avec un corps vide pour un identifiant d’éditeur qu’il ne sait pas résoudre, si bien qu’un fichier de zéro octet atterrissait dans la bibliothèque, annoncé comme <em>« Téléchargé… (0 octet) »</em>. Zéro octet est refusé maintenant.</li>
+                    <li><strong>Chaque fiche de la bibliothèque était anonyme.</strong> Cible, instrument, filtre et coordonnées n’étaient jamais remplis que par l’<em>enregistrement d’un résultat de recherche</em>, de sorte que tout ce qui était récupéré par identifiant d’éditeur arrivait avec un fichier et rien d’autre. Un téléchargement interroge désormais l’archive &mdash; une requête indexée, un quart de seconde.</li>
+                    <li><strong>Trois services signalaient un 4xx à côté d’un crochet vert.</strong> Le défaut n’était pas l’étiquette, mais la sonde. Elle envoyait un <code>GET</code> nu à des points d’accès qui répondent 400 ou 401 à exactement cela, puis déclarait l’hôte en bonne santé parce qu’il avait répondu. Chaque service IVOA publie <code>/availability</code> pour cette question, et la sonde lit désormais ce document &mdash; de sorte qu’un service annonçant un arrêt planifié est signalé comme indisponible, dans ses propres mots.</li>
+                    <li><strong>Un agent ne pouvait pas se connecter, et rien ne disait pourquoi.</strong> Un outil annonçait un schéma mal formé&nbsp;; les clients qui valident avant d’enregistrer rejetaient toute la liste, ce qui se présente comme <em>« ce serveur n’a aucun outil »</em> plutôt que comme <em>« un outil est mal formé »</em>. Chaque schéma annoncé est vérifié maintenant.</li>
+                    <li><strong>Le travail d’un agent était consigné comme le vôtre.</strong> Rien de ce qu’un agent créait n’a jamais mérité sa pastille, parce que le routeur appliquait une copie de la fiche prise avant l’apposition de la pastille.</li>
+                    <li><strong>Les propositions en attente ne survivaient pas à un redémarrage.</strong> Sept en attente de révision se sont évanouies en silence, et une déjà approuvée a été annulée. La file est journalisée et réhydratée maintenant.</li>
+                    <li><strong>89 avertissements de code mort supprimés cachaient cinq vrais défauts</strong> &mdash; des fonctionnalités écrites et jamais raccordées. La version livrée passe l’analyse avec <code>dead_code</code> activé.</li>
+                </ul>
+                <p>La suite de tests est passée de 841 à plus de 1&nbsp;200, et les ajouts sont la partie intéressante&nbsp;: des tests d’invariants qui parcourent le manifeste d’outils en direct pour vérifier que chaque argument annoncé est lu par quelque chose et que tout ce qui est réglable est lisible, et des tests qui parcourent les sources à la recherche des chaînes qu’une personne lit &mdash; rien n’atteint une étiquette ou une notification sans passer par le catalogue, et chaque chaîne localisée a une forme française. Ce dernier point compte, car à la 1.3.3 le français n’était jamais que la part qu’avait la référence&nbsp;: <strong>621 chaînes visibles</strong> parvenaient aux gens en anglais, écrans entiers compris. Toutes sont traduites.</p>
+
+                <h2>Vie privée, sources, et comment l’obtenir</h2>
+                <p>La posture de confidentialité est celle que garde chaque application Verbinal. Aucune collecte de données, aucune analytique, aucun rapport de plantage, aucun service tiers &mdash; l’application n’a pas de serveur à elle. Vos identifiants du CADC restent dans le trousseau du système, et le trafic réseau va directement à CANFAR et au CADC en HTTPS, sans rien entre les deux. Les données que vous ouvrez dans les visionneuses sont lues et rendues sur votre propre machine&nbsp;; le cube que vous tournez en 3D n’est jamais téléversé.</p>
+                <p>Verbinal pour Linux est libre et open source sous la licence publique générale GNU Affero v3.0, avec l’intégralité des sources à <code>github.com/szautkin/CanfarDesktopUbuntu</code> &mdash; l’analyseur FITS, la gestion du WCS, le nuanceur volumique et la couche d’outils MCP décrits ici sont tous des choses que vous pouvez lire plutôt que croire sur parole. Installez le <code>.deb</code>, ouvrez une tuile, et &mdash; si le cœur vous en dit &mdash; partez d’un modèle de Flux de travail et laissez-le vous mener de l’archive à la figure sans quitter le bureau.</p>
+
+                <div class="post-cta">
+                    <h3>Obtenir Verbinal pour Linux</h3>
+                    <p>Libre et open source sous AGPL-3.0. GTK 4.12+, libadwaita 1.4+ et un compte CANFAR gratuit. Rechercher et les deux visionneuses fonctionnent sans connexion &mdash; et vos données restent sur votre machine.</p>
+                    <div class="post-cta-actions">
+                        <a href="https://github.com/szautkin/CanfarDesktopUbuntu/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Télécharger le .deb</a>
+                        <a href="https://github.com/szautkin/CanfarDesktopUbuntu" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Code source</a>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
+            <span>Verbinal</span>
+        </div>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="/fr/blog">Blogue</a> &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; Les clients CANFAR sont open source sous MPL-2.0 et AGPL-3.0.</p>
+        <!--LANGSWITCH-FOOTER--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-3-7-linux" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-3-7-linux" aria-current="page" hreflang="fr">FR</a></div><!--/LANGSWITCH-FOOTER-->
+    </div>
+</footer>
+
+</body>
+</html>
