@@ -15,6 +15,16 @@
 #
 # `latest/download` always resolves to the newest release, so this rule never
 # needs updating when a version ships.
+# The public key is served from here rather than from a keyserver. `pacman-key
+# --recv-keys` depends on keyserver propagation and on port 11371 not being
+# blocked, and a user whose first command hangs does not try the second. This
+# is 3KB of ASCII, committed, and served by the same host as the repository.
+[[headers]]
+  for = "/linux/arch/verbinal.gpg"
+  [headers.values]
+    Content-Type = "application/pgp-keys"
+    Cache-Control = "public, max-age=3600"
+
 [[redirects]]
   from = "/linux/arch/x86_64/*"
   to = "https://github.com/szautkin/CanfarDesktopUbuntu/releases/latest/download/:splat"
