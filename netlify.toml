@@ -1,6 +1,26 @@
 [build]
   publish = "."
 
+# The Arch/Omarchy package repository.
+#
+# A pacman repo is a directory of packages and a database index served over
+# HTTPS — nothing more. The files themselves live on GitHub Releases, and this
+# redirects to them rather than proxying, so the bytes never pass through
+# Netlify and no package is ever committed to this repository. A 15MB binary
+# per release would be in the git history forever.
+#
+# 302 rather than 200: a rewrite would proxy every download through Netlify's
+# bandwidth. pacman uses libcurl and follows redirects, so a redirect costs
+# nothing and GitHub serves the file.
+#
+# `latest/download` always resolves to the newest release, so this rule never
+# needs updating when a version ships.
+[[redirects]]
+  from = "/linux/arch/x86_64/*"
+  to = "https://github.com/szautkin/CanfarDesktopUbuntu/releases/latest/download/:splat"
+  status = 302
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
