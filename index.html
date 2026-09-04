@@ -47,15 +47,24 @@
 </head>
 <body>
 
-<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-linux-137-announce-dismissed')==='1')d.classList.add('announce-linux-hidden');if(localStorage.getItem('verbinal-windows-130-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-macos-130-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
+<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');if(localStorage.getItem('verbinal-windows-130-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-macos-130-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
 
-<div class="announce" id="announce-linux">
-    <a href="/blog/verbinal-1-3-7-linux" class="announce-text">
+<div class="announce" id="announce-ubuntu">
+    <a href="/blog/verbinal-1-4-4-linux" class="announce-text">
         <span class="announce-tag">New</span>
-        <span>Verbinal for Linux 1.3.7 is here &mdash; a native GTK&nbsp;4 desktop for CANFAR. Read the guide</span>
+        <span>Verbinal for Linux 1.4.4 is here &mdash; notifications when things happen, and an images list you can search. Read the notes</span>
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
-    <button type="button" class="announce-close" id="announce-linux-close" aria-label="Dismiss announcement">&times;</button>
+    <button type="button" class="announce-close" id="announce-ubuntu-close" aria-label="Dismiss announcement">&times;</button>
+</div>
+
+<div class="announce announce-sub" id="announce-omarchy">
+    <a href="/blog/verbinal-1-4-4-omarchy" class="announce-text">
+        <span class="announce-tag">Omarchy 1.4.4</span>
+        <span>Now on Arch and Omarchy, from a signed pacman repository. Read the install guide</span>
+        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
+    </a>
+    <button type="button" class="announce-close" id="announce-omarchy-close" aria-label="Dismiss announcement">&times;</button>
 </div>
 
 <div class="announce announce-sub" id="announce-windows">
@@ -124,6 +133,7 @@
             <span class="platform-badge">macOS</span>
             <span class="platform-badge">Windows</span>
             <span class="platform-badge">Linux</span>
+            <span class="platform-badge">Omarchy</span>
             <span class="platform-badge">Android</span>
         </div>
     </div>
@@ -278,12 +288,25 @@
                 <div class="platform-card-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.36-.312.086-.664.196-.978.468a2.07 2.07 0 00-.496.64 2.205 2.205 0 00-.155.518.417.417 0 00.485.486 2.109 2.109 0 00.7-.217c.198-.1.378-.222.546-.366.168-.142.3-.26.478-.37.082-.05.174-.09.254-.128.076.298.218.58.42.85.413.55 1.107 1.058 2.162 1.153a.413.413 0 00.44-.34 6.21 6.21 0 01.496-1.527 2.038 2.038 0 01.155-.255c-.03.341.024.672.098.984.167.705.514 1.307.89 1.89-.263.088-.517.207-.72.404-.266.26-.42.6-.535.89-.12.293-.2.561-.31.754a.416.416 0 00.584.583c.185-.104.46-.193.748-.31.09-.037.339-.143.589-.355.093-.078.154-.128.272-.265a4.12 4.12 0 002.202.645c1.175 0 2.18-.398 2.94-1.01.237.219.5.368.73.467.29.124.564.21.747.312a.416.416 0 00.585-.582c-.112-.2-.19-.465-.31-.755-.118-.29-.27-.63-.536-.89-.18-.178-.393-.29-.618-.377.405-.612.76-1.27.88-2.018.03-.19.045-.375.04-.555.026.037.053.073.08.108.2.484.357 1.023.496 1.527a.413.413 0 00.44.34c1.055-.095 1.749-.603 2.162-1.153.202-.27.344-.552.42-.85.09.045.18.093.26.135.18.11.31.23.478.37.168.144.349.266.546.366.197.1.45.186.7.217a.417.417 0 00.485-.486 2.205 2.205 0 00-.155-.518 2.07 2.07 0 00-.496-.64c-.314-.272-.666-.382-.978-.468-.312-.093-.598-.16-.797-.36a3.555 3.555 0 01-.662-.839.424.424 0 00-.112-.137c.124-.805-.008-1.656-.287-2.487-.589-1.771-1.83-3.47-2.716-4.521-.75-1.067-.974-1.928-1.05-3.02-.065-1.491 1.057-5.965-3.17-6.298A5.043 5.043 0 0012.504 0z"/></svg>
                 </div>
-                <h3>Linux</h3>
+                <h3>Ubuntu &amp; Debian</h3>
                 <p class="platform-tech">Rust &middot; GTK 4 &middot; libadwaita</p>
-                <p class="platform-desc">Native GNOME app built with Rust. Sessions and batch compute, CADC archive search, FITS and 3D cube viewers, a native notebook, research workflows, and an optional AI assistant. Credentials via Secret Service (GNOME Keyring / KDE Wallet).</p>
+                <p class="platform-desc">Native GNOME app built with Rust. Sessions and batch compute, CADC archive search, FITS and 3D cube viewers, a native notebook, research workflows, and an optional AI assistant. Credentials via Secret Service (GNOME Keyring / KDE Wallet). Installs from a <code>.deb</code> on Ubuntu 24.04 and newer.</p>
                 <div class="platform-actions">
                     <a href="https://github.com/szautkin/CanfarDesktopUbuntu/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Download .deb</a>
                     <a href="https://github.com/szautkin/CanfarDesktopUbuntu" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-card-icon platform-card-icon-omarchy">
+                    <img src="/assets/omarchy-logo.svg" alt="" width="48" height="48" loading="lazy">
+                </div>
+                <h3>Omarchy &amp; Arch</h3>
+                <p class="platform-tech">pacman &middot; signed repository</p>
+                <p class="platform-desc">The same GTK 4 app, packaged for Arch and for <a href="https://omarchy.org" target="_blank" rel="noopener">Omarchy</a> &mdash; DHH's Arch and Hyprland distribution. Verbinal has its own signed pacman repository, so it updates with <code>pacman -Syu</code> alongside the rest of the system, and appears in <code>omarchy-pkg-install</code>.</p>
+                <div class="platform-actions">
+                    <a href="/blog/verbinal-1-4-4-omarchy" class="btn btn-primary btn-sm">Install Guide</a>
+                    <a href="https://github.com/omacom/omarchy" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Omarchy</a>
                 </div>
             </div>
 
@@ -384,7 +407,8 @@
             try { localStorage.setItem(key, '1'); } catch (e) {}
         });
     }
-    wire('announce-linux-close', 'announce-linux-hidden', 'verbinal-linux-137-announce-dismissed');
+    wire('announce-ubuntu-close', 'announce-ubuntu-hidden', 'verbinal-ubuntu-144-announce-dismissed');
+    wire('announce-omarchy-close', 'announce-omarchy-hidden', 'verbinal-omarchy-144-announce-dismissed');
     wire('announce-windows-close', 'announce-windows-hidden', 'verbinal-windows-130-announce-dismissed');
     wire('announce-macos-close', 'announce-macos-hidden', 'verbinal-macos-130-announce-dismissed');
     wire('announce-ios-close', 'announce-ios-hidden', 'verbinal-ios-announce-dismissed');

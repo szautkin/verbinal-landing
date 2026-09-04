@@ -25,6 +25,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog"/>
   </url>
   <url>
+    <loc>https://verbinal.com/blog/verbinal-1-4-4-linux</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-4-4-linux"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-4-4-linux"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-4-4-linux"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/fr/blog/verbinal-1-4-4-linux</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-4-4-linux"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-4-4-linux"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-4-4-linux"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/blog/verbinal-1-4-4-omarchy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-4-4-omarchy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-4-4-omarchy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-4-4-omarchy"/>
+  </url>
+  <url>
+    <loc>https://verbinal.com/fr/blog/verbinal-1-4-4-omarchy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-4-4-omarchy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-4-4-omarchy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-4-4-omarchy"/>
+  </url>
+  <url>
     <loc>https://verbinal.com/blog/verbinal-1-3-7-linux</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-3-7-linux"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-3-7-linux"/>

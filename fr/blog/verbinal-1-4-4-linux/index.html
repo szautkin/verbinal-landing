@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informé au moment où cela se produit : Verbinal pour Linux 1.4.4 — Verbinal</title>
+    <meta name="description" content="Verbinal pour Linux 1.4.4 corrige des notifications qui arrivaient jusqu’à 45 secondes en retard, refond la liste des images CANFAR pour n’afficher que ce qui est réellement lançable, ajoute une recherche dans le registre de conteneurs, et s’installe pour la première fois sur Arch et Omarchy.">
+    <meta name="keywords" content="Verbinal, CANFAR, CADC, Linux, Ubuntu, Arch, Omarchy, GTK 4, libadwaita, Rust, notifications, registre de conteneurs, Harbor, MCP, astronomie, deb, pacman">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Informé au moment où cela se produit : Verbinal pour Linux 1.4.4">
+    <meta property="og:description" content="Des notifications qui arrivent en même temps que l’événement, une liste d’images filtrée par type de session et par projet, une recherche dans le registre pour les images que la plateforme ne publie pas, et une première version pour Arch et Omarchy.">
+    <meta property="og:image" content="/assets/blog/verbinal-1-4-4-linux-portal.png">
+    <meta property="og:image:alt" content="Le Portail de Verbinal pour Linux en 1.4.4, montrant la charge de la plateforme, le quota de stockage, les tâches par lots, les sessions en cours et le catalogue d’images CANFAR filtré par type et par projet.">
+    <meta property="og:site_name" content="Verbinal">
+    <meta property="og:url" content="https://verbinal.com/fr/blog/verbinal-1-4-4-linux">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Informé au moment où cela se produit : Verbinal pour Linux 1.4.4">
+    <meta name="twitter:description" content="Verbinal pour Linux 1.4.4 — des notifications à l’heure, une liste d’images que l’on peut fouiller, et une première version pour Arch et Omarchy.">
+    <meta name="twitter:image" content="/assets/blog/verbinal-1-4-4-linux-portal.png">
+
+    <link rel="canonical" href="https://verbinal.com/fr/blog/verbinal-1-4-4-linux">
+    <link rel="icon" type="image/svg+xml" href="/assets/verbinal-dark.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/play_store_icon_512.png">
+    <link rel="apple-touch-icon" href="/assets/play_store_icon_512.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-4-4-linux">
+    <link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-4-4-linux">
+    <link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-4-4-linux">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/fr/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <div class="header-actions">
+            <nav class="nav">
+                <a href="/fr/#features">Features</a>
+                <a href="/fr/#platforms">Download</a>
+                <a href="/fr/blog">Blog</a>
+                <a href="mailto:support@verbinal.com">Support</a>
+            </nav>
+            <!--LANGSWITCH--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-4-4-linux" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-4-4-linux" aria-current="page" hreflang="fr">FR</a></div><!--/LANGSWITCH-->
+        </div>
+    </div>
+</header>
+
+<section class="post-hero">
+    <div class="container">
+        <div class="doc-inner">
+            <a href="/fr/blog" class="post-back"><span aria-hidden="true">&lsaquo;</span> Tous les articles</a>
+            <div class="post-eyebrow">
+                <span class="tag">Linux 1.4.4</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>Version</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>4 septembre 2026</span>
+            </div>
+            <h1>Informé au moment où cela se produit : Verbinal pour Linux 1.4.4</h1>
+            <p class="post-lede">Une version qui porte sur le temps. Les notifications du Portail étaient un effet secondaire de l’interrogation du service : l’intervalle <em>était</em> donc le délai &mdash; une tâche terminée annoncée jusqu’à 45 secondes en retard, et une tâche commencée et achevée entre deux interrogations jamais annoncée du tout. À côté de cela : une liste d’images qui montre ce que l’on peut réellement lancer, une recherche dans le registre de conteneurs de la plateforme, et une première version pour <strong>Arch</strong> et <strong>Omarchy</strong>.</p>
+            <div class="post-byline">
+                <span>Serhii Zautkin</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>8 min de lecture</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="doc post">
+    <div class="container">
+        <div class="doc-inner">
+            <article>
+                <p>Verbinal pour Linux 1.4.4 est une version qui porte sur le fait d’être informé au moment où les choses se produisent, et sur la recherche d’une image de conteneur que l’on peut réellement exécuter. Elle s’installe aussi pour la première fois sur <strong>Arch</strong> et <strong>Omarchy</strong> &mdash; cette moitié-là fait l’objet d’<a href="/fr/blog/verbinal-1-4-4-omarchy">un guide distinct</a>.</p>
+
+                <h2>Les notifications arrivaient en retard, et parfois pas du tout</h2>
+                <p>Le Portail apprenait qu’une session avait démarré ou qu’une tâche s’était terminée en interrogeant le service. Chaque notification était un effet secondaire de cette interrogation : l’intervalle <em>était</em> donc le délai. Une tâche par lots terminée était annoncée jusqu’à <strong>45 secondes</strong> après coup, une session jusqu’à <strong>15</strong>. Assez pour que la notification semble porter sur tout autre chose.</p>
+                <p>Pire : une tâche démarrée et terminée à l’intérieur d’un même intervalle n’était jamais observée en cours d’exécution ; aucune transition n’était détectée et rien n’était annoncé. Elle apparaissait simplement, déjà finie.</p>
+                <p>La cadence suit désormais le travail : cinq secondes après un changement, puis un relâchement progressif tant que rien ne bouge, et un rythme lent quand plus rien n’est en cours. Mesuré sur une fenêtre de cinq minutes, le pire cas est passé de <strong>45 s à 19 s</strong> et la moyenne de <strong>22 s à 9 s</strong> &mdash; chaque surface plafonnant à l’intervalle fixe qu’elle utilisait déjà, ou en deçà : rien ne peut donc arriver <em>plus tard</em> qu’auparavant.</p>
+                <p>Deux problèmes que ce délai masquait sont apparus du même coup. La bande des sessions cessait toute interrogation dès que plus rien n’était en attente : c’est pourquoi « session bientôt expirée » ne pouvait se déclencher que par accident, lorsqu’une autre session se trouvait en attente au même moment. Et une session ayant échoué <em>avant le démarrage de l’application</em> était annoncée à chaque lancement, parce que la vérification demandait « est-elle en échec, et ne l’était-elle pas auparavant ? » &mdash; une question trivialement vraie pour une session que l’application n’a jamais vue.</p>
+                <p>Les notifications éphémères ne s’accumulent plus non plus. La zone d’affichage n’en montre qu’une à la fois : dans une rafale, la sixième atteignait l’écran une demi-minute après l’événement décrit. Un nouveau message remplace désormais celui affiché, et une répétition exacte est ignorée plutôt que de réarmer son minuteur.</p>
+
+                <h2>Une liste d’images que l’on peut vraiment fouiller</h2>
+                <p>La carte Images CANFAR affichait les 365 images renvoyées par la plateforme. Soixante-dix-sept d’entre elles portent l’étiquette <code>desktop-app</code> et rien d’autre &mdash; une application publiée <em>à l’intérieur</em> d’une session de bureau, et non une session que l’on peut démarrer. Toutes les versions de CASA jusqu’à la 3.4.0 en font partie. Elles représentaient un cinquième de la carte, encombraient le filtre par type, et lancer Inspecter sur l’une d’elles dépensait une véritable tâche de sonde sur une image qu’aucun onglet de lancement ne proposerait jamais.</p>
+                <p>La carte affiche maintenant ce que le formulaire de lancement peut offrir, et comporte une seconde rangée de filtres par <strong>projet</strong>, construite à partir de ce que le filtre par type laisse. Le catalogue compte 21 projets et les deux plus gros en contiennent 60 images chacun : le type de session seul n’a jamais suffi à réduire la liste. Choisir CARTA fait passer la rangée des projets de 21 boutons à 2.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-4-linux-portal.png" alt="Le Portail de Verbinal pour Linux en 1.4.4 : charge de la plateforme, quota de stockage et décompte des tâches par lots en haut, deux sessions de calepin en cours avec leur consommation réelle de processeur et de mémoire, et le catalogue d’images CANFAR filtré par type de session et par projet, à côté d’une liste des lancements récents." width="1600" height="1195" loading="lazy">
+                    <figcaption>Le Portail en 1.4.4 &mdash; deux rangées de filtres sur le catalogue d’images, type de session et projet, et une seule façon clairement identifiée de lancer une session.</figcaption>
+                </figure>
+
+                <h2>Les images que la plateforme ne publie pas</h2>
+                <p>Skaha publie une liste organisée. Le registre de conteneurs qui la sous-tend en contient bien davantage, et jusqu’ici une image que la plateforme n’avait pas retenue était tout simplement hors d’atteinte depuis l’application, quelle que soit la précision avec laquelle on connaissait son nom.</p>
+                <p><strong>Ajouter une image du registre</strong> interroge ce registre &mdash; uniquement sur demande, jamais sur minuterie ni à la frappe, parce qu’énumérer un registre partagé pour remplir une carte de tableau de bord représente beaucoup de trafic pour répondre à une question que personne n’a posée. Ce que vous ajoutez rejoint un catalogue unifié que la carte des images, la recherche par paquet et le formulaire de lancement lisent tous : une image ajoutée devient donc lançable partout à la fois, plutôt que répertoriée à un seul endroit.</p>
+                <p>Cliquer sur une ligne d’image ouvre désormais ce qu’elle contient : système d’exploitation, capacités, environnements conda, et paquets par écosystème. L’image médiane en contient 624 et la plus grosse section 960 : la vue commence donc par un filtre plutôt que par une liste, construit son contenu au fur et à mesure que vous ouvrez chaque section, et omet les écosystèmes vides dans tous les manifestes au lieu d’afficher « R (0) » indéfiniment.</p>
+
+                <p class="pullquote">Interrogé sur la meilleure image pour la spectroscopie de M51, un agent cherchait « spectroscopy », n’obtenait aucun résultat ni aucune approximation, et concluait qu’aucune image ne convenait. Neuf d’entre elles contiennent <code>specutils</code>.</p>
+
+                <h2>Deux nouveaux outils pour les agents</h2>
+                <p>Cet échec mérite qu’on s’y arrête, car l’outil fonctionnait exactement comme prévu. <code>find_images_with_packages</code> apparie de véritables noms de paquets, et rien ne permettait à un assistant d’<em>apprendre</em> quels sont ces noms. Un mot de sujet ne trouve rien, et « rien » est indiscernable d’un non catégorique.</p>
+                <p><code>search_packages</code> est le vocabulaire qui manquait : les noms de paquets et le nombre d’images qui les portent. Les noms qui commencent par le terme viennent en tête, car un classement par nombre seul placerait <code>jsonschema-specifications</code> (71 images) et <code>fsspec</code> (56) devant <code>specutils</code> (9) &mdash; les paquets présents dans le plus d’images sont de la plomberie Python que presque toutes embarquent, c’est-à-dire précisément ce qui ne distingue rien.</p>
+                <p><code>describe_image</code> répond à la question suivante : non pas quelles images correspondent, mais laquelle convient le mieux. Cela dépend du système d’exploitation, de ce qui est installé à côté de la correspondance, et du fait que l’image ait déjà été inspectée ou non.</p>
+
+                <h2>Le lancement</h2>
+                <p>Le formulaire de lancement occupait les deux tiers du Portail, que l’on soit en train de lancer quelque chose ou non. Il s’ouvre désormais en boîte de dialogue, depuis un unique bouton clairement identifié, à côté de la liste des sessions qu’il vient compléter. Une tentative antérieure l’avait placé derrière un bouton flottant : sans étiquette, éloigné de tout ce à quoi il se rapportait, et pour qui ne l’avait pas remarqué il n’existait aucune autre voie d’accès &mdash; il a donc disparu.</p>
+                <p>La boîte de dialogue répond sur place plutôt que d’ouvrir une seconde fenêtre par-dessus elle-même. Un lancement ouvrait auparavant sa propre confirmation au-dessus de la fenêtre de lancement, attendait deux secondes, se fermait, puis fermait la fenêtre en dessous : deux fenêtres à écarter pour une seule action.</p>
+
+                <h2>Installation</h2>
+                <p>Sur Ubuntu 24.04 et plus récent, téléchargez le <code>.deb</code> depuis les versions GitHub :</p>
+                <pre class="post-code"><code>sudo apt install ./verbinal_1.4.4-1_amd64.deb</code></pre>
+                <p>Le <code>./</code> initial est ce que l’on oublie &mdash; sans lui, apt cherche un paquet portant ce nom dans l’archive. Il installe au passage les dépendances manquantes, ce qui le rend préférable à <code>dpkg -i</code> suivi de <code>apt-get install -f</code> : le même travail en deux commandes, avec un état incohérent entre les deux.</p>
+                <p>Tout ce dont Verbinal a besoin se trouve dans l’archive d’Ubuntu : GTK 4, libadwaita, glib et cfitsio. <code>libgtk-4-media-gstreamer</code> est <em>recommandé</em> plutôt que requis &mdash; il joue les signaux sonores de l’agent, et sans lui l’application est silencieuse et par ailleurs inchangée.</p>
+                <p>Sur Arch et Omarchy, Verbinal dispose de son propre dépôt pacman signé. C’est <a href="/fr/blog/verbinal-1-4-4-omarchy">un guide distinct</a>.</p>
+                <p>Verbinal pour Linux est un logiciel libre sous <strong>licence publique générale GNU Affero v3.0</strong>. L’application ne contient aucune télémétrie, votre jeton du CADC réside dans le trousseau du système plutôt que dans un fichier de configuration, et les données ouvertes dans les visionneuses sont lues et affichées sur votre propre machine.</p>
+                <div class="post-cta">
+                    <h3>Obtenir Verbinal pour Linux 1.4.4</h3>
+                    <p>Libre et ouvert sous AGPL-3.0. GTK 4.12+, libadwaita 1.4+ et un compte CANFAR gratuit. La recherche et les deux visionneuses fonctionnent sans connexion &mdash; et vos données restent sur votre machine.</p>
+                    <div class="post-cta-actions">
+                        <a href="https://github.com/szautkin/CanfarDesktopUbuntu/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Télécharger le .deb</a>
+                        <a href="/fr/blog/verbinal-1-4-4-omarchy" class="btn btn-outline btn-sm">Arch et Omarchy</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
+            <span>Verbinal</span>
+        </div>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="/fr/blog">Blog</a> &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; CANFAR clients are open source under MPL-2.0 and AGPL-3.0.</p>
+        <!--LANGSWITCH-FOOTER--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-4-4-linux" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-4-4-linux" aria-current="page" hreflang="fr">FR</a></div><!--/LANGSWITCH-FOOTER-->
+    </div>
+</footer>
+
+</body>
+</html>

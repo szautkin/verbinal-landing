@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbinal on Omarchy: a signed pacman repository for Arch — Verbinal</title>
+    <meta name="description" content="Verbinal for Linux 1.4.4 installs on Arch and Omarchy from its own signed pacman repository. Why not the AUR, the three commands to install it, and the two build failures that only showed up in a real Arch container.">
+    <meta name="keywords" content="Verbinal, Omarchy, Arch Linux, pacman, PKGBUILD, makepkg, CANFAR, CADC, GTK 4, libadwaita, Rust, Hyprland, DHH, astronomy, signed repository, pacman-key">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Verbinal on Omarchy: a signed pacman repository for Arch">
+    <meta property="og:description" content="Verbinal installs on Arch and Omarchy from a signed pacman repository, updating with pacman -Syu alongside the rest of the system. Three commands, and an honest account of what building it cost.">
+    <meta property="og:image" content="/assets/blog/verbinal-1-4-4-omarchy-cube.png">
+    <meta property="og:image:alt" content="Verbinal's Cube Viewer running on Omarchy, showing a spectral cube volume-rendered in 3D with the Inferno colormap.">
+    <meta property="og:site_name" content="Verbinal">
+    <meta property="og:url" content="https://verbinal.com/blog/verbinal-1-4-4-omarchy">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Verbinal on Omarchy: a signed pacman repository for Arch">
+    <meta name="twitter:description" content="Verbinal for Linux 1.4.4 on Arch and Omarchy — a signed pacman repository, three commands, and no compiling.">
+    <meta name="twitter:image" content="/assets/blog/verbinal-1-4-4-omarchy-cube.png">
+
+    <link rel="canonical" href="https://verbinal.com/blog/verbinal-1-4-4-omarchy">
+    <link rel="icon" type="image/svg+xml" href="/assets/verbinal-dark.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/play_store_icon_512.png">
+    <link rel="apple-touch-icon" href="/assets/play_store_icon_512.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-4-4-omarchy">
+    <link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-4-4-omarchy">
+    <link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-4-4-omarchy">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <div class="header-actions">
+            <nav class="nav">
+                <a href="/#features">Features</a>
+                <a href="/#platforms">Download</a>
+                <a href="/blog">Blog</a>
+                <a href="mailto:support@verbinal.com">Support</a>
+            </nav>
+            <!--LANGSWITCH--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-4-4-omarchy" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-4-4-omarchy" hreflang="fr">FR</a></div><!--/LANGSWITCH-->
+        </div>
+    </div>
+</header>
+
+<section class="post-hero">
+    <div class="container">
+        <div class="doc-inner">
+            <a href="/blog" class="post-back"><span aria-hidden="true">&lsaquo;</span> All articles</a>
+            <div class="post-eyebrow">
+                <span class="tag">Omarchy 1.4.4</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>Guide</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>4 September 2026</span>
+            </div>
+            <h1>Verbinal on Omarchy: a signed pacman repository for Arch</h1>
+            <p class="post-lede">Verbinal for Linux is a native <strong>GTK&nbsp;4</strong> desktop for CANFAR and the CADC, written in <strong>Rust</strong>. As of <strong>1.4.4</strong> it installs on <strong>Arch</strong> and <strong>Omarchy</strong> from its own signed pacman repository &mdash; three commands, no compiling, and <code>pacman -Syu</code> from then on. Here is how, why it is not on the AUR, and what building it actually cost.</p>
+            <div class="post-byline">
+                <span>Serhii Zautkin</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>6 min read</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="doc post">
+    <div class="container">
+        <div class="doc-inner">
+            <article>
+                <p>Verbinal for Linux has installed from a <code>.deb</code> since its first release, which is fine if you run Ubuntu and no use at all if you do not. As of <strong>1.4.4</strong> it installs on <strong>Arch</strong> and on <strong>Omarchy</strong> from a signed <strong>pacman repository</strong>, and it updates with <code>pacman -Syu</code> along with everything else on the system.</p>
+
+                <div class="post-brand">
+                    <img src="/assets/omarchy-logo.svg" alt="The Omarchy logo" width="120" height="120" loading="lazy">
+                    <div>
+                        <p>Omarchy is <a href="https://omarchy.org" target="_blank" rel="noopener">DHH's Arch and Hyprland distribution</a> &mdash; Arch Linux underneath, with a tiling compositor and a set of opinionated defaults on top. It keeps pacman, the AUR, and its own repository for the packages it ships itself.</p>
+                        <p>That last part is the interesting one, because it is exactly what Verbinal needed.</p>
+                    </div>
+                </div>
+
+                <h2>Why not the AUR</h2>
+                <p>The obvious route for an Arch package is the <strong>AUR</strong>, and it was the first thing tried. AUR account registration is closed, so there is no route through it &mdash; not a policy objection, simply a door that does not open.</p>
+                <p>It turns out not to matter. A pacman repository is a directory of package files and a database index served over HTTPS. Nothing more. It is the same shape as Omarchy's own <strong>OPR</strong>, which is where <code>omarchy</code> and <code>omarchy-settings</code> come from. So Verbinal has one, at <code>verbinal.com/linux/arch</code>, and any Arch machine can add it in three lines.</p>
+                <p>There is a real advantage to the repository over an AUR package, incidentally: nobody compiles anything. An AUR source package would have every user build ~200 Rust crates on their own machine. The repository serves a 6.8&nbsp;MB prebuilt binary package that installs in seconds.</p>
+
+                <h2>Installing it</h2>
+                <p>Three steps. Trust the signing key, add the repository, install.</p>
+                <pre class="post-code"><code>curl -fsSL https://verbinal.com/linux/arch/verbinal.gpg | sudo pacman-key --add -
+sudo pacman-key --lsign-key 61FBCBA86674EFAF009D49495AD7FD0C3CCCD519</code></pre>
+                <p>The key is served from the site rather than a keyserver on purpose. <code>pacman-key --recv-keys</code> depends on keyserver propagation and on port 11371 not being blocked by whatever network you are on, and a first command that hangs is where people stop. If you want to check it against what you just imported:</p>
+                <pre class="post-code"><code>pacman-key --finger 61FBCBA86674EFAF009D49495AD7FD0C3CCCD519</code></pre>
+                <p><code>--lsign-key</code> is the step that matters and the one people skip. Adding a key tells pacman the signature exists; locally signing it tells pacman to believe it.</p>
+                <p>Then the repository:</p>
+                <pre class="post-code"><code>sudo tee -a /etc/pacman.conf &lt;&lt;'EOF'
+
+[verbinal]
+Server = https://verbinal.com/linux/arch/$arch
+EOF
+
+sudo pacman -Sy verbinal</code></pre>
+                <p>That is the whole thing. <code>pacman -Syu</code> now upgrades Verbinal with the rest of the system, and because <code>omarchy-pkg-install</code> is a wrapper around pacman reading the same configuration, Verbinal shows up there too.</p>
+                <p>The packages are signed and pacman is left on its default <code>SigLevel</code>, which <em>requires</em> signatures. If you would rather install one version and not add a repository at all:</p>
+                <pre class="post-code"><code>sudo pacman -U https://verbinal.com/linux/arch/x86_64/verbinal-1.4.4-1-x86_64.pkg.tar.zst</code></pre>
+
+                <h2>One optional dependency</h2>
+                <p>Verbinal declares <code>gst-plugins-good</code> as an <em>optional</em> dependency. It is what GTK uses to play the short cues the AI agent makes when it starts and stops working. Without it the app is silent and otherwise identical &mdash; which is a poor reason to refuse to install, so it does not.</p>
+
+                <h2>What you get</h2>
+                <p>The same application, not a reduced one. Verbinal is a native <strong>GTK&nbsp;4</strong> and <strong>libadwaita</strong> desktop for the <strong>CANFAR Science Platform</strong> and the <strong>CADC</strong>, written in <strong>Rust</strong>: launch and manage Skaha sessions, search the CADC archive in a form or in ADQL, browse VOSpace, open FITS images and spectral cubes, run Jupyter notebooks on a local kernel, follow research protocols as checklists, and hand the whole app to an AI assistant over MCP.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-4-omarchy-cube.png" alt="Verbinal's Cube Viewer running on Omarchy: a spectral cube volume-rendered in 3D with the Inferno colormap against a dark background, axis captions for RA, DEC and CHANNEL, a slice plane, and a Display panel with colormap, stretch, window and volume controls." width="1656" height="1000" loading="lazy">
+                    <figcaption>The Cube Viewer on Omarchy &mdash; a spectral cube ray-marched on the GPU, with the slice plane crossing it and a channel scrubber underneath. libadwaita follows the system theme, so it arrives dark without being told.</figcaption>
+                </figure>
+
+                <p class="pullquote">The dark theme is not a Verbinal setting. libadwaita asks the desktop, Omarchy answers dark, and the app follows &mdash; which is the whole argument for building natively rather than shipping a browser.</p>
+
+                <h2>How it is built, and what that cost</h2>
+                <p>The package is built on Arch, in CI, against the libraries pacman will resolve to &mdash; not cross-built on Ubuntu and hoped for. Two things about that were only learnable by running it.</p>
+                <p><strong>makepkg enables LTO for every package by default.</strong> The <code>ring</code> crate compiles its own C and assembly, and under <code>-flto</code> those objects become LLVM bitcode that the Rust link step does not resolve. The build runs all the way through compilation and then dies with a page of <code>undefined symbol: ring_core_*</code>. Nothing about that symptom points at LTO. The fix is one line, <code>options=('!lto')</code>, and the reason it is now pinned by a test is that the failure gives you nothing to search for.</p>
+                <p><strong><code>repo-add</code> writes the database as a symlink.</strong> A GitHub release asset cannot be a symlink, so the publishing step has to copy the tarball under the name pacman asks for &mdash; and copying onto an existing symlink copies a file onto its own target, which fails. That one ended the release job after building and signing, before publishing anything.</p>
+                <p>Both were found by building and installing the package in a clean Arch container rather than by reading the recipe. The install path in this article is the one that gets exercised: the CI-built package is added to a repository, the key is fetched from this site, and pacman installs it with signatures required. It reports <code>Validated By: SHA-256 Sum  Signature</code>, which is the sentence worth having.</p>
+
+                <h2>Where things live</h2>
+                <p>The repository is at <code>verbinal.com/linux/arch/$arch</code>, the signing key at <code>verbinal.com/linux/arch/verbinal.gpg</code>, and the packages themselves on GitHub Releases &mdash; the site redirects rather than proxying, so the bytes come from GitHub and nothing large is ever committed to the site.</p>
+                <p>Verbinal for Linux is free software under the <strong>GNU Affero General Public License v3.0</strong>. The <code>PKGBUILD</code> is in the app's own repository under <code>packaging/arch/</code>, beside the code it packages, so a dependency added to <code>Cargo.toml</code> and the dependency line in the package move in the same commit.</p>
+                <p>More about Omarchy itself: <a href="https://omarchy.org" target="_blank" rel="noopener">omarchy.org</a>, <a href="https://learn.omacom.io/2/the-omarchy-manual" target="_blank" rel="noopener">the manual</a>, and <a href="https://github.com/omacom/omarchy" target="_blank" rel="noopener">github.com/omacom/omarchy</a>.</p>
+                <div class="post-cta">
+                    <h3>Get Verbinal on Omarchy</h3>
+                    <p>Free and open source under AGPL-3.0. A signed pacman repository, a free CANFAR account, and <code>pacman -Syu</code> from then on. Search and both viewers work without signing in &mdash; and your data stays on your machine.</p>
+                    <div class="post-cta-actions">
+                        <a href="https://github.com/szautkin/CanfarDesktopUbuntu/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Releases</a>
+                        <a href="https://github.com/szautkin/CanfarDesktopUbuntu" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
+            <span>Verbinal</span>
+        </div>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="/blog">Blog</a> &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; CANFAR clients are open source under MPL-2.0 and AGPL-3.0.</p>
+        <!--LANGSWITCH-FOOTER--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-4-4-omarchy" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-4-4-omarchy" hreflang="fr">FR</a></div><!--/LANGSWITCH-FOOTER-->
+    </div>
+</footer>
+
+</body>
+</html>

@@ -136,8 +136,18 @@ img {
     color: #fff;
 }
 
-.announce-linux-hidden #announce-linux {
+.announce-ubuntu-hidden #announce-ubuntu {
     display: none;
+}
+
+.announce-omarchy-hidden #announce-omarchy {
+    display: none;
+}
+
+/* The Omarchy mark is a brand asset with its own colour, so it is not tinted
+   to the card accent the way the currentColor glyphs are. */
+.platform-card-icon-omarchy img {
+    display: block;
 }
 
 .announce-windows-hidden #announce-windows {
@@ -1347,6 +1357,73 @@ a, button, .btn {
     color: var(--color-heading);
     font-weight: 500;
     letter-spacing: -0.01em;
+}
+
+/* ── Post: a brand aside ───────────────────────────────────────
+ *
+ * Words with a mark beside them, for a post that is about somebody else's
+ * project. The logo sits in its own column at reading width and drops under
+ * the text on a phone, where a 120px square beside a paragraph leaves the
+ * paragraph about nine characters wide. */
+.post-brand {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 28px;
+    align-items: start;
+    margin: 34px 0;
+    padding: 26px 28px;
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.post-brand img {
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+
+.post-brand p {
+    margin: 0 0 12px;
+}
+
+.post-brand p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    .post-brand {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .post-brand img {
+        width: 84px;
+        height: 84px;
+    }
+}
+
+/* ── Post: commands you are meant to run ───────────────────────
+ *
+ * Scrolls on its own rather than widening the article: a pacman.conf heredoc
+ * is longer than the reading measure, and a page that scrolls sideways to
+ * show it has broken every paragraph above it to do so. */
+.post-code {
+    margin: 22px 0;
+    padding: 18px 20px;
+    border-radius: var(--radius);
+    background: rgba(2, 6, 23, 0.6);
+    border: 1px solid var(--color-border);
+    overflow-x: auto;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.post-code code {
+    background: none;
+    padding: 0;
+    color: var(--color-text);
+    white-space: pre;
 }
 
 .post-cta {
