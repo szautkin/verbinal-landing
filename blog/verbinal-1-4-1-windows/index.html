@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark it, cut it out, publish it: Verbinal for Windows 1.4.1 — Verbinal</title>
+    <meta name="description" content="Verbinal for Windows 1.4.1 adds cutouts — only the part of a file you need, cut by CADC or on your own computer — on top of 1.4.0's marks on images and cubes, figure export, Remote Compute, and an AI assistant that can see the viewers and point at the interface.">
+    <meta name="keywords" content="Verbinal, CANFAR, CADC, Windows, WinUI 3, FITS, cutout, SODA, marks, DS9 regions, figure export, Remote Compute, MCP, AI assistant, JWST, HST, MegaPipe, Microsoft Store, ARM64">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mark it, cut it out, publish it: Verbinal for Windows 1.4.1">
+    <meta property="og:description" content="Cutouts cut by CADC or on your own machine, marks pinned to the sky, figures with the marks on them, a screen for the code your assistant runs on CANFAR, and a round of accuracy fixes — two Windows releases, two days apart, on the Microsoft Store.">
+    <meta property="og:image" content="/assets/blog/verbinal-1-4-1-windows-marks.png">
+    <meta property="og:image:alt" content="The Verbinal for Windows FITS Viewer showing an HST image of a field in M31, with five marks drawn by the AI assistant listed in the Marks panel.">
+    <meta property="og:site_name" content="Verbinal">
+    <meta property="og:url" content="https://verbinal.com/blog/verbinal-1-4-1-windows">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mark it, cut it out, publish it: Verbinal for Windows 1.4.1">
+    <meta name="twitter:description" content="Verbinal for Windows 1.4.1 — cutouts by CADC or on your computer, marks on images and cubes, figure export, Remote Compute, and an assistant that can see.">
+    <meta name="twitter:image" content="/assets/blog/verbinal-1-4-1-windows-marks.png">
+
+    <link rel="canonical" href="https://verbinal.com/blog/verbinal-1-4-1-windows">
+    <link rel="icon" type="image/svg+xml" href="/assets/verbinal-dark.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/play_store_icon_512.png">
+    <link rel="apple-touch-icon" href="/assets/play_store_icon_512.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-4-1-windows">
+    <link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-4-1-windows">
+    <link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-4-1-windows">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <div class="header-actions">
+            <nav class="nav">
+                <a href="/#features">Features</a>
+                <a href="/#platforms">Download</a>
+                <a href="/blog">Blog</a>
+                <a href="mailto:support@verbinal.com">Support</a>
+            </nav>
+            <!--LANGSWITCH--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-4-1-windows" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-4-1-windows" hreflang="fr">FR</a></div><!--/LANGSWITCH-->
+        </div>
+    </div>
+</header>
+
+<section class="post-hero">
+    <div class="container">
+        <div class="doc-inner">
+            <a href="/blog" class="post-back"><span aria-hidden="true">&lsaquo;</span> All articles</a>
+            <div class="post-eyebrow">
+                <span class="tag">Windows 1.4.1</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>Release</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>26 September 2026</span>
+            </div>
+            <h1>Mark it, cut it out, publish it: Verbinal for Windows 1.4.1</h1>
+            <p class="post-lede">Two Windows releases reached the Microsoft Store on consecutive days, and this is the story of both. <strong>1.4.0</strong> added marks on images and cubes, figure export, Remote Compute, and an AI assistant that can see what the viewers show. <strong>1.4.1</strong> adds cutouts &mdash; only the part of a file you need, cut by CADC or on your own computer &mdash; and the fixes that testing the published 1.4.0 turned up.</p>
+            <div class="post-byline">
+                <span>Serhii Zautkin</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>12 min read</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="doc post">
+    <div class="container">
+        <div class="doc-inner">
+            <article>
+                <p>The last time this blog covered Windows was <a href="/blog/verbinal-1-3-0-windows">1.3.0</a>, the release that brought Workflows, the AI assistant and the Direct3D Cube Viewer. Since then the Linux app has moved quickly, and by 1.4.4 it had become the reference: Windows 1.4.0 began as a parity plan measured against Linux, item by item, rather than as a list of ideas. The measuring turned out to be the productive part. It found coordinates that were wrong by tens of arcseconds on modern headers, which no feature list would have.</p>
+                <p>1.4.0 reached the Store on 25 September and 1.4.1 followed on the 26th, shaped by what testing the published 1.4.0 turned up. Rather than two posts a day apart, this one covers both. If you are new to Verbinal for Windows, the 1.3.0 post is still the tour of the app; this one is about what is new.</p>
+
+                <h2>Cutouts: only the part of a file you need</h2>
+                <p>A MegaPipe tile is 1.6&nbsp;GB. If what you want is a galaxy in one corner of it, downloading the whole tile costs most of an afternoon and a good share of your disk. <strong>1.4.1</strong> adds cutouts, and there are two ways to make one.</p>
+                <p><strong>Cut by CADC.</strong> Where the archive offers its <strong>SODA</strong> cutout service for a file, CADC cuts the region on its side and sends only that: a few megabytes of the tile, at full resolution. In an observation's Files tab every file has a <strong>Cutout&hellip;</strong> button &mdash; live where CADC can cut the file, greyed with the reason where it cannot &mdash; and Research has one for the observation you are looking at. It opens an editor: a circle or box by RA, Dec and size, in degrees or sexagesimal, or drawn straight onto the file's footprint &mdash; drag to move, drag its dot to resize, drag elsewhere to draw &mdash; and, for a cube, a wavelength range. It starts from your last search's target and wavelengths when they fall on the file, checks as you type (off the file, partly off, a band the file does not have), and estimates the size before you commit.</p>
+                <p>The cutout downloads like any other download, in the status bar and carrying on if you move away, and lands in <strong>Research</strong> as the observation's record, marked <strong>Cutout</strong> with its region and opening with a note that it is not the complete observation. <strong>Original observation</strong> takes you back to the whole thing &mdash; in Research if you already have it, otherwise found in Search by its observation ID. And Search's <strong>Spatial cutout</strong> and <strong>Spectral cutout</strong> boxes now do what they say: a row's download is cut to the search's circle and wavelengths.</p>
+                <p><strong>Cut on this computer.</strong> Once a file is downloaded, you can cut pieces of it locally: at once, offline, as often as you like &mdash; and for files CADC will not cut at all, such as those in its HST mirror. It is the same button and the same editor; when both ways are open to a file, <strong>Cut by</strong> chooses between them, and the size shown for a local cut is exact rather than estimated.</p>
+                <p>A local cutout is meant to be something you can hand to other tools without apology. The pixels are copied, not converted &mdash; the same <code>BITPIX</code>, the same scaling. The header is the file's own, with its size, every reference pixel and pixel section put right for the cut, SIP distortion still valid, and a <code>HISTORY</code> line saying where it came from. It records where it sits in its parent (<code>LTV</code>/<code>LTM</code>), so DS9 and IRAF show the original file's pixel numbers on it &mdash; which is how a MegaPipe catalogue, written in tile pixels, still lines up. Every HDU carries a fresh <code>CHECKSUM</code> and <code>DATASUM</code> that astropy and fitsverify accept.</p>
+                <ul>
+                    <li><strong>Multi-extension files keep their shape.</strong> An HST frame keeps the SCI, ERR and DQ of the chips the region falls on; a MegaPrime frame keeps its CCDs, each cut by its own sky coordinates; or you tick exactly the images you want under <strong>Images</strong>. A region in the gap between chips is refused rather than returned empty.</li>
+                    <li><strong>Cubes</strong> are cut to the box on every plane, or to a wavelength range &mdash; on a wavelength, frequency, energy or wavenumber axis, or a velocity axis with its line's rest frequency.</li>
+                    <li><strong>fpack files</strong> compressed the CFHT way (<code>RICE_1</code>, 16-bit) are cut to a plain <code>.fits</code>, decompressing only the tiles the region touches.</li>
+                    <li><strong>Weight maps come along.</strong> A MegaPipe tile's <code>.weight</code> map is offered under <strong>Also cut</strong> and cut with the very same pixel box. That the two lie on the same pixels is checked, not assumed: the same sky at every point of a grid across the image, to a hundredth of a pixel.</li>
+                    <li><strong>A file that cannot be cut says why</strong> &mdash; no sky coordinates, only approximate ones, galactic or B1950, compressed another way (with the <code>funpack</code> advice), or cut short.</li>
+                </ul>
+
+                <p class="pullquote">A few megabytes of a 1.6&nbsp;GB tile, at full resolution &mdash; cut where the data lives, or on your own machine from the file you already have.</p>
+
+                <h2>Marks on images and cubes</h2>
+                <p><strong>1.4.0</strong> lets you draw on your data. Boxes, circles, callouts and text go on FITS images and on cubes, pinned to the <strong>sky</strong>, to image pixels, or to a cube channel, so a mark on a source stays on the source when you pan, zoom or reopen the file. A <strong>Marks</strong> panel lists, filters and styles them &mdash; colour, weight, label size, outline &mdash; grips resize the one you have selected, and every shape carries its label on a leader.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-1-windows-marks.png" alt="The Verbinal for Windows FITS Viewer with an HST WFC3/UVIS image of a field in M31, shown in the Viridis colormap with an asinh stretch. The Marks panel lists five marks drawn by the AI agent — a circle on the source M31-B086, a callout reading 'Peak ≈ 1,057 electrons', and three text labels — and a hint points at the Marks button in the toolbar." width="1919" height="1042" loading="lazy">
+                    <figcaption>Marks on an HST WFC3/UVIS image of M31. All five were drawn by the AI assistant &mdash; the list says <em>by the agent</em> &mdash; and the hint over the Marks button is a guided-tour pointer, the same one an assistant uses to show you a control.</figcaption>
+                </figure>
+
+                <p>Right-click a mark, or press the Menu key, and it has a menu of its own: edit the label, copy its coordinates in a form the Search box reads, centre on it, <strong>search here</strong>, export a figure around it, or delete it. Since 1.4.1 an image opened from Research also offers <strong>Cut out&hellip;</strong>, so a mark on a source is one step from a cutout of it. Marks are stored per file &mdash; and per <em>extension</em> in a multi-extension file, because a MegaPrime frame holds one image per CCD and a pixel mark on one CCD has no business reappearing on another. They export as <strong>JSON with provenance</strong> or as a <strong>DS9 region file</strong>.</p>
+
+                <h2>Figures with the marks on them</h2>
+                <p>Also in 1.4.0: the FITS Viewer exports figures. Export the whole view, or select a region &mdash; the <strong>Select area</strong> button, or Ctrl-drag &mdash; as <strong>PNG or PDF</strong> at 1&times;, 2&times; or 4&times;, with a header and footer, your marks, a dark or light theme, and a transparent background if the figure is going onto a slide. Cube figures carry their marks too. A 4&times; figure too large to render reports the scale it actually achieved rather than quietly handing you less.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-1-windows-figure.png" alt="A figure exported by Verbinal for Windows from a JWST MIRI spectral cube, jw01178001001_09101_00002_mirifushort_s3d: a dark plate titled with the file name, the region size and the date, a star outlined by a yellow box mark labelled 'Star' on a leader, and a Viridis colorbar along the bottom." width="2486" height="2217" loading="lazy">
+                    <figcaption>A figure exported from a JWST MIRI cube, with a mark labelled <em>Star</em>. The header names the file, the region and the date; the footer carries the colorbar, its range and the colormap. This is the exported file, not a screenshot.</figcaption>
+                </figure>
+
+                <h2>An assistant that can see, point, and wait its turn</h2>
+                <p>Verbinal's AI assistant drives the app through the Model Context Protocol, and until 1.4.0 it worked blind: it could read numbers out of an image but not look at it. Now it can. <code>get_fits_image</code>, <code>get_cube_image</code> and <code>get_cell_image</code> hand it what the viewers and notebook cells actually show, so <em>mark the brightest source and label its peak</em> is something it can check against the picture before it tells you it is done. The marks in the screenshot above are its work.</p>
+                <p>It can also point. <code>list_ui_targets</code> and <code>point_at_ui</code> put a hint on a control on screen &mdash; even one inside a section somebody has folded shut &mdash; which is what powers the guided tour every screen now has. In 1.4.1 that reaches into dialogs, and <code>open_settings</code> opens Settings at the right section, so an assistant can <em>show</em> you where something is set. It does not set it for you: settings stay yours, and some &mdash; the MCP server and auto-apply, service endpoints, the compute image, sign-ins &mdash; only you should touch.</p>
+                <p>1.4.0 added 31 tools, and the count is now past <strong>170</strong>. Any MCP client can use them: <code>AGENTS.md</code>, in the repository and in the app's install folder, tells Codex, Copilot, Cursor, Gemini and the rest how to connect, written for the agent to follow. An activity bar shows what the app and an agent are working on, two short sound cues mark when an agent starts and finishes, and changes waiting for your approval now survive a restart of the app.</p>
+                <p>Two 1.4.1 fixes matter more than their size suggests. The first is about restarts. Closing Verbinal used to leave each assistant's MCP bridge stuck, answering nothing, until you reconnected it by hand &mdash; and an assistant started <em>before</em> Verbinal gave up on it for the whole session. The bridge now answers &ldquo;not running&rdquo; at once while Verbinal is closed, answers the assistant's handshake itself, and picks the connection up when Verbinal starts.</p>
+                <p>The second is about control, and it was found in testing. <code>start_background_apply</code> would start any pending change an assistant asked it to &mdash; including a destructive one waiting for your approval. It now starts only what auto-apply would have applied without you. A destructive change &mdash; removing a file, stopping a session, deleting from storage &mdash; always waits for you, and every tool that proposes a change now ends its description with that rule, taken from the same code that enforces it.</p>
+
+                <h2>Remote Compute: the code your assistant runs, in view</h2>
+                <p>An assistant could already run code on CANFAR with <code>run_code</code>, and until 1.4.0 that left no trace in the app. <strong>Remote Compute</strong> is the screen for it: the <code>verbinal-compute</code> session's state with Start and Stop, every run &mdash; the assistant's and your own &mdash; with its code, output and errors, and a box to run a Python or Bash snippet yourself. It uses your own CANFAR allocation and is off until you choose a compute image in Settings; until then it explains how to set one up, with a link to the <a href="https://github.com/szautkin/verbinal-execution" target="_blank" rel="noopener">verbinal-execution</a> watcher image.</p>
+                <p>The Portal marks the session as the assistant's, the activity bar shows a run while it is out, and with <em>Follow agent activity</em> on, the app brings Remote Compute to the front when an assistant runs code &mdash; so the run happens in front of you rather than behind your back. It has its own tile on the home screen, between Portal and Storage, and like them it stays locked until you sign in, however it is reached: its tile, a workflow step, or an assistant's <code>navigate_to</code>.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-1-windows-home.png" alt="The Verbinal for Windows home screen at 1.4.1, with tiles for Portal, Remote Compute, Storage, Search, Research, FITS Viewer, Cube Viewer, Notebook, Workflows, AI Guide and AI Assistant, and the activity bar along the bottom of the window." width="1920" height="1043" loading="lazy">
+                    <figcaption>The home screen, reordered in 1.4.0: the signed-in modules first &mdash; Portal, the new Remote Compute, Storage &mdash; then Search, Research, the viewers, Notebook, Workflows and the AI tiles. The activity bar runs along the bottom.</figcaption>
+                </figure>
+
+                <h2>The Portal, laid out as on Linux</h2>
+                <p>The Windows Portal used to give the launch form two thirds of the page whether or not you were launching anything. In 1.4.1 it takes the layout Linux arrived at: platform load, storage and batch jobs across the top; active sessions the full width; then the CANFAR images beside your recent launches &mdash; and a single column in a narrow window. <strong>Launch session</strong> opens the form in a dialog, <strong>Use this image</strong> opens it with that image chosen, and a launch that fails brings the form back as it was, with the reason.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-1-windows-portal.png" alt="The Verbinal for Windows Portal at 1.4.1: Platform Load, Storage and Batch Jobs across the top; three active sessions, one labelled as the assistant's remote compute; and the CANFAR Images card, filtered by session type and by project, beside Recent Launches." width="1920" height="1041" loading="lazy">
+                    <figcaption>The Portal at 1.4.1 &mdash; one clearly marked <strong>Launch session</strong> button, the assistant's compute session labelled as such, and the images card with a row for session type and a row for project.</figcaption>
+                </figure>
+
+                <p>The images card changed in both releases. 1.4.0 added a search of the container registry behind the platform, for images the curated catalogue does not list, and a view of what is installed inside an image before you launch it. 1.4.1 filters the card the way Linux does, by one shared set of rules: only images a launch can start &mdash; the <code>desktop-app</code> images, applications published <em>inside</em> a desktop session, are gone from it &mdash; with session type as a row of chips, <strong>All</strong> first, and project as a second row rebuilt from whatever the type leaves. The reasoning is in the <a href="/blog/verbinal-1-4-4-linux">Linux 1.4.4 notes</a>.</p>
+
+                <h2>Search and Research, day to day</h2>
+                <ul>
+                    <li><strong>Copy anything.</strong> Right-click any cell in the results to copy its value, the observation's details, or the row &mdash; with several rows chosen, all of them &mdash; as tab-separated text that pastes into a spreadsheet; Ctrl+C does the same. The details read the same from every screen, down to the position written the way the Search box, Simbad and DS9 read it.</li>
+                    <li><strong>Keep an observation without its file.</strong> <strong>Save to Research</strong> keeps its details and a place for notes without downloading anything. <strong>Remove file</strong> frees the disk and keeps the notes, and Download brings the file back &mdash; for a cutout, the same cutout.</li>
+                    <li><strong>A click opens the observation.</strong> Five columns used to be silent filter links, so clicking a target name narrowed the table instead of opening the row. A click anywhere on a row now opens it at once; narrowing to a value moved to the right-click menu.</li>
+                    <li><strong>A long search can be cancelled.</strong> <strong>Cancel</strong> appears beside the spinner, on the form and in the ADQL editor, and the results already shown stay.</li>
+                    <li><strong>ADQL is checked before it runs.</strong> The editor validates the query against the service's <code>TAP_SCHEMA</code> as you type, lists each problem (click one to jump to it), and keeps Execute disabled until the query can run. Queries from the editor are now kept in Recent searches too.</li>
+                    <li><strong>Notebooks</strong> open percent-format <code>.py</code> and <code>.md</code> files as cells and save them back in their own format; outputs render SVG, Markdown, LaTeX and HTML; and, as in Jupyter, a cell ending in an expression shows its value.</li>
+                </ul>
+
+                <h2>What measuring found</h2>
+                <p>The fixes in these two releases came from two places: measuring Windows against Linux 1.4.4 for 1.4.0, and testing the published 1.4.0 from the Store for 1.4.1. Some were wrong answers rather than rough edges, and those are worth saying plainly:</p>
+                <ul>
+                    <li><strong>Rotation on modern headers.</strong> Headers that describe rotation with a <code>PC</code> matrix &mdash; JWST's among them &mdash; had it ignored. The scale stayed right and the rotation silently became zero, so the error was nil at the reference pixel and grew toward the edge of the frame, to <strong>40&ndash;90&Prime;</strong>. The crosshair, Go&nbsp;To, cross-tab sync, marks and the assistant's sky readouts were all off by that much. The tests that should have caught it passed at a tolerance eleven pixels wide; they are tighter now, and reach the far corner of the frame, where a rotation error is largest.</li>
+                    <li><strong>Distortion, the other way round.</strong> On images whose header gives only the forward SIP distortion &mdash; HST's calibrated frames among them &mdash; going from the sky to a pixel skipped the distortion: up to <strong>6.6 pixels (0.26&Prime;)</strong> across a WFC3 frame. A position now lands on its own pixel.</li>
+                    <li><strong>&ldquo;Public only&rdquo; never worked.</strong> Ticking it made every search fail with <em>&ldquo;Function [GETDATE] is not found in TapSchema&rdquo;</em>: CADC's TAP service has no function for the current time. The Linux app found and fixed the same inherited bug in <a href="/blog/verbinal-1-3-7-linux">1.3.7</a>; Windows now writes out the time of the search, as CADC's own search does.</li>
+                    <li><strong>Proprietary files.</strong> DataLink, which every download goes through, was not signed in, so a proprietary observation's files were refused even to their owner. It signs in now, and the token only ever goes to CADC.</li>
+                    <li><strong>Very large images.</strong> Anything over 512&nbsp;MB was refused, whatever the machine had free. The limit is now the memory actually free: a 1.6&nbsp;GB MegaPipe tile opens, drawn at 40% while its full pixels stay behind every readout, coordinate, mark and export.</li>
+                    <li><strong>Downloads that produced nothing</strong> were recorded as successful, and a failed or cancelled download could truncate a file you already had. Neither happens now, and JWST products fetch the science file rather than the first listed artifact.</li>
+                    <li><strong>Viridis was not viridis.</strong> The FITS Viewer used a teal-to-orange approximation, and figures went out labelled VIRIDIS. It now uses the Cube Viewer's colour tables, so every colormap looks the same in both.</li>
+                    <li><strong>Marks and paths.</strong> The same file reopened as <code>C:/Users/&hellip;</code> rather than <code>C:\Users\&hellip;</code>, or with other capitals, came back without its marks. A path is now read one way, however it is written.</li>
+                    <li><strong>A French Windows refused &ldquo;10.68&rdquo;</strong> in Go&nbsp;To's RA and Dec boxes. They now read a position as the rest of the app does: a decimal point or a comma, or sexagesimal.</li>
+                    <li><strong>32-bit Windows.</strong> The x86 packages of 1.3.2 and 1.3.3 carried a 64-bit MCP bridge, so an assistant could not connect. Each package now builds its own bridge for its own architecture &mdash; and 1.4.0 adds <strong>ARM64</strong> packages alongside x64 and x86.</li>
+                </ul>
+
+                <h2>Privacy, source, and how to get it</h2>
+                <p>The privacy posture has not moved. No analytics, no telemetry, no third-party services; your credentials stay in the Windows Credential Manager, and traffic goes directly to CANFAR and CADC over HTTPS. The one new thing to know is small: a cutout by CADC sends CADC the region you asked for, which is how it knows what to cut. A cutout on your computer sends nothing at all.</p>
+                <p>Verbinal for Windows is free and open source under the <strong>GNU Affero General Public License v3.0</strong>, with the full source at <code>github.com/szautkin/CanfarDesktop</code> and <strong>3,400+ tests</strong> that GitHub Actions now runs on Windows for every push, with CodeQL beside them. It runs on <strong>Windows&nbsp;10 (1809)</strong> or newer, on x64, x86 and ARM64; notebooks need Python&nbsp;3.8+. Search and both viewers work without signing in; Portal, Remote Compute and Storage need a free CADC account.</p>
+
+                <div class="post-cta">
+                    <h3>Get Verbinal for Windows 1.4.1</h3>
+                    <p>Free and open source under AGPL-3.0. Windows 10 (1809) or newer on x64, x86 or ARM64, and a free CANFAR account. Search and the viewers work without signing in &mdash; and your data stays on your machine.</p>
+                    <div class="post-cta-actions">
+                        <a href="https://apps.microsoft.com/detail/9p8jqvk4pjch?mode=full" class="store-badge" target="_blank" rel="noopener">
+                            <img src="https://get.microsoft.com/images/en-us%20light.svg" alt="Get it from Microsoft Store" width="200">
+                        </a>
+                        <a href="https://github.com/szautkin/CanfarDesktop" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
+            <span>Verbinal</span>
+        </div>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="/blog">Blog</a> &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; CANFAR clients are open source under MPL-2.0 and AGPL-3.0.</p>
+        <!--LANGSWITCH-FOOTER--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-4-1-windows" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-4-1-windows" hreflang="fr">FR</a></div><!--/LANGSWITCH-FOOTER-->
+    </div>
+</footer>
+
+</body>
+</html>

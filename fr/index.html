@@ -48,12 +48,21 @@
 </head>
 <body>
 
-<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');if(localStorage.getItem('verbinal-windows-130-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-macos-130-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
+<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-windows-141-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');if(localStorage.getItem('verbinal-macos-130-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
 
-<div class="announce" id="announce-ubuntu">
-    <a href="/fr/blog/verbinal-1-4-4-linux" class="announce-text">
+<div class="announce" id="announce-windows">
+    <a href="/fr/blog/verbinal-1-4-1-windows" class="announce-text">
         <span class="announce-tag">Nouveau</span>
-        <span>Verbinal pour Linux 1.4.4 est arrivé &mdash; des notifications au moment où les choses arrivent, et une liste d’images que l’on peut fouiller. Lire les notes</span>
+        <span>Verbinal pour Windows 1.4.1 est arrivé &mdash; découpes, repères sur les images et les cubes, et export de figures. Lire les notes</span>
+        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
+    </a>
+    <button type="button" class="announce-close" id="announce-windows-close" aria-label="Fermer l’annonce">&times;</button>
+</div>
+
+<div class="announce announce-sub" id="announce-ubuntu">
+    <a href="/fr/blog/verbinal-1-4-4-linux" class="announce-text">
+        <span class="announce-tag">Linux 1.4.4</span>
+        <span>Des notifications au moment où les choses arrivent, et une liste d’images que l’on peut fouiller. Lire les notes</span>
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-ubuntu-close" aria-label="Fermer l’annonce">&times;</button>
@@ -66,15 +75,6 @@
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-omarchy-close" aria-label="Fermer l’annonce">&times;</button>
-</div>
-
-<div class="announce announce-sub" id="announce-windows">
-    <a href="/fr/blog/verbinal-1-3-0-windows" class="announce-text">
-        <span class="announce-tag">Windows 1.3.0</span>
-        <span>Verbinal pour Windows est arrivé &mdash; maintenant sur le Microsoft Store. Lire le guide</span>
-        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
-    </a>
-    <button type="button" class="announce-close" id="announce-windows-close" aria-label="Fermer l’annonce">&times;</button>
 </div>
 
 <div class="announce announce-sub" id="announce-macos">
@@ -233,7 +233,7 @@
                 </div>
                 <h3>Windows</h3>
                 <p class="platform-tech">C# &middot; WinUI 3</p>
-                <p class="platform-desc">Application Windows native avec Fluent Design. Disponible sur le Microsoft Store.</p>
+                <p class="platform-desc">Application Windows native avec Fluent Design. Sessions et calcul par lots, recherche dans l’archive du CADC avec découpes, visionneuses FITS et de cubes 3D avec repères et export de figures, calepin natif, flux de travail de recherche, Calcul distant et assistant IA optionnel. Identifiants dans le Windows Credential Manager. Sur le Microsoft Store pour x64, x86 et ARM64.</p>
                 <div class="platform-actions">
                     <a href="https://apps.microsoft.com/detail/9p8jqvk4pjch?mode=full" class="store-badge" target="_blank" rel="noopener">
                         <img src="https://get.microsoft.com/images/en-us%20light.svg" alt="Obtenez-le sur le Microsoft Store" width="200">
@@ -408,9 +408,9 @@
             try { localStorage.setItem(key, '1'); } catch (e) {}
         });
     }
+    wire('announce-windows-close', 'announce-windows-hidden', 'verbinal-windows-141-announce-dismissed');
     wire('announce-ubuntu-close', 'announce-ubuntu-hidden', 'verbinal-ubuntu-144-announce-dismissed');
     wire('announce-omarchy-close', 'announce-omarchy-hidden', 'verbinal-omarchy-144-announce-dismissed');
-    wire('announce-windows-close', 'announce-windows-hidden', 'verbinal-windows-130-announce-dismissed');
     wire('announce-macos-close', 'announce-macos-hidden', 'verbinal-macos-130-announce-dismissed');
     wire('announce-ios-close', 'announce-ios-hidden', 'verbinal-ios-announce-dismissed');
 })();
