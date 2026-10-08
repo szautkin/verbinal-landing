@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YZCSMB3FG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YZCSMB3FG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutouts, marks, and an assistant on your terms: Verbinal for macOS 1.4.0 — Verbinal</title>
+    <meta name="description" content="Verbinal for macOS 1.4.0 adds cutouts cut by CADC or on your Mac, marks on images and cubes, spectra and figures, Remote Compute, and an AI assistant you allow session by session, that says why for every change and can see the window and point at it.">
+    <meta name="keywords" content="Verbinal, CANFAR, CADC, macOS, SwiftUI, FITS, cutout, SODA, marks, DS9 regions, figure export, spectrum, HST x1d, Remote Compute, MCP, AI assistant, JWST, HST, MegaPipe, fpack, Mac App Store">
+    <meta name="author" content="Serhii Zautkin">
+    <meta name="theme-color" content="#060a14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cutouts, marks, and an assistant on your terms: Verbinal for macOS 1.4.0">
+    <meta property="og:description" content="Only the part of a file you need, marks pinned to the sky, spectra that open as spectra, a screen for the code your assistant runs on CANFAR, and an assistant that asks for the session, says why, and keeps a log — on the Mac App Store.">
+    <meta property="og:image" content="/assets/blog/verbinal-1-4-0-macos-marks.jpg">
+    <meta property="og:image:alt" content="The Verbinal for macOS FITS Viewer showing a JWST image of the galaxy cluster field RXC J2211, with four marks drawn by an AI assistant listed in the Marks panel.">
+    <meta property="og:site_name" content="Verbinal">
+    <meta property="og:url" content="https://verbinal.com/blog/verbinal-1-4-0-macos">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cutouts, marks, and an assistant on your terms: Verbinal for macOS 1.4.0">
+    <meta name="twitter:description" content="Verbinal for macOS 1.4.0 — cutouts by CADC or on your Mac, marks on images and cubes, spectra and figures, Remote Compute, and an assistant you allow, that says why.">
+    <meta name="twitter:image" content="/assets/blog/verbinal-1-4-0-macos-marks.jpg">
+
+    <link rel="canonical" href="https://verbinal.com/blog/verbinal-1-4-0-macos">
+    <link rel="icon" type="image/svg+xml" href="/assets/verbinal-dark.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/play_store_icon_512.png">
+    <link rel="apple-touch-icon" href="/assets/play_store_icon_512.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" hreflang="en" href="https://verbinal.com/blog/verbinal-1-4-0-macos">
+    <link rel="alternate" hreflang="fr" href="https://verbinal.com/fr/blog/verbinal-1-4-0-macos">
+    <link rel="alternate" hreflang="x-default" href="https://verbinal.com/blog/verbinal-1-4-0-macos">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="36" height="36">
+            <span>Verbinal</span>
+        </a>
+        <div class="header-actions">
+            <nav class="nav">
+                <a href="/#features">Features</a>
+                <a href="/#platforms">Download</a>
+                <a href="/blog">Blog</a>
+                <a href="mailto:support@verbinal.com">Support</a>
+            </nav>
+            <!--LANGSWITCH--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-4-0-macos" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-4-0-macos" hreflang="fr">FR</a></div><!--/LANGSWITCH-->
+        </div>
+    </div>
+</header>
+
+<section class="post-hero">
+    <div class="container">
+        <div class="doc-inner">
+            <a href="/blog" class="post-back"><span aria-hidden="true">&lsaquo;</span> All articles</a>
+            <div class="post-eyebrow">
+                <span class="tag">macOS 1.4.0</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>Release</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>7 October 2026</span>
+            </div>
+            <h1>Cutouts, marks, and an assistant on your terms: Verbinal for macOS 1.4.0</h1>
+            <p class="post-lede">The largest Mac release since the Cube Viewer. <strong>1.4.0</strong> brings over what Windows 1.4.1 shipped &mdash; cutouts, marks on images and cubes, figures with the marks on them, Remote Compute &mdash; and goes further with the AI assistant: you allow each session, decide kind by kind what it may do without asking, read why it proposes every change, and keep a log of everything it did.</p>
+            <div class="post-byline">
+                <span>Serhii Zautkin</span>
+                <span class="sep" aria-hidden="true">&middot;</span>
+                <span>13 min read</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="doc post">
+    <div class="container">
+        <div class="doc-inner">
+            <article>
+                <p>The last time this blog covered the Mac was <a href="/blog/verbinal-1-3-0-macos">1.3.0</a>, the release that brought the Cube Viewer. Three quieter releases followed over the summer: 1.3.1 added <strong>Settings&nbsp;&#9656; Endpoints</strong> and the FITS Viewer's own figure export, 1.3.2 added Workflows and French for every string in the app, and 1.3.3 was a reliability pass on Storage. Meanwhile the Windows app moved ahead, and <a href="/blog/verbinal-1-4-1-windows">Windows 1.4.1</a> became the measure: Mac 1.4.0 began as a plan to catch up with it, item by item.</p>
+                <p>Then came two full test passes, run by an AI assistant driving the app through its own tools, case by case, with a person watching the screen. They found more than the plan did &mdash; wrong pixels, wrong positions, wrong answers to the assistant &mdash; and much of this release is what they found, put right. If you are new to Verbinal for macOS, the 1.3.0 post is still a good tour of the app; this one is about what is new.</p>
+
+                <h2>Cutouts: only the part of a file you need</h2>
+                <p>A MegaPipe tile is 1.6&nbsp;GB. If what you want is one galaxy in a corner of it, the whole tile is most of an afternoon's download and a good share of your disk. 1.4.0 adds cutouts, and there are two ways to make one.</p>
+                <p><strong>Cut by CADC.</strong> Where the archive offers its <strong>SODA</strong> cutout service, CADC cuts the region on its side and sends only that: a few megabytes, at full resolution. <strong>Cut Out&hellip;</strong>, in an observation's detail in Search and in Research, opens an editor on the file's footprint: a circle or a box, RA and Dec in degrees or sexagesimal, sizes in arcminutes, and for a cube a wavelength range in nanometres. It starts from what your search asked for, checks as you type &mdash; off the file, partly off, the wrong shape for this file &mdash; and tells you the size it will be before you commit. And Search's <strong>Spatial cutout</strong> and <strong>Spectral cutout</strong> boxes, as on CADC's own search page, make Download fetch only the part of a file within the search's circle, or its wavelengths.</p>
+                <p><strong>Cut on this Mac.</strong> Once an observation's file is downloaded, you can cut it locally: at once, offline, as often as you like &mdash; and it is the only way for files CADC will not cut. A local cutout is meant to be handed to other tools without apology:</p>
+                <ul>
+                    <li><strong>The pixels are copied, not converted</strong> &mdash; the same <code>BITPIX</code>, the same scaling.</li>
+                    <li><strong>The header is rewritten so the same sky lands on the same pixel</strong>: <code>CRPIX</code> moved, <code>LTV</code>/<code>LTM</code> recording where the cut sits in its parent, SIP distortion kept valid, a <code>HISTORY</code> line saying where it came from, and a fresh <code>CHECKSUM</code> and <code>DATASUM</code>.</li>
+                    <li><strong>Mosaics keep the images you choose</strong>, and <strong>cubes</strong> are cut to the channels of a wavelength range, whether the axis is frequency, wavelength, wavenumber or velocity.</li>
+                    <li><strong>fpack files</strong> compressed with <code>RICE_1</code> are cut by decoding only the tiles the region touches, and the cutout is written uncompressed.</li>
+                    <li><strong>Weight maps come along.</strong> A MegaPipe tile's weight map can be cut beside it with the very same box, once Verbinal has checked that the two lie on the same pixels. A file on another grid is offered greyed out, with the reason.</li>
+                </ul>
+                <p>A cutout is kept in Research beside its observation, marked with what it was cut from and where, with a way back to the complete observation; downloading it again cuts it again.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-0-macos-cutout.png" alt="The Cut Out sheet on the M31 MegaPipe u-band tile: the file MegaPipe.016.263.U.MP9301.fits, on this computer; a 4.2-arcminute circle drawn on the tile's footprint; and the size, about 29.5 MB of 400 MB. Two numbered hints explain Cut by and the size." width="1120" height="760" loading="lazy">
+                    <figcaption>The cutout editor on the M31 MegaPipe u-band tile: a 4.2&prime; circle, about 29.5&nbsp;MB of a 400&nbsp;MB file, cut on this Mac from the copy already downloaded. The numbered hints in this post's screenshots were put up by an AI assistant through Verbinal's own tools.</figcaption>
+                </figure>
+
+                <p class="pullquote">A few megabytes of a 1.6&nbsp;GB tile, at full resolution &mdash; cut where the data lives, or on your own Mac from the file you already have.</p>
+
+                <h2>Marks on images and cubes</h2>
+                <p>You can now draw on your data. Turn on <strong>Draw</strong> in the FITS Viewer's new <strong>Marks</strong> panel, click the image &mdash; or drag to size the mark &mdash; and type its label: a circle or a box around a source, a callout with a leader line to its label, or a label alone. Drag a mark to move it, a corner grip to resize it, double-click to rename it. Right-click it to copy its position in the form the Search box reads, centre on it, search there, export a figure around it, or delete it.</p>
+                <p>When the image has a WCS, marks are pinned to the <strong>sky</strong>, so a mark finds the same place in another image of the field. They keep their size on the subject as you zoom, turn with the view, and are kept with the file and its extension &mdash; however its path is spelled &mdash; so they are there when you open it again. The panel lists them with a filter, and sets colour, bold, label size and outline. They export as a <strong>DS9 region file</strong> (sky in fk5 with sizes in arcseconds, pixels counted from 1 as DS9 counts them) or as <strong>JSON</strong>.</p>
+                <p>Cubes have marks too. A cube mark lives on a channel: it is drawn on the slice showing that channel, <strong>Centre on Mark</strong> takes you there, and the volume shows every channel's marks where they sit in the cube. Your assistant can draw marks as well, and its marks say so.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-0-macos-marks.jpg" alt="The Verbinal for macOS FITS Viewer with a JWST NIRISS F356W image of the galaxy cluster field RXC J2211 in the inferno colormap with an asinh stretch. Four marks sit on the image — a callout to a star reading 'Star: JWST diffraction spikes', a box labelled 'Galaxy chain', a circle labelled 'Galaxy group', and a callout reading 'Peak ≈ 3.34 MJy/sr' — and the Marks panel lists all four as by the assistant. Numbered hints point at Draw, the marks' Export menu and Export Figure." width="2048" height="1210" loading="lazy">
+                    <figcaption>Marks on a JWST NIRISS image of the cluster field RXC J2211. All four were drawn by an AI assistant &mdash; the panel says <em>by the assistant</em> &mdash; and the peak is the value it read from the file with a pixel probe. The bubbles are its hints on Draw, the marks' Export menu and Export Figure&hellip;</figcaption>
+                </figure>
+
+                <h2>Figures, and spectra that open as spectra</h2>
+                <p><strong>Export Figure</strong> in the FITS Viewer now draws the image's marks and labels &mdash; a <strong>Marks</strong> toggle turns them off &mdash; and shows either the whole image or the view on screen, as PNG at 2&times; or 4&times;, or as PDF. A mark's menu has <strong>Export Figure Around Mark&hellip;</strong>. The legend gives the figure's own centre and field of view; its &ldquo;Center&rdquo; used to be the WCS reference point, which is often not the middle of the image at all. The Cube Viewer's figures draw the cube's marks too: on a slice, those of the channel shown; in the volume, where they sit.</p>
+                <p>A FITS file whose data is a table used to open as a blank image a row of bytes tall &mdash; HST's <code>_x1d</code> spectra came out 38946&times;1. Now a spectrum opens as a <strong>spectrum</strong>: flux against wavelength, in the units the file gives, each echelle order its own line, the error as a band. A table that holds no spectrum says so and lists its columns. And a spectrum exports as a figure of its own, titled by the object (<code>TARGNAME</code>) and the instrument, with its axis units and error band, and a note of how large the error is &mdash; a high-S/N spectrum's band can be thinner than its line.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-0-macos-spectrum.png" alt="The FITS Viewer showing an HST STIS x1d file of SN 2023ixf as a spectrum: titled SN2023IXF, HST · STIS · 2023-05-22, flux in 10^-14 erg/s/cm²/Å against wavelength from about 5,300 to 10,200 Å, with the note that the ±1σ band from ERROR is a median 0.76% of the flux, narrower than the line. Numbered hints point at the title, the error note and Export Figure." width="2048" height="1210" loading="lazy">
+                    <figcaption>An HST STIS <code>_x1d</code> of SN&nbsp;2023ixf, which used to open as a blank image one row tall. It now plots as a spectrum, titled by its target, and says its error band is narrower than the line.</figcaption>
+                </figure>
+
+                <h2>Your assistant, on your terms</h2>
+                <p>Verbinal's built-in MCP server lets Claude Desktop, Claude Code or any other MCP client work in the app with you, through about two hundred tools. Until now, the rules for that were one switch: Auto-apply, on or off. 1.4.0 replaces the switch with decisions you make in the open.</p>
+                <p><strong>You allow each session.</strong> An assistant now starts by saying who it is and what it is here for, and Verbinal comes forward with a window: the client and its connection, the assistant's own description of itself &mdash; its own words, which Verbinal cannot check &mdash; and the instructions it will be given for this session, up to 250 words, filled from <strong>Settings&nbsp;&#9656; AI Agent&nbsp;&#9656; Session Instructions</strong>. <strong>Allow</strong>, and it receives your instructions word for word. <strong>Deny</strong>, and it is told to ask you first. Until you allow a session, no tool works but <code>start_session</code> and <code>describe_app</code>.</p>
+                <p><strong>You decide what it may do without asking, kind by kind.</strong> <strong>Settings&nbsp;&#9656; AI Agent</strong> lists every kind of change an assistant can make, each <strong>Allowed</strong> &mdash; it applies at once, with its reason in the session log &mdash; or <strong>Ask me</strong>, when it waits in Pending for you. What adds or changes is kept apart from what removes, replaces or stops, so allowing an assistant to tidy up what it made does not let it delete your files. By default notes, saved things, files, uploads, sessions, batch jobs and removing what an assistant itself made go ahead; sharing and every other removal ask. Your old Auto-apply choice carries over.</p>
+                <p>One kind always asks: <strong>what every later assistant is told</strong>. Adding or changing an AI Guide tool, or rewriting a tool's description, changes the instructions of every assistant after this one &mdash; so an assistant, or text planted in a file it happened to read, could quietly steer the next. Those changes now always wait for you, as deletions do.</p>
+                <p><strong>Every change says why.</strong> Each write takes a one-sentence reason, and Pending shows it under the change &mdash; or &ldquo;No reason given&rdquo; &mdash; so you read why a delete is wanted before you apply it. Pending's History says who applied each change: you, auto-apply, or the assistant's background start. A proposal nobody applies expires after three hours instead of waiting, as one did for six days, to be applied to a world that had moved on. A change that fails says why. And the robot that opens Pending is now in every toolbar, always, with its count.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-0-macos-agent-settings.jpg" alt="Settings, AI Agent section: kinds of change an assistant can make, each with an Allowed / Ask me switch — files saved on this Mac, adding to CANFAR storage, using the CANFAR allocation for sessions and compute or for batch jobs, sharing — then 'What every assistant is told', marked Always asks, and the start of 'What removes, replaces or stops'. Three numbered hints explain them." width="1800" height="1016" loading="lazy">
+                    <figcaption><strong>Settings&nbsp;&#9656; AI Agent</strong>: each kind of change <strong>Allowed</strong> or <strong>Ask me</strong>, what every later assistant is told always asking, and what removes, replaces or stops kept in a list of its own.</figcaption>
+                </figure>
+
+                <p><strong>A log that explains itself.</strong> <strong>Session Logs</strong>, also in <strong>Settings&nbsp;&#9656; AI Agent</strong>, keep each assistant session: every change with who made it and why, the app's own decisions and the rule behind each, every call with the CADC and CANFAR requests it made and what their outcomes mean, and services failing and recovering. Read it session by session, export it as text or JSON Lines, or delete closed ones; it is kept for ten days on your Mac.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-0-macos-session-log.png" alt="The Session Logs sheet. The selected session, claude-code-blog-screenshots/1.0, is open; its log reads: the assistant connected to Verbinal 1.4.0; the person allowed the session of Claude, as the assistant presents itself, to set up screens and hints and capture them for the verbinal.com blog post, with the instructions 'Use only Verbinal and its tools for this work: no other apps, and no network connections outside Verbinal. Ask before anything destructive.'; then each call — start_session, get_current_view, capture_view, list_ui_targets, show_ui_hints — with how long it took." width="1720" height="1080" loading="lazy">
+                    <figcaption>The log of the session that took these screenshots. The assistant said who it was and what it was for; the session was allowed, with the instructions from Settings given to it word for word; and every call after is written out in plain words.</figcaption>
+                </figure>
+                <p><strong>Answers within 45 seconds.</strong> An assistant's client can give up on a call after a minute, while some of Verbinal's waited two. Every call now answers within 45 seconds; work that takes longer &mdash; a 1.6&nbsp;GB download, a ten-minute image probe &mdash; carries on, on a new <strong>activity bar</strong> along the bottom of the window, which says what is running, who started it (you, your assistant, or Verbinal itself), and why anything failed. Two short sound cues, the ones Windows and Linux play, mark when an assistant starts working and when it has gone quiet.</p>
+                <p><strong>A bridge that survives restarts.</strong> An assistant started before Verbinal used to fail its handshake and give up for the whole session; one connected when Verbinal quit lost its tools until reconnected by hand. The bridge an assistant launches now answers the handshake itself, tells the assistant Verbinal is not running and what to turn on, and connects when Verbinal starts. It speaks every MCP version, the newest (2026-07-28) included.</p>
+
+                <h2>An assistant that can see, point, and keep its hands off</h2>
+                <p>An assistant can now look. <code>capture_view</code> gives it a picture of Verbinal's front window &mdash; whatever screen, sheet or Settings section is showing, with no Screen Recording permission, since the window is Verbinal's own. <code>get_fits_image</code> and <code>get_cube_image</code> return the viewers as you see them, with the map from a point in the picture back to the file's pixel, so <em>mark the brightest source</em> is something it can check against the picture.</p>
+                <p>And it can point. Verbinal reads its own windows the way VoiceOver does, so every control on every screen, sheet and Settings section can be pointed at, down to each entry of a list. <code>show_ui_hints</code> puts up rings and bubbles with the assistant's words &mdash; a numbered tour, or the rest of the window dimmed &mdash; placed by rules: bubbles never overlap each other, never cover what they point at, stay in the window and keep off images. An assistant can open a folded section or a sheet, select a tab, and close a sheet as Esc would. It never presses a button that acts, and never changes your settings: <code>open_settings</code> opens the right section, and you do the setting.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-0-macos-home.png" alt="The Verbinal for macOS home screen at 1.4.0 with a numbered tour of three hints: 1, Remote Compute, ringed on its tile; 2, Pending, on the robot button in the toolbar; 3, the activity bar along the bottom of the window." width="2048" height="1210" loading="lazy">
+                    <figcaption>A numbered tour on the home screen, put up by an assistant with <code>show_ui_hints</code>: the new Remote Compute tile, Pending in the toolbar, and the activity bar. The home screen now runs in the same order as on Windows &mdash; Portal, Remote Compute and Storage first.</figcaption>
+                </figure>
+
+                <p>Any MCP client can connect. <code>AGENTS.md</code>, in the repository, is written for the assistant to follow: the command (<code>Verbinal.app/Contents/MacOS/Verbinal mcp</code>), the server name <code>verbinal-canfar</code>, and the entry for Claude Code, Claude Desktop, Codex, Cursor, Gemini, Windsurf and VS Code.</p>
+
+                <h2>Remote Compute: the code your assistant runs, in view</h2>
+                <p>An assistant could already run code on CANFAR with <code>run_code</code>, and the app showed no trace of it. <strong>Remote Compute</strong> is the screen for it, with its own tile on the home screen: the compute session's state, size and uptime, <strong>Start Session</strong> and <strong>Stop Session</strong>, every run &mdash; the assistant's and your own &mdash; with its code, output and errors and <strong>Run Again</strong>, and a box to run a Python or Bash snippet yourself. It uses your own CANFAR allocation, and until you choose a compute image it explains what it takes, with a link to the <a href="https://github.com/szautkin/verbinal-execution" target="_blank" rel="noopener">verbinal-execution</a> watcher image.</p>
+                <p>Every run is remembered, with who sent it, when and how it ended, and is watched until its result arrives, whether or not anyone asks. A run survives signing out and quitting the app: after you sign in, every run still out is looked at again. A session whose image CANFAR could not pull shows <strong>Not ready</strong> with the reason, instead of &ldquo;Starting&rdquo; for ever. A session that no longer matches Settings says how it differs, with <strong>Restart with New Settings</strong>. And the screen tells you something worth knowing before you size a pool of workers: on CANFAR, <code>os.cpu_count()</code> counts the whole node &mdash; 192 &mdash; not the cores your session may use. Those are set by its CPU quota, in <code>/sys/fs/cgroup/cpu.max</code>, and the screen says how to read it.</p>
+
+                <figure class="post-figure">
+                    <img src="/assets/blog/verbinal-1-4-0-macos-compute.png" alt="The Remote Compute screen: the session running, with Start Session, Stop Session, Settings and Open Folder in Storage; a banner saying the session differs from Settings, with Restart with New Settings; the list of runs, all sent by the assistant; and the newest run's Python code and output — os.cpu_count(): 192, cores in the quota: 1.0. Three numbered hints point at the run, the output and the restart button." width="2048" height="1210" loading="lazy">
+                    <figcaption>Remote Compute after a run an assistant sent: its code, and an output that makes the point &mdash; Python counts 192 cores, the session's quota is one. Above, the session says it no longer matches Settings, with <strong>Restart with New Settings</strong>.</figcaption>
+                </figure>
+
+                <h2>The Portal, Batch Jobs and Storage</h2>
+                <ul>
+                    <li><strong>The Portal is laid out as on Linux and Windows</strong>: platform load, storage and batch jobs across the top, active sessions the full width, then CANFAR images beside recent launches &mdash; one column in a narrow window. <strong>Launch Session</strong> opens the form in a sheet, the progress window closes by itself once the launch goes through, and a launch that fails keeps the form to put right.</li>
+                    <li><strong>Session cards show CPU and RAM for every session.</strong> A flexible session used to say only &ldquo;FLEX&rdquo;; it now shows what it uses, and a fixed one what it was given.</li>
+                    <li><strong>CANFAR images by type and by project</strong>, as chips with counts. <strong>Find in Registry&hellip;</strong> searches the registry behind the platform for a colleague's build or a tag the catalogue has not picked up, and <strong>Add</strong> keeps it among your images. Long lists in the launch form &mdash; projects, images &mdash; open a panel you can type into.</li>
+                    <li><strong>Batch Jobs keeps up with thousands of jobs.</strong> With ten thousand jobs, opening the list took two seconds and every check froze it again. It now shows the newest 500 with <strong>Show More</strong>, a filter on every tab, and a <strong>History</strong> tab that remembers finished jobs &mdash; and why one failed &mdash; after CANFAR has forgotten them.</li>
+                    <li><strong>Notifications</strong> for a session that comes up or fails to start, and polling that follows what is happening: about five seconds after a change, easing off while nothing moves.</li>
+                    <li><strong>Storage warns when a file that usually holds secrets is public.</strong> A real CANFAR home had <code>.token</code>, <code>.config</code> and <code>.bashrc</code> readable by anyone, and nothing said so. Such a file is now marked, with <strong>Make Private</strong>. A folder deletes with everything in it, and a 200&nbsp;GB quota reads as 200&nbsp;GB, counted as Finder counts.</li>
+                </ul>
+
+                <h2>Search and Research, day to day</h2>
+                <ul>
+                    <li><strong>A Radius field.</strong> A cone search looked within 1&prime; of the target unless you knew to type a radius after it. The Spatial section now has a <strong>Radius</strong> &mdash; degrees, <code>5'</code> or <code>30 arcsec</code> &mdash; kept with saved and recent searches.</li>
+                    <li><strong>ADQL checked as you type</strong> against CADC's own schema: each problem underlined and listed, Execute off until the query can run &mdash; <code>LIMIT</code> where ADQL writes <code>SELECT TOP n</code>, a column the archive does not have (with the name that exists), a column two joined tables share. Nothing it cannot be sure of is flagged.</li>
+                    <li><strong>Cancel a long search</strong>, on the form and in the ADQL editor (Esc); the results already shown stay. With CADC's archive down, a search now says so after two minutes instead of spinning for four.</li>
+                    <li><strong>Each calibration level is its own result</strong>, so opening one row no longer lands on another, and a transient is found however it is written: <code>AT&nbsp;2023ixf</code>, <code>2023ixf</code> or <code>SN&nbsp;2023ixf</code>.</li>
+                    <li><strong>Copy anything.</strong> Right-click a result to copy a value, the observation's details, a row or the page, as tab-separated text that pastes into a spreadsheet; the Search box now reads a pasted <code>00:42:44.3 +41:16:09</code>.</li>
+                    <li><strong>Research without the file.</strong> <strong>Save to Research</strong> keeps an observation and a place for notes without downloading it; <strong>Remove File&hellip;</strong> frees the disk and keeps the notes. A record now describes the file it actually holds, from the archive's details for its own plane &mdash; one had said g band for a u-band file.</li>
+                </ul>
+
+                <h2>What testing found</h2>
+                <p>Some of what the test passes found were rough edges. Others were wrong answers, and those are worth saying plainly:</p>
+                <ul>
+                    <li><strong>Distortion was ignored.</strong> On images with SIP distortion &mdash; HST's calibrated frames, many ground-based pipelines &mdash; the crosshair, Go&nbsp;To, bookmarks, blink alignment and the assistant's sky readouts were up to about <strong>8 pixels (0.3&Prime;)</strong> out toward the corners of a WFC3 frame. The polynomial now applies both ways and agrees with astropy to 10<sup>&minus;9</sup>&deg; and 10<sup>&minus;6</sup>&nbsp;px.</li>
+                    <li><strong>Rotation on modern headers.</strong> Headers that give the rotation as a <code>PC</code> matrix beside <code>CDELT</code> &mdash; JWST's i2d images among them &mdash; had it ignored. And the value under the cursor came from the vertically mirrored row: the RA and Dec were right, the number was not, except on data symmetric top to bottom.</li>
+                    <li><strong>Every CFHT <code>.fz</code> frame was unviewable.</strong> A Rice block that fpack stores raw &mdash; noise, cosmic rays, anything busy &mdash; was read as Rice codes, and the rest of the tile came out as horizontal streaks, in the viewer and in local cutouts. The decoder now follows cfitsio block for block, is checked value for value against files cfitsio wrote, and reads 8- and 32-bit images as well as 16-bit.</li>
+                    <li><strong>Viridis was not viridis.</strong> Both viewers drew a teal-to-orange approximation, and figures went out labelled VIRIDIS; inferno, magma and plasma were 9-point approximations up to 17/255 off. All four are now matplotlib's own 256-entry tables.</li>
+                    <li><strong>Very large images</strong> over 4&nbsp;GB, or 500 million pixels, were refused whatever the Mac had free. Now the free memory decides: a MegaPipe tile opens, drawn from a block average so stars a pixel across survive, while the readout, WCS, marks and Go&nbsp;To still read every pixel.</li>
+                    <li><strong>A Mac set to another calendar</strong> &mdash; the Buddhist one, say &mdash; showed dates in the year 2569 and asked the archive for the wrong release date. Dates sent to CADC are now always Gregorian.</li>
+                    <li><strong>Positions just under a whole minute</strong> printed as <code>23h59m60.00s</code>, and Go&nbsp;To on a French Mac refused <code>10,68</code>. Both read and write positions as the rest of the app does now.</li>
+                    <li><strong>Downloads that held nothing</strong> &mdash; a 0-byte package, a tar of 1024 zero bytes &mdash; were recorded as downloaded, and a download that took over five minutes failed however steadily it arrived. An empty download is refused now, a record whose file is missing says so with <strong>Download Again</strong>, and only a five-minute stall ends a download.</li>
+                    <li><strong>A delete that did nothing said it had.</strong> CANFAR answers a delete of a session it does not have with success, so a bulk delete of one real and one made-up id said &ldquo;Deleted 2 of 2&rdquo;. Verbinal now checks the ids first, and asks the platform afterwards whether the session is really gone.</li>
+                    <li><strong>An assistant's download replaced your file.</strong> Downloading from your storage into Downloads deleted a file of the same name already there. Yours is kept now, and the download takes a timestamp in its name.</li>
+                </ul>
+
+                <h2>Privacy, source, and how to get it</h2>
+                <p>The privacy posture has not moved. No analytics, no telemetry, no third-party services; your credentials stay in the macOS Keychain, and traffic goes directly to CANFAR and CADC over HTTPS. Session logs and the archive details Research keeps stay on your Mac. The one new thing to know is small: a cutout by CADC sends CADC the region you asked for, which is how it knows what to cut. A cutout on your Mac sends nothing at all.</p>
+                <p>Verbinal for macOS is free and open source under the <strong>Mozilla Public License 2.0</strong>, with the full source at <code>github.com/szautkin/canfar-macos</code>. It runs on <strong>macOS&nbsp;14 (Sonoma)</strong> or newer, in English and French, with VoiceOver naming every control &mdash; a test now fails on any that has no name. Search and both viewers work without signing in; Portal, Remote Compute and Storage need a free CADC account. It is on the Mac App Store, and the release page on GitHub has an unsigned <code>.dmg</code> and <code>.zip</code> with SHA-256 checksums.</p>
+
+                <div class="post-cta">
+                    <h3>Get Verbinal for macOS 1.4.0</h3>
+                    <p>Free and open source under MPL-2.0. macOS 14 or later and a free CANFAR account. Search and the viewers work without signing in &mdash; and your data stays on your Mac.</p>
+                    <div class="post-cta-actions">
+                        <a href="https://apps.apple.com/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
+                            <img src="/assets/mac-app-store-badge.svg" alt="Download on the Mac App Store" width="200">
+                        </a>
+                        <a href="https://github.com/szautkin/canfar-macos" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="/assets/verbinal-dark.svg" alt="Verbinal" width="28" height="28">
+            <span>Verbinal</span>
+        </div>
+        <p class="footer-copy">&copy; 2025&ndash;2026 Serhii Zautkin &middot; <a href="/blog">Blog</a> &middot; <a href="mailto:support@verbinal.com">Support</a> &middot; CANFAR clients are open source under MPL-2.0 and AGPL-3.0.</p>
+        <!--LANGSWITCH-FOOTER--><div class="lang-switch" role="group" aria-label="Language / Langue"><a href="/blog/verbinal-1-4-0-macos" aria-current="page" hreflang="en">EN</a><a href="/fr/blog/verbinal-1-4-0-macos" hreflang="fr">FR</a></div><!--/LANGSWITCH-FOOTER-->
+    </div>
+</footer>
+
+</body>
+</html>

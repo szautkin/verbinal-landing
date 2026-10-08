@@ -48,12 +48,21 @@
 </head>
 <body>
 
-<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-windows-141-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');if(localStorage.getItem('verbinal-macos-130-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
+<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-macos-140-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-windows-141-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
 
-<div class="announce" id="announce-windows">
-    <a href="/fr/blog/verbinal-1-4-1-windows" class="announce-text">
+<div class="announce" id="announce-macos">
+    <a href="/fr/blog/verbinal-1-4-0-macos" class="announce-text">
         <span class="announce-tag">Nouveau</span>
-        <span>Verbinal pour Windows 1.4.1 est arrivé &mdash; découpes, repères sur les images et les cubes, et export de figures. Lire les notes</span>
+        <span>Verbinal pour macOS 1.4.0 est arrivé &mdash; découpes, marques sur les images et les cubes, et un assistant IA à vos conditions. Lire les notes</span>
+        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
+    </a>
+    <button type="button" class="announce-close" id="announce-macos-close" aria-label="Fermer l’annonce">&times;</button>
+</div>
+
+<div class="announce announce-sub" id="announce-windows">
+    <a href="/fr/blog/verbinal-1-4-1-windows" class="announce-text">
+        <span class="announce-tag">Windows 1.4.1</span>
+        <span>Découpes, repères sur les images et les cubes, et export de figures. Lire les notes</span>
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-windows-close" aria-label="Fermer l’annonce">&times;</button>
@@ -75,15 +84,6 @@
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-omarchy-close" aria-label="Fermer l’annonce">&times;</button>
-</div>
-
-<div class="announce announce-sub" id="announce-macos">
-    <a href="/fr/blog/verbinal-1-3-0-macos" class="announce-text">
-        <span class="announce-tag">macOS 1.3.0</span>
-        <span>Nouvelle Visionneuse de cubes &mdash; explorez les cubes spectraux FITS en 3D sur votre Mac. Lire le guide</span>
-        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
-    </a>
-    <button type="button" class="announce-close" id="announce-macos-close" aria-label="Fermer l’annonce">&times;</button>
 </div>
 
 <div class="announce announce-sub" id="announce-ios">
@@ -248,7 +248,7 @@
                 </div>
                 <h3>macOS</h3>
                 <p class="platform-tech">SwiftUI &middot; macOS 14+</p>
-                <p class="platform-desc">Application SwiftUI native. Zéro dépendance, stockage dans le trousseau, intégration macOS sans accroc.</p>
+                <p class="platform-desc">Application SwiftUI native. Sessions et calcul en lot, recherche dans l’archive du CADC avec découpes, visionneuses FITS et de cubes 3D avec marques, spectres et export de figures, flux de travail de recherche, Calcul à distance, et un assistant IA facultatif que vous autorisez session par session. Identifiants dans le trousseau macOS. Sur le Mac App Store pour les Mac Apple silicon et Intel.</p>
                 <div class="platform-actions">
                     <a href="https://apps.apple.com/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
                         <img src="/assets/mac-app-store-badge.svg" alt="Télécharger sur le Mac App Store" width="200">
@@ -408,10 +408,10 @@
             try { localStorage.setItem(key, '1'); } catch (e) {}
         });
     }
+    wire('announce-macos-close', 'announce-macos-hidden', 'verbinal-macos-140-announce-dismissed');
     wire('announce-windows-close', 'announce-windows-hidden', 'verbinal-windows-141-announce-dismissed');
     wire('announce-ubuntu-close', 'announce-ubuntu-hidden', 'verbinal-ubuntu-144-announce-dismissed');
     wire('announce-omarchy-close', 'announce-omarchy-hidden', 'verbinal-omarchy-144-announce-dismissed');
-    wire('announce-macos-close', 'announce-macos-hidden', 'verbinal-macos-130-announce-dismissed');
     wire('announce-ios-close', 'announce-ios-hidden', 'verbinal-ios-announce-dismissed');
 })();
 </script>
