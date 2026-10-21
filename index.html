@@ -47,12 +47,12 @@
 </head>
 <body>
 
-<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-macos-140-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-windows-141-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
+<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-macos-141-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-windows-141-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
 
 <div class="announce" id="announce-macos">
-    <a href="/blog/verbinal-1-4-0-macos" class="announce-text">
+    <a href="/blog/verbinal-1-4-1-macos" class="announce-text">
         <span class="announce-tag">New</span>
-        <span>Verbinal for macOS 1.4.0 is here &mdash; cutouts, marks on images and cubes, and an AI assistant on your terms. Read the notes</span>
+        <span>Verbinal for macOS 1.4.1 is here &mdash; your work on every Mac, Research files with Move To&hellip;, and GPUs in the Portal. Read the notes</span>
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-macos-close" aria-label="Dismiss announcement">&times;</button>
@@ -248,7 +248,7 @@
                 </div>
                 <h3>macOS</h3>
                 <p class="platform-tech">SwiftUI &middot; macOS 14+</p>
-                <p class="platform-desc">Native SwiftUI app. Sessions and batch compute, CADC archive search with cutouts, FITS and 3D cube viewers with marks, spectra and figure export, research workflows, Remote Compute, and an optional AI assistant you allow session by session. Credentials in the macOS Keychain. On the Mac App Store for Apple silicon and Intel Macs.</p>
+                <p class="platform-desc">Native SwiftUI app. Sessions and batch compute with GPUs, CADC archive search with cutouts, FITS and 3D cube viewers with marks, spectra and figure export, research workflows, Remote Compute, your work in your own CANFAR storage on every Mac if you want it, and an optional AI assistant you allow session by session. Credentials in the macOS Keychain. On the Mac App Store for Apple silicon and Intel Macs.</p>
                 <div class="platform-actions">
                     <a href="https://apps.apple.com/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
                         <img src="assets/mac-app-store-badge.svg" alt="Download on the Mac App Store" width="200">
@@ -422,7 +422,7 @@
             try { localStorage.setItem(key, '1'); } catch (e) {}
         });
     }
-    wire('announce-macos-close', 'announce-macos-hidden', 'verbinal-macos-140-announce-dismissed');
+    wire('announce-macos-close', 'announce-macos-hidden', 'verbinal-macos-141-announce-dismissed');
     wire('announce-windows-close', 'announce-windows-hidden', 'verbinal-windows-141-announce-dismissed');
     wire('announce-ubuntu-close', 'announce-ubuntu-hidden', 'verbinal-ubuntu-144-announce-dismissed');
     wire('announce-omarchy-close', 'announce-omarchy-hidden', 'verbinal-omarchy-144-announce-dismissed');
