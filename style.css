@@ -489,6 +489,19 @@ img {
     text-align: center;
 }
 
+/* Two phone captures in one figure. Side by side they stand about as tall as
+ * the landscape capture beside them; one alone would stand twice as tall. */
+.screenshot-phones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 16px 16px 0;
+}
+
+.screenshot-phones img {
+    border-radius: var(--radius-sm);
+}
+
 /* ── Platforms ──────────────────────────────────────────────── */
 .platforms {
     padding: 100px 0;
@@ -1400,6 +1413,30 @@ a, button, .btn {
     .post-brand img {
         width: 84px;
         height: 84px;
+    }
+}
+
+/* ── Post: phone captures ──────────────────────────────────────
+ *
+ * Tall screenshots in a row, at most 260px each, centred. One at the reading
+ * width would be some 1,800px high. On a phone they stay in a row, smaller,
+ * rather than stacking into a scroll of screens. */
+.post-phones {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.post-phones img {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 260px;
+}
+
+@media (max-width: 480px) {
+    .post-phones {
+        gap: 10px;
     }
 }
 

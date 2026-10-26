@@ -48,12 +48,21 @@
 </head>
 <body>
 
-<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-macos-141-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-windows-141-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
+<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-ios-141-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');if(localStorage.getItem('verbinal-macos-141-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-windows-141-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');}catch(e){}</script>
 
-<div class="announce" id="announce-macos">
-    <a href="/fr/blog/verbinal-1-4-1-macos" class="announce-text">
+<div class="announce" id="announce-ios">
+    <a href="/fr/blog/verbinal-1-4-1-ios" class="announce-text">
         <span class="announce-tag">Nouveau</span>
-        <span>Verbinal pour macOS 1.4.1 est arrivé &mdash; votre travail sur chaque Mac, les fichiers de Recherche avec Déplacer vers&hellip;, et les GPU dans le Portail. Lire les notes</span>
+        <span>Verbinal pour iPhone et iPad 1.4.1 est arrivé &mdash; des visionneuses FITS et de cubes sans compte, et le Portail et le Calcul une fois connecté. Lire les notes</span>
+        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
+    </a>
+    <button type="button" class="announce-close" id="announce-ios-close" aria-label="Fermer l’annonce">&times;</button>
+</div>
+
+<div class="announce announce-sub" id="announce-macos">
+    <a href="/fr/blog/verbinal-1-4-1-macos" class="announce-text">
+        <span class="announce-tag">macOS 1.4.1</span>
+        <span>Votre travail sur chaque Mac, les fichiers de Recherche avec Déplacer vers&hellip;, et les GPU dans le Portail. Lire les notes</span>
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-macos-close" aria-label="Fermer l’annonce">&times;</button>
@@ -84,15 +93,6 @@
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-omarchy-close" aria-label="Fermer l’annonce">&times;</button>
-</div>
-
-<div class="announce announce-sub" id="announce-ios">
-    <a href="#platforms" class="announce-text">
-        <span class="announce-tag">iPhone &amp; iPad</span>
-        <span>Verbinal est maintenant sur l’App Store pour iPhone &amp; iPad</span>
-        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
-    </a>
-    <button type="button" class="announce-close" id="announce-ios-close" aria-label="Fermer l’annonce">&times;</button>
 </div>
 
 <header class="header">
@@ -178,7 +178,7 @@
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
                 <h3>Identifiants sécurisés</h3>
-                <p>Jetons stockés de façon sécurisée dans le trousseau natif de votre plate-forme &mdash; trousseau macOS, Windows Credential Manager, GNOME Keyring ou Android EncryptedSharedPreferences.</p>
+                <p>Jetons stockés de façon sécurisée dans le trousseau natif de votre plate-forme &mdash; trousseau macOS et iOS, Windows Credential Manager, GNOME Keyring ou Android EncryptedSharedPreferences.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
@@ -208,15 +208,18 @@
 <section class="screenshots">
     <div class="container">
         <h2 class="section-title">Conçu en natif pour chaque plate-forme</h2>
-        <p class="section-subtitle">Chaque application est conçue avec la trousse d’outils native de la plate-forme &mdash; SwiftUI sur macOS, WinUI 3 sur Windows, GTK 4 &amp; libadwaita sur Linux, Jetpack Compose sur Android.</p>
+        <p class="section-subtitle">Chaque application est conçue avec la trousse d’outils native de la plate-forme &mdash; SwiftUI sur macOS, iPhone et iPad, WinUI 3 sur Windows, GTK 4 &amp; libadwaita sur Linux, Jetpack Compose sur Android.</p>
         <div class="screenshots-grid">
             <figure class="screenshot-item">
                 <img src="/assets/screenshot-2.png" alt="Le Portail de Verbinal pour macOS, application en anglais&nbsp;: la charge de la plate-forme avec les anneaux processeur, mémoire et GPU, le quota de stockage et les tâches en lot, deux sessions actives, les images CANFAR par type, et les lancements récents" width="2048" height="1280" loading="lazy">
                 <figcaption>Le Portail sur macOS</figcaption>
             </figure>
             <figure class="screenshot-item">
-                <img src="/assets/screenshot-1.png" alt="La fenêtre À propos de Verbinal pour macOS, version 1.4.1 (18), application en anglais&nbsp;: un compagnon natif de CANFAR pour la recherche dans l’archive, Recherche, le Stockage et les fichiers FITS, avec un agent IA facultatif qui le pilote pour vous" width="880" height="506" loading="lazy">
-                <figcaption>Verbinal 1.4.1 pour macOS</figcaption>
+                <div class="screenshot-phones">
+                    <img src="/assets/blog/verbinal-1-4-1-ios-fits-m31.jpg" alt="La visionneuse FITS de Verbinal pour iPhone 1.4.1, application en anglais&nbsp;: l’exemple M31 vu par Hubble dans la palette Heat, avec une rose des vents tirée de son WCS et une barre d’échelle de 15″" width="660" height="1434" loading="lazy">
+                    <img src="/assets/blog/verbinal-1-4-1-ios-cube-volume.jpg" alt="La visionneuse de cubes de Verbinal pour iPhone 1.4.1, application en anglais&nbsp;: l’exemple GN-z11 vu par le JWST en volume 3D dans un cube filaire, avec le curseur des canaux sur son spectre moyen" width="660" height="1434" loading="lazy">
+                </div>
+                <figcaption>Les visionneuses FITS et de cubes sur iPhone</figcaption>
             </figure>
         </div>
     </div>
@@ -264,10 +267,10 @@
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01M12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
                 </div>
                 <h3>iOS</h3>
-                <p class="platform-tech">Swift &middot; SwiftUI &middot; iPhone &amp; iPad</p>
-                <p class="platform-desc">Application SwiftUI native pour iPhone et iPad. Gérez vos sessions CANFAR en déplacement, avec des identifiants sécurisés dans le trousseau iOS.</p>
+                <p class="platform-tech">SwiftUI &middot; iOS et iPadOS 17+</p>
+                <p class="platform-desc">Application SwiftUI native pour iPhone et iPad, pour faire le point, revoir et vérifier loin de votre bureau. Des visionneuses FITS et de cubes sans compte, avec des fichiers ouverts par leur en-tête depuis Fichiers, Mail, AirDrop ou votre stockage&nbsp;; avec un compte CANFAR, le Portail, votre stockage et le Calcul. Identifiants dans le trousseau iOS. Sur l’App Store, sur la même page que l’application Mac.</p>
                 <div class="platform-actions">
-                    <a href="https://apps.apple.com/us/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
+                    <a href="https://apps.apple.com/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
                         <img src="/assets/app-store-badge.svg" alt="Télécharger sur l’App Store" width="200">
                     </a>
                     <a href="https://github.com/szautkin/canfar-macos" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Code source</a>
@@ -427,7 +430,7 @@
     wire('announce-windows-close', 'announce-windows-hidden', 'verbinal-windows-141-announce-dismissed');
     wire('announce-ubuntu-close', 'announce-ubuntu-hidden', 'verbinal-ubuntu-144-announce-dismissed');
     wire('announce-omarchy-close', 'announce-omarchy-hidden', 'verbinal-omarchy-144-announce-dismissed');
-    wire('announce-ios-close', 'announce-ios-hidden', 'verbinal-ios-announce-dismissed');
+    wire('announce-ios-close', 'announce-ios-hidden', 'verbinal-ios-141-announce-dismissed');
 })();
 </script>
 

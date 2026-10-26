@@ -47,12 +47,21 @@
 </head>
 <body>
 
-<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-macos-141-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-windows-141-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');if(localStorage.getItem('verbinal-ios-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');}catch(e){}</script>
+<script>try{var d=document.documentElement;if(localStorage.getItem('verbinal-ios-141-announce-dismissed')==='1')d.classList.add('announce-ios-hidden');if(localStorage.getItem('verbinal-macos-141-announce-dismissed')==='1')d.classList.add('announce-macos-hidden');if(localStorage.getItem('verbinal-windows-141-announce-dismissed')==='1')d.classList.add('announce-windows-hidden');if(localStorage.getItem('verbinal-ubuntu-144-announce-dismissed')==='1')d.classList.add('announce-ubuntu-hidden');if(localStorage.getItem('verbinal-omarchy-144-announce-dismissed')==='1')d.classList.add('announce-omarchy-hidden');}catch(e){}</script>
 
-<div class="announce" id="announce-macos">
-    <a href="/blog/verbinal-1-4-1-macos" class="announce-text">
+<div class="announce" id="announce-ios">
+    <a href="/blog/verbinal-1-4-1-ios" class="announce-text">
         <span class="announce-tag">New</span>
-        <span>Verbinal for macOS 1.4.1 is here &mdash; your work on every Mac, Research files with Move To&hellip;, and GPUs in the Portal. Read the notes</span>
+        <span>Verbinal for iPhone and iPad 1.4.1 is here &mdash; FITS and cube viewers with no account needed, and the Portal and Compute when you sign in. Read the notes</span>
+        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
+    </a>
+    <button type="button" class="announce-close" id="announce-ios-close" aria-label="Dismiss announcement">&times;</button>
+</div>
+
+<div class="announce announce-sub" id="announce-macos">
+    <a href="/blog/verbinal-1-4-1-macos" class="announce-text">
+        <span class="announce-tag">macOS 1.4.1</span>
+        <span>Your work on every Mac, Research files with Move To&hellip;, and GPUs in the Portal. Read the notes</span>
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-macos-close" aria-label="Dismiss announcement">&times;</button>
@@ -83,15 +92,6 @@
         <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
     </a>
     <button type="button" class="announce-close" id="announce-omarchy-close" aria-label="Dismiss announcement">&times;</button>
-</div>
-
-<div class="announce announce-sub" id="announce-ios">
-    <a href="#platforms" class="announce-text">
-        <span class="announce-tag">iPhone &amp; iPad</span>
-        <span>Verbinal is now on the App Store for iPhone &amp; iPad</span>
-        <span class="announce-arrow" aria-hidden="true">&rsaquo;</span>
-    </a>
-    <button type="button" class="announce-close" id="announce-ios-close" aria-label="Dismiss announcement">&times;</button>
 </div>
 
 <header class="header">
@@ -177,7 +177,7 @@
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
                 <h3>Secure Credentials</h3>
-                <p>Tokens stored securely in your platform's native keychain &mdash; macOS Keychain, Windows Credential Manager, GNOME Keyring, or Android EncryptedSharedPreferences.</p>
+                <p>Tokens stored securely in your platform's native keychain &mdash; the macOS and iOS Keychain, Windows Credential Manager, GNOME Keyring, or Android EncryptedSharedPreferences.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
@@ -207,15 +207,18 @@
 <section class="screenshots">
     <div class="container">
         <h2 class="section-title">Built native for every platform</h2>
-        <p class="section-subtitle">Each app is crafted with the platform's native toolkit &mdash; SwiftUI on macOS, WinUI 3 on Windows, GTK 4 &amp; libadwaita on Linux, Jetpack Compose on Android.</p>
+        <p class="section-subtitle">Each app is crafted with the platform's native toolkit &mdash; SwiftUI on macOS, iPhone and iPad, WinUI 3 on Windows, GTK 4 &amp; libadwaita on Linux, Jetpack Compose on Android.</p>
         <div class="screenshots-grid">
             <figure class="screenshot-item">
                 <img src="assets/screenshot-2.png" alt="The Verbinal for macOS Portal: platform load with CPU, RAM and GPU rings, the storage quota and batch jobs, two active sessions, CANFAR images by type, and recent launches" width="2048" height="1280" loading="lazy">
                 <figcaption>The Portal on macOS</figcaption>
             </figure>
             <figure class="screenshot-item">
-                <img src="assets/screenshot-1.png" alt="The About window of Verbinal for macOS, version 1.4.1 (18): A CANFAR Science Portal Companion — a native CANFAR companion for Search, Research, Storage, and FITS, with an optional AI agent that drives it for you" width="880" height="506" loading="lazy">
-                <figcaption>Verbinal 1.4.1 for macOS</figcaption>
+                <div class="screenshot-phones">
+                    <img src="assets/blog/verbinal-1-4-1-ios-fits-m31.jpg" alt="The FITS viewer in Verbinal for iPhone 1.4.1, showing the M31 sample from Hubble in the Heat colour map, with a compass from its WCS and a 15″ scale bar" width="660" height="1434" loading="lazy">
+                    <img src="assets/blog/verbinal-1-4-1-ios-cube-volume.jpg" alt="The Cube viewer in Verbinal for iPhone 1.4.1, showing the GN-z11 sample from JWST as a 3D volume inside a wireframe cube, with the channel scrubber over its mean spectrum" width="660" height="1434" loading="lazy">
+                </div>
+                <figcaption>The FITS and Cube viewers on iPhone</figcaption>
             </figure>
         </div>
     </div>
@@ -263,10 +266,10 @@
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01M12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
                 </div>
                 <h3>iOS</h3>
-                <p class="platform-tech">Swift &middot; SwiftUI &middot; iPhone &amp; iPad</p>
-                <p class="platform-desc">Native SwiftUI app for iPhone and iPad. Manage your CANFAR sessions on the go, with credentials secured in the iOS Keychain.</p>
+                <p class="platform-tech">SwiftUI &middot; iOS &amp; iPadOS 17+</p>
+                <p class="platform-desc">Native SwiftUI app for iPhone and iPad, to check, review and verify away from your desk. FITS and cube viewers that need no account, with files opened header first from Files, Mail, AirDrop or your storage; with a CANFAR account, the Portal, your storage and Compute. Credentials in the iOS Keychain. On the App Store, on the same page as the Mac app.</p>
                 <div class="platform-actions">
-                    <a href="https://apps.apple.com/us/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
+                    <a href="https://apps.apple.com/app/verbinal/id6761290036" class="store-badge" target="_blank" rel="noopener">
                         <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="200">
                     </a>
                     <a href="https://github.com/szautkin/canfar-macos" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Source Code</a>
@@ -426,7 +429,7 @@
     wire('announce-windows-close', 'announce-windows-hidden', 'verbinal-windows-141-announce-dismissed');
     wire('announce-ubuntu-close', 'announce-ubuntu-hidden', 'verbinal-ubuntu-144-announce-dismissed');
     wire('announce-omarchy-close', 'announce-omarchy-hidden', 'verbinal-omarchy-144-announce-dismissed');
-    wire('announce-ios-close', 'announce-ios-hidden', 'verbinal-ios-announce-dismissed');
+    wire('announce-ios-close', 'announce-ios-hidden', 'verbinal-ios-141-announce-dismissed');
 })();
 </script>
 
