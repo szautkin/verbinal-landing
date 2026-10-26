@@ -1418,9 +1418,10 @@ a, button, .btn {
 
 /* ── Post: phone captures ──────────────────────────────────────
  *
- * Tall screenshots in a row, at most 260px each, centred. One at the reading
- * width would be some 1,800px high. On a phone they stay in a row, smaller,
- * rather than stacking into a scroll of screens. */
+ * Tall screenshots in a row, centred, at about a phone's own size: 180px
+ * wide, 140px on a phone. One at the reading width would be some 1,800px
+ * high. On a phone they stay in a row rather than stacking into a scroll of
+ * screens. */
 .post-phones {
     display: flex;
     justify-content: center;
@@ -1431,12 +1432,16 @@ a, button, .btn {
 .post-phones img {
     flex: 1 1 0;
     min-width: 0;
-    max-width: 260px;
+    max-width: 180px;
 }
 
 @media (max-width: 480px) {
     .post-phones {
         gap: 10px;
+    }
+
+    .post-phones img {
+        max-width: 140px;
     }
 }
 
